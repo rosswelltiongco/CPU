@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jesus\Documents\Xilinx_Files\CECS301Lab4\top_level.ncd
+OUTFILE=C:\Users\Jesus\Documents\Xilinx_Files\CECS301Lab4\top_level.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\Jesus\Documents\Xilinx_Files\CECS301Lab4
+LICENSE=WebPack
+USER_INFO=211394997_0_0_518
