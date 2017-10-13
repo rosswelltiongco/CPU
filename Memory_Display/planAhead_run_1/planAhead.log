@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Oct 11 20:05:47 2017
+# Process ID: 9312
+# Log file: /home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/planAhead_run_1/planAhead.log
+# Journal file: /home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/pa.fromNetlist.tcl
+# create_project -name Lab4_Memory_Display_MemoryOnly -dir "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/planAhead_run_1" -part xc7a100tcsg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/ram.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly} {ipcore_dir} }
+# add_files [list {ipcore_dir/ram_256x16.ncf}] -fileset [get_property constrset [current_run]]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See /home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/planAhead_pid9312.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Oct 11 20:06:07 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

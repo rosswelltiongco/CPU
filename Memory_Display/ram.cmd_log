@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/ram.xst" -ofn "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/ram.syr" 
+xst -intstyle ise -ifn "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/ram.xst" -ofn "/home/rosswell/Documents/301/CPU/Memory/Lab4_Memory_Display_MemoryOnly/ram.syr" 
