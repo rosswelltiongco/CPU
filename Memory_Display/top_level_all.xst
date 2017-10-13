@@ -1,6 +1,9 @@
-set -tmpdir "/home/rosswell/Documents/301/CPU/Memory_Display/xst/projnav.tmp"
-set -xsthdpdir "/home/rosswell/Documents/301/CPU/Memory_Display/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn top_level_all.prj
+-ofn top_level_all
+-ofmt NGC
 -p xc7a100t-3-csg324
 -top top_level_all
 -opt_mode Speed
@@ -48,4 +51,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn top_level_all.prj

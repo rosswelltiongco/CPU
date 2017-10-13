@@ -20,7 +20,7 @@ module addr_seq(clk, rst, addr);
       if (rst)
          addr <= 8'b0;
       else
-         addr <= addr + 1;
+         addr <= addr + 1'b1;
    end
 
 endmodule
