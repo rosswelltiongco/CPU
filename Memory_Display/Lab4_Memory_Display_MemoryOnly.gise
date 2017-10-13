@@ -90,18 +90,9 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="ram.lso"/>
-      <outfile xil_pn:name="ram.ngc"/>
-      <outfile xil_pn:name="ram.ngr"/>
-      <outfile xil_pn:name="ram.prj"/>
-      <outfile xil_pn:name="ram.stx"/>
-      <outfile xil_pn:name="ram.syr"/>
-      <outfile xil_pn:name="ram.xst"/>
-      <outfile xil_pn:name="ram_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 
