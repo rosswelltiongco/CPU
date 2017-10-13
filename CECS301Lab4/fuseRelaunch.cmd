@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Jesus/Documents/Xilinx_Files/CECS301Lab4/ad_mux_test_isim_beh.exe" -prj "C:/Users/Jesus/Documents/Xilinx_Files/CECS301Lab4/ad_mux_test_beh.prj" "work.ad_mux_test" "work.glbl" 
