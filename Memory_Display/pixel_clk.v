@@ -5,10 +5,10 @@
  * Email:    jlucian995@gmail.com
  * Filename: pixel_clk.v
  * Date:     
- * Version:  
+ * Version:  1.0
  *
- * Description:     
- *
+ * Description:  a 480 Hz clock divider used to time multiplex the common
+ * anode inputs to the 7-segment displays
  *
  *******************************************************************************/
 module pixel_clk(clk_in, reset, clk_out);
@@ -16,8 +16,7 @@ module pixel_clk(clk_in, reset, clk_out);
 	input clk_in, reset;
 	
 	//declare outputs
-	output clk_out;
-	reg clk_out;
+	output reg clk_out;
 
 	//declare variables
 	integer i = 0;
@@ -37,8 +36,6 @@ module pixel_clk(clk_in, reset, clk_out);
 			end
 		end
 	end
-	
-	
 	
 	
 

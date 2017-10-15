@@ -7,7 +7,7 @@
  * Date:     Spectember 25, 2017
  * Version:  1.0
  *
- * Description: This module debounces a signal and only outputs high when 9 of 
+ * Description: Debounces a signal and only outputs high when 9 of 
  * its 10 inputs have been high, which means that a button push signal has
  * stabilized to a value of 1;
  *

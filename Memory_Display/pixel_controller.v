@@ -5,10 +5,11 @@
  * Email:    jlucian995@gmail.com
  * Filename: pixel_controller.v
  * Date:     
- * Version:  
+ * Version:  1.0
  *
- * Description:     
- *
+ * Description: Generates the signals for the common anode inputs to the
+ * 7-segment displays and also generates the multiplexer select signals for
+ * multiplexing the address/data nibbles
  *
  *******************************************************************************/
 module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_sel);
@@ -19,14 +20,10 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	input clk_480Hz, reset;
 	
 	//declare outputs for anode selection
-	output a7, a6, a5, a4, a3, a2, a1, a0;
-	reg a7, a6, a5, a4, a3, a2, a1, a0;
-	
+	output reg a7, a6, a5, a4, a3, a2, a1, a0;	
 
 	//delcare output for segment selection
-	output [2:0] seg_sel;
-	reg [2:0] seg_sel;
-
+	output reg [2:0] seg_sel;
 
 ////////////////////////////////////////	
 	//**********************
@@ -45,6 +42,7 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	always @(present_state, clk_480Hz)
 		casex( {present_state, clk_480Hz} )
          4'bxxx_1 : next_state = present_state;
+			//
          4'b000_0 : next_state = 3'b001;
          //
          4'b001_0 : next_state = 3'b010;
@@ -92,4 +90,4 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
          4'b111_x  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b01111111_111;
 			default   : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111111_xxx;
 		endcase
-endmodule
+endmodule 

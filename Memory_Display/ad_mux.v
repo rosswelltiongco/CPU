@@ -5,9 +5,10 @@
  * Email:    jlucian995@gmail.com
  * Filename: ad_mux.v
  * Date:     
- * Version:  
+ * Version:  1.0
  *
- * Description:     
+ * Description: A four bit 8 to 1 multiplexer that selects address/data
+ * information to be displayed based on the pixel controller
  *
  *
  *******************************************************************************/
@@ -25,8 +26,7 @@ module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
 	input [2:0] sel;
 	
 	//declare outputs
-	output [3:0] Y;
-	reg [3:0] Y;
+	output reg [3:0] Y;
 	
 	always @ (*) begin
 		case(sel)
@@ -38,9 +38,9 @@ module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
 			3'b101 :	Y = d5;
 			3'b110 :	Y = d6;
 			3'b111 : Y = d7;
-			default:	Y = 4'bxxxx; 
+			default:	Y = 4'bxxxx; //FIXME: Shouldn't a default have a concrete/set value?
 		endcase
 		
 	end
 
-endmodule
+endmodule 
