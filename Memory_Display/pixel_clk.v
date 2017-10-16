@@ -28,22 +28,27 @@ module pixel_clk(clk_in, reset, clk_out);
 	Code divides incoming clock by number specified in 
 	"if" conditional statement
 	*/
+
 	always @ (posedge clk_in or posedge reset) begin
-		//sets outputs to zero when reset is active
-		if (reset == 1'b1) begin
-			i = 0;
+      //if reset is high, variable reset to zero
+		if( reset == 1'b1) begin
 			clk_out = 0;
+			i = 0;
 		end
-		
+      //if i is greater than specified value, the output
+      //is complemented and counter is reset to zero
+      //this "slows" a clock pulse down to
+      // board_clock / i / 2 for the frequency
+      //of the output clock
 		else begin
-      //variable increases with every clock input
-			i = i + 1;
-         //once variable reaches certain value, clock is
-         //complemented and variable is reset to 0
-			if (i >= 104_166 ) begin
+			if(i > 104_166) begin
 				clk_out = ~clk_out;
 				i = 0;
-			end//if
-		end//else
-	end//always
+			end
+         //otherwise, counter increases
+			else begin
+				i = i + 1;
+			end
+		end
+	end
 endmodule

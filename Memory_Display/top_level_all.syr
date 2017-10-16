@@ -181,8 +181,8 @@ Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Memory_Display\pixel_clk.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_3_o_add_1_OUT> created at line 40.
-    Found 32-bit comparator greater for signal <n0002> created at line 43
+    Found 32-bit adder for signal <i[31]_GND_3_o_add_2_OUT> created at line 50.
+    Found 32-bit comparator greater for signal <i[31]_GND_3_o_LessThan_2_o> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -302,22 +302,27 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_disp> will be implemented on LUTs ei
     -----------------------------------------------------------------------
 Unit <hexto7segment> synthesized (advanced).
 
+Synthesizing (advanced) Unit <pixel_clk>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+Unit <pixel_clk> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
  16x7-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 2
- 32-bit adder                                          : 2
-# Counters                                             : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
  8-bit up counter                                      : 1
-# Registers                                            : 86
- Flip-Flops                                            : 86
+# Registers                                            : 54
+ Flip-Flops                                            : 54
 # Comparators                                          : 2
  32-bit comparator greater                             : 2
-# Multiplexers                                         : 3
- 32-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 1
  4-bit 7-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
@@ -345,27 +350,10 @@ Optimizing unit <top_level_all> ...
 
 Optimizing unit <clk_500Hz> ...
 
-Optimizing unit <pixel_clk> ...
-
 Optimizing unit <one_shot> ...
 
 Optimizing unit <pixel_controller> ...
-WARNING:Xst:1710 - FF/Latch <px_clk/i_17> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_18> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_19> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_20> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_21> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_22> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_23> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_24> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_25> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_26> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_27> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_28> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_29> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_30> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_31> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_17> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_clk1/i_17> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_18> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_19> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_20> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
@@ -380,7 +368,24 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_28> (wit
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_29> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_30> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <clk_clk1/i_31> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <clk_clk1/i_0> in Unit <top_level_all> is equivalent to the following FF/Latch, which will be removed : <px_clk/i_0> 
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_31> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_30> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_29> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_28> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_27> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_26> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_25> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_24> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_23> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_22> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_21> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_20> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_19> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_18> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <px_clk/i_17> (without init value) has a constant value of 0 in block <top_level_all>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <px_clk/i_0> in Unit <top_level_all> is equivalent to the following FF/Latch, which will be removed : <clk_clk1/i_0> 
+INFO:Xst:2261 - The FF/Latch <px_clk/i_1> in Unit <top_level_all> is equivalent to the following FF/Latch, which will be removed : <clk_clk1/i_1> 
+INFO:Xst:2261 - The FF/Latch <px_clk/i_2> in Unit <top_level_all> is equivalent to the following FF/Latch, which will be removed : <clk_clk1/i_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -392,8 +397,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 66
- Flip-Flops                                            : 66
+# Registers                                            : 64
+ Flip-Flops                                            : 64
 
 =========================================================================
 
@@ -416,20 +421,20 @@ Top Level Output File Name         : top_level_all.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 220
+# BELS                             : 198
 #      GND                         : 2
-#      INV                         : 3
-#      LUT1                        : 39
-#      LUT2                        : 37
-#      LUT3                        : 4
-#      LUT4                        : 18
-#      LUT5                        : 8
+#      INV                         : 2
+#      LUT1                        : 23
+#      LUT2                        : 36
+#      LUT3                        : 2
+#      LUT4                        : 19
+#      LUT5                        : 9
 #      LUT6                        : 10
-#      MUXCY                       : 54
+#      MUXCY                       : 53
 #      VCC                         : 2
-#      XORCY                       : 43
-# FlipFlops/Latches                : 66
-#      FDC                         : 66
+#      XORCY                       : 40
+# FlipFlops/Latches                : 64
+#      FDC                         : 64
 # RAMS                             : 1
 #      RAMB18E1                    : 1
 # Clock Buffers                    : 2
@@ -446,15 +451,15 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              66  out of  126800     0%  
- Number of Slice LUTs:                  119  out of  63400     0%  
-    Number used as Logic:               119  out of  63400     0%  
+ Number of Slice Registers:              64  out of  126800     0%  
+ Number of Slice LUTs:                  101  out of  63400     0%  
+    Number used as Logic:               101  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    127
-   Number with an unused Flip Flop:      61  out of    127    48%  
-   Number with an unused LUT:             8  out of    127     6%  
-   Number of fully used LUT-FF pairs:    58  out of    127    45%  
+ Number of LUT Flip Flop pairs used:    109
+   Number with an unused Flip Flop:      45  out of    109    41%  
+   Number with an unused LUT:             8  out of    109     7%  
+   Number of fully used LUT-FF pairs:    56  out of    109    51%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -487,8 +492,8 @@ Clock Information:
 -----------------------------------+--------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)          | Load  |
 -----------------------------------+--------------------------------+-------+
+clk                                | BUFGP                          | 34    |
 addr_shot(addr_oneshot/Dout:O)     | NONE(*)(add_seq/addr_0)        | 8     |
-clk                                | BUFGP                          | 36    |
 clk_clk1/clk_out                   | BUFG                           | 20    |
 px_clk/clk_out                     | NONE(pc/present_state_FSM_FFd2)| 3     |
 -----------------------------------+--------------------------------+-------+
@@ -505,7 +510,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.726ns (Maximum Frequency: 268.377MHz)
+   Minimum period: 3.646ns (Maximum Frequency: 274.281MHz)
    Minimum input arrival time before clock: 0.857ns
    Maximum output required time after clock: 3.852ns
    Maximum combinational path delay: No path found
@@ -513,6 +518,47 @@ Speed Grade: -3
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.646ns (frequency: 274.281MHz)
+  Total number of paths / destination ports: 9845 / 33
+-------------------------------------------------------------------------
+Delay:               3.646ns (Levels of Logic = 20)
+  Source:            px_clk/i_0 (FF)
+  Destination:       clk_clk1/i_16 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: px_clk/i_0 to clk_clk1/i_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.361   0.289  px_clk/i_0 (px_clk/i_0)
+     INV:I->O              1   0.113   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_lut<0>_INV_0 (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<0> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<1> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<2> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<3> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<4> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<5> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<6> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<7> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<8> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<9> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<10> (clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_cy<10>)
+     XORCY:CI->O           3   0.370   0.693  clk_clk1/Madd_i[31]_GND_2_o_add_1_OUT_xor<11> (clk_clk1/i[31]_GND_2_o_add_1_OUT<11>)
+     LUT5:I0->O            1   0.097   0.000  clk_clk1/Mcompar_n0002_lut<1> (clk_clk1/Mcompar_n0002_lut<1>)
+     MUXCY:S->O            1   0.353   0.000  clk_clk1/Mcompar_n0002_cy<1> (clk_clk1/Mcompar_n0002_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Mcompar_n0002_cy<2> (clk_clk1/Mcompar_n0002_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Mcompar_n0002_cy<3> (clk_clk1/Mcompar_n0002_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  clk_clk1/Mcompar_n0002_cy<4> (clk_clk1/Mcompar_n0002_cy<4>)
+     MUXCY:CI->O          15   0.253   0.360  clk_clk1/Mcompar_n0002_cy<5> (clk_clk1/Mcompar_n0002_cy<5>)
+     LUT2:I1->O            1   0.097   0.000  clk_clk1/Mmux_i[31]_GND_2_o_mux_3_OUT21 (clk_clk1/i[31]_GND_2_o_mux_3_OUT<10>)
+     FDC:D                     0.008          clk_clk1/i_10
+    ----------------------------------------
+    Total                      3.646ns (2.304ns logic, 1.342ns route)
+                                       (63.2% logic, 36.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'addr_shot'
@@ -543,51 +589,6 @@ Delay:               1.636ns (Levels of Logic = 9)
     ----------------------------------------
     Total                      1.636ns (1.343ns logic, 0.293ns route)
                                        (82.1% logic, 17.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.726ns (frequency: 268.377MHz)
-  Total number of paths / destination ports: 10104 / 35
--------------------------------------------------------------------------
-Delay:               3.726ns (Levels of Logic = 24)
-  Source:            clk_clk1/i_0 (FF)
-  Destination:       px_clk/i_16 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: clk_clk1/i_0 to px_clk/i_16
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.361   0.283  clk_clk1/i_0 (clk_clk1/i_0)
-     INV:I->O              1   0.113   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_lut<0>_INV_0 (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<0> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<1> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<2> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<3> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<4> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<5> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<6> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<7> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<8> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<9> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<10> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<11> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<12> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<13> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<14> (px_clk/Madd_i[31]_GND_3_o_add_1_OUT_cy<14>)
-     XORCY:CI->O           3   0.370   0.693  px_clk/Madd_i[31]_GND_3_o_add_1_OUT_xor<15> (px_clk/i[31]_GND_3_o_add_1_OUT<15>)
-     LUT5:I0->O            0   0.097   0.000  px_clk/Mcompar_n0002_lutdi2 (px_clk/Mcompar_n0002_lutdi2)
-     MUXCY:DI->O           1   0.337   0.000  px_clk/Mcompar_n0002_cy<2> (px_clk/Mcompar_n0002_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Mcompar_n0002_cy<3> (px_clk/Mcompar_n0002_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Mcompar_n0002_cy<4> (px_clk/Mcompar_n0002_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  px_clk/Mcompar_n0002_cy<5> (px_clk/Mcompar_n0002_cy<5>)
-     MUXCY:CI->O          17   0.253   0.369  px_clk/Mcompar_n0002_cy<6> (px_clk/Mcompar_n0002_cy<6>)
-     LUT2:I1->O            1   0.097   0.000  px_clk/Mmux_i[31]_GND_3_o_mux_3_OUT21 (px_clk/i[31]_GND_3_o_mux_3_OUT<10>)
-     FDC:D                     0.008          px_clk/i_10
-    ----------------------------------------
-    Total                      3.726ns (2.380ns logic, 1.346ns route)
-                                       (63.9% logic, 36.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_clk1/clk_out'
@@ -633,27 +634,8 @@ Delay:               1.097ns (Levels of Logic = 1)
                                        (42.5% logic, 57.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'addr_shot'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              0.741ns (Levels of Logic = 1)
-  Source:            rst (PAD)
-  Destination:       add_seq/addr_0 (FF)
-  Destination Clock: addr_shot rising
-
-  Data Path: rst to add_seq/addr_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            66   0.001   0.391  rst_IBUF (rst_IBUF)
-     FDC:CLR                   0.349          add_seq/addr_0
-    ----------------------------------------
-    Total                      0.741ns (0.350ns logic, 0.391ns route)
-                                       (47.2% logic, 52.8% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 51 / 51
+  Total number of paths / destination ports: 49 / 49
 -------------------------------------------------------------------------
 Offset:              0.857ns (Levels of Logic = 2)
   Source:            din<7> (PAD)
@@ -672,6 +654,25 @@ Offset:              0.857ns (Levels of Logic = 2)
                                        (67.4% logic, 32.6% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'addr_shot'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.741ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       add_seq/addr_0 (FF)
+  Destination Clock: addr_shot rising
+
+  Data Path: rst to add_seq/addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.001   0.391  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.349          add_seq/addr_0
+    ----------------------------------------
+    Total                      0.741ns (0.350ns logic, 0.391ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_clk1/clk_out'
   Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
@@ -684,7 +685,7 @@ Offset:              0.741ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   0.001   0.391  rst_IBUF (rst_IBUF)
+     IBUF:I->O            64   0.001   0.391  rst_IBUF (rst_IBUF)
      FDC:CLR                   0.349          we_oneshot/q0
     ----------------------------------------
     Total                      0.741ns (0.350ns logic, 0.391ns route)
@@ -703,7 +704,7 @@ Offset:              0.741ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            66   0.001   0.391  rst_IBUF (rst_IBUF)
+     IBUF:I->O            64   0.001   0.391  rst_IBUF (rst_IBUF)
      FDC:CLR                   0.349          pc/present_state_FSM_FFd1
     ----------------------------------------
     Total                      0.741ns (0.350ns logic, 0.391ns route)
@@ -795,7 +796,7 @@ Clock to Setup on destination clock clk
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
 addr_shot       |    1.096|         |         |         |
-clk             |    3.726|         |         |         |
+clk             |    3.646|         |         |         |
 clk_clk1/clk_out|    1.975|         |         |         |
 ----------------+---------+---------+---------+---------+
 
@@ -819,14 +820,14 @@ px_clk/clk_out |    1.097|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.50 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.60 secs
  
 --> 
 
-Total memory usage is 414372 kilobytes
+Total memory usage is 414432 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   31 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 
