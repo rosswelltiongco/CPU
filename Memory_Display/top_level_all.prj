@@ -1,5 +1,5 @@
 verilog work "ipcore_dir/ram_256x16.v"
-verilog work "ram.v"
+verilog work "ram1.v"
 verilog work "pixel_controller.v"
 verilog work "pixel_clk.v"
 verilog work "one_shot.v"

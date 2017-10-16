@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 /********************************************************************************
  *
- * Author:   Jesus Luciano
- * Email:    jlucian995@gmail.com
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: ad_mux.v
- * Date:     
+ * Date:     October 16, 2017
  * Version:  1.0
  *
  * Description: A four bit 8 to 1 multiplexer that selects address/data
@@ -13,6 +13,7 @@
  *
  *******************************************************************************/
 module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
+
 	//declare inputs
 	input [3:0] d7;
 	input [3:0] d6;
@@ -22,12 +23,13 @@ module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
 	input [3:0] d2;
 	input [3:0] d1;
 	input [3:0] d0;
-	//
+	//declare input for selector
 	input [2:0] sel;
 	
 	//declare outputs
 	output reg [3:0] Y;
 	
+   //any change to any input will cause module to change output
 	always @ (*) begin
 		case(sel)
 			3'b000 : Y = d0;
@@ -38,9 +40,7 @@ module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
 			3'b101 :	Y = d5;
 			3'b110 :	Y = d6;
 			3'b111 : Y = d7;
-			default:	Y = 4'bxxxx; //FIXME: Shouldn't a default have a concrete/set value?
+			default:	Y = 4'bxxxx; 
 		endcase
-		
 	end
-
 endmodule 

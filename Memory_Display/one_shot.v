@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 /********************************************************************************
  *
- * Author:   Jesus Luciano
- * Email:    jlucian995@gmail.com
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: one_shot.v
- * Date:     Spectember 25, 2017
+ * Date:     October 16, 2017
  * Version:  1.0
  *
  * Description: Debounces a signal and only outputs high when 9 of 
@@ -36,7 +36,9 @@ module one_shot( clk_in, reset, Din, Dout );
 			q9 <= q8; q8 <= q7; q7 <= q6; q6 <= q5; q5 <= q4; q4 <= q3;
 			q3 <= q2; q2 <= q1; q1 <= q0; q0 <= Din;
 		end
-		//sets Dout to 1 when the input has stabilized to 1, effectively debouncing
+		//sets Dout to 1 when 9 of the 10 inputs are 10, this creates
+      //a single high pulse for one clock cycle since the next value
+      //to be set to q9 is 1 since all values are shifted to the left
 		assign Dout = !q9 & q8 & q7 & q6 & q5 & q4 & q3 & q2 & q1 & q0;
 		
 endmodule

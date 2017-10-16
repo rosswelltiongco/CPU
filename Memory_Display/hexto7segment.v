@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 /********************************************************************************
  *
- * Author:   Jesus Luciano
- * Email:    jlucian995@gmail.com
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: hexto7segment.v
- * Date:     
+ * Date:     October 16, 2017
  * Version:  1.0
  *
  * Description: Module has 4 bit input and uses case statement to convert 4 bit
@@ -30,7 +30,7 @@ module hexto7segment(Q, disp);
 		casex ({Q[3], Q[2], Q[1], Q[0]})
 			//cases for all 16 possible value combinations
 			//disp output corresponds to segments in 7 segment display
-			//disp = {A, B, C, D, E ,F ,G}
+			//        disp = {A, B, C, D, E ,F ,G}
 			4'b0000 : disp = 7'b0000001;
 			4'b0001 : disp = 7'b1001111;
 			4'b0010 : disp = 7'b0010010;

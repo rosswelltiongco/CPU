@@ -1,23 +1,18 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    22:53:13 10/09/2015 
-// Design Name: 
-// Module Name:    ram1 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+/********************************************************************************
+ *
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
+ * Filename: ram1.v
+ * Date:     October 16, 2017
+ * Version:  1.0
+ *
+ * Description: Ram1 module uses coregen and .coe file provided by instructor
+ * to contain data based on file.
+ * Memory stars at adress 55 with data FF, as an address value increases, the
+ * data address decreases from 55 to 0, and the value FF decreases with it
+ *
+ *******************************************************************************/
 module ram1(
     input clk,
     input we,
@@ -26,20 +21,12 @@ module ram1(
     output [15:0] dout
     );
 	 
-//----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-ram_256x16 dut (
-	.clka(clk),
-	.wea(we), // Bus [0 : 0] 
-	.addra(addr), // Bus [7 : 0] 
-	.dina(din), // Bus [15 : 0] 
-	.douta(dout)); // Bus [15 : 0] 
-
-// INST_TAG_END ------ End INSTANTIATION Template ---------
-
-// You must compile the wrapper file ram_256x16.v when simulating
-// the core, ram_256x16. When compiling the wrapper file, be sure to
-// reference the XilinxCoreLib Verilog simulation library. For detailed
-// instructions, please refer to the "CORE Generator Help".	 
-
+    //ram black box declaration using coregen
+   ram_256x16 dut (
+      .clka(clk),
+      .wea(we), // Bus [0 : 0] 
+      .addra(addr), // Bus [7 : 0] 
+      .dina(din), // Bus [15 : 0] 
+      .douta(dout)); // Bus [15 : 0] 
 
 endmodule

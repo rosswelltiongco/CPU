@@ -1,18 +1,19 @@
 `timescale 1ns / 1ps
 /********************************************************************************
  *
- * Author:   Rosswell Tiongco
- * Email:    rosswelltiongco@gmail.com
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: top_level_all.v
- * Date:     
- * Version:  
+ * Date:     October 16, 2017
+ * Version:  2.0
  *
  * Description: Displays a location in memory onto the target machine.
  * Additionally, the location in memory's corresponding value can be
  * read and overwritten
  *
  *******************************************************************************/
-module top_level_all(clk,rst,addr_step,we_step,din,a7,a6,a5,a4,a3,a2,a1,a0,disp);
+module top_level_all(clk ,rst ,addr_step ,we_step ,din ,a7 ,a6 ,a5 ,a4 ,a3 ,a2 ,
+                     a1  , a0 ,disp );
  //Inputs
    input clk, rst, addr_step, we_step;
    input [15:0] din;
@@ -52,8 +53,8 @@ module top_level_all(clk,rst,addr_step,we_step,din,a7,a6,a5,a4,a3,a2,a1,a0,disp)
 
  //ad_mux    ( d7   ,  d6   , d5           , d4           , d3         , 
 	ad_mux am0({4'h0}, {4'h0}, addr_out[7:4], addr_out[3:0], dout[15:12], 
-	dout[11:8], dout[7:4], dout[3:0], seg_sel, mux_out);
- //d2        , d1       , d0       , sel    , Y      );
+ //           d2        , d1       , d0       , sel    , Y      );
+              dout[11:8], dout[7:4], dout[3:0], seg_sel, mux_out);
  
  //hexto7segment      ( Q      , disp );
 	hexto7segment  hex0( mux_out, disp );
