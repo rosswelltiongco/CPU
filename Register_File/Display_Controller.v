@@ -10,7 +10,8 @@
  * Description: 
  *
  *
- * Work Time: 
+ * Work Time: 15 mins - Jesus
+ * Debug Time: 15 mins - Jesus
  *******************************************************************************/
 module Display_Controller(clk, reset, 
                           seg7, seg6, seg5, seg4, seg3, seg2, seg1, seg0, 
