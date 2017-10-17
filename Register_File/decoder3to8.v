@@ -10,7 +10,7 @@
  * Description: 3 to 8 decoder <= add more
  * Must be behavioral
  *
- * Work  Time: 
+ * Work  Time: 15 mins
  * Debug Time: 
  *******************************************************************************/
 module decoder3to8( In, en, y7, y6, y5, y4, y3, y2, y1, y0 );
