@@ -1,0 +1,8 @@
+verilog work "pixel_controller.v"
+verilog work "pixel_clk.v"
+verilog work "hexto7segment.v"
+verilog work "ad_mux.v"
+verilog work "reg16.v"
+verilog work "Display_Controller.v"
+verilog work "decoder3to8.v"
+verilog work "top_level_lab5.v"
