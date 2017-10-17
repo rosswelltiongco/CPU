@@ -22,13 +22,28 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Register_File.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Display_Controller.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Display_Controller.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Display_Controller.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Display_Controller.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Display_Controller.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Display_Controller.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="hexto7segment.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="hexto7segment.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="hexto7segment.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reg16.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reg16.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="reg16.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1508261441" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1508261441">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+    </transform>
+  </transforms>
 
 </generated_project>

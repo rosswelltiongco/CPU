@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/Display_Controller.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/Display_Controller.syr" 

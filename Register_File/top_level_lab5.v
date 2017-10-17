@@ -11,7 +11,16 @@
  *
  *
  *******************************************************************************/
-module top_level_lab5();
-
-
+module top_level_lab5(clk, reset, we, W, W_Adr, R_Adr, S_Adr, R, S, );
+   //Declare inputs
+   input clk, reset, we;
+   input [3:0] W;
+   input [2:0] W_Adr, R_Adr, S_Adr;
+   
+   //Declare outputs
+   output [15:0] R, S;
+   
+   //Declare wires
+   
+   
 endmodule

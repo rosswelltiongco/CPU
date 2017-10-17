@@ -10,6 +10,7 @@
  * Description: Register File <= Add more
  *
  *
+ * Work Time: Jesus - 5min writing, no debugging
  *******************************************************************************/
 module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
     //Declare Inputs
