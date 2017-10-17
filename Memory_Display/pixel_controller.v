@@ -41,30 +41,24 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	// Next State Combinational Logic
 	// (next state values can change anytime but will only be "clock" below
 	//**********************************************************************
-	//next state changes only when clock pulse is low since the preset
-   //state will be set when clock pulse is high since clk_480Hz acts as
-   //both a clock source and an input
-	always @(present_state, clk_480Hz)
-		casex( {present_state, clk_480Hz} )
-         4'bxxx_1 : next_state = present_state;
-			//
-         4'b000_0 : next_state = 3'b001;
+	//next_state changes based on value of present state
+	always @(present_state)
+		casex( present_state )
+         3'b000 : next_state = 3'b001;
          //
-         4'b001_0 : next_state = 3'b010;
+         3'b001 : next_state = 3'b010;
          //
-         4'b010_0 : next_state = 3'b011;
+         3'b010 : next_state = 3'b011;
          //
-         4'b011_0 : next_state = 3'b100;
+         3'b011 : next_state = 3'b100;
          //
-         4'b100_0 : next_state = 3'b101;
+         3'b100 : next_state = 3'b101;
          //
-         4'b101_0 : next_state = 3'b110;
+         3'b101 : next_state = 3'b110;
          //
-         4'b110_0 : next_state = 3'b111;
+         3'b110 : next_state = 3'b111;
          //
-         4'b111_0 : next_state = 3'b000;
-			//when clock pulse is high, next_state is not changed to
-         //the next value
+         3'b111 : next_state = 3'b000;
 			default	: next_state = present_state;
 		endcase
 		
@@ -82,20 +76,19 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	// Output Combinational Logic
 	// (output values can change whenever an input or state changes)
 	//***************************************************************
-	
-	always @( present_state, clk_480Hz)
-		casex( {present_state, clk_480Hz} )
-         //Mealey finite state machine
-         //Output changes based on state and only when clock pulse is
-         //high, this means that state will change once every full clock pulse
-			4'b000_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111110_000;
-         4'b001_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111101_001;
-         4'b010_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111011_010;
-         4'b011_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11110111_011;
-         4'b100_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11101111_100;
-         4'b101_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11011111_101;
-         4'b110_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b10111111_110;
-         4'b111_1  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b01111111_111;
+	always @( present_state)
+		casex( present_state )
+         //Moore finite state machine
+         //Output changes only when present_state value changes at
+         //top end of the clock
+			3'b000  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111110_000;
+         3'b001  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111101_001;
+         3'b010  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111011_010;
+         3'b011  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11110111_011;
+         3'b100  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11101111_100;
+         3'b101  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11011111_101;
+         3'b110  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b10111111_110;
+         3'b111  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b01111111_111;
 			default   : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111111_xxx;
 		endcase
 endmodule 
