@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Mon Oct 16 13:23:54 2017
+Mapped Date    : Fri Oct 20 17:59:33 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,11 +19,11 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 23 secs 
-Total CPU  time at the beginning of Placer: 21 secs 
+Total REAL time at the beginning of Placer: 22 secs 
+Total CPU  time at the beginning of Placer: 22 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:8608d75f) REAL time: 25 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:8608d75f) REAL time: 23 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -46,46 +46,46 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: din<15>   IOSTANDARD = LVCMOS33
 
 
-Phase 2.7  Design Feasibility Check (Checksum:8608d75f) REAL time: 25 secs 
+Phase 2.7  Design Feasibility Check (Checksum:8608d75f) REAL time: 23 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:8608d75f) REAL time: 25 secs 
+Phase 3.31  Local Placement Optimization (Checksum:8608d75f) REAL time: 23 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:fb25ea2) REAL time: 27 secs 
+(Checksum:fb25ea2) REAL time: 26 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:fb25ea2) REAL time: 27 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:fb25ea2) REAL time: 26 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:fb25ea2) REAL time: 27 secs 
+Phase 6.3  Local Placement Optimization (Checksum:fb25ea2) REAL time: 26 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:fb25ea2) REAL time: 27 secs 
+Phase 7.5  Local Placement Optimization (Checksum:fb25ea2) REAL time: 26 secs 
 
 Phase 8.8  Global Placement
 ...................
 .....
 ..................
 ..........................................................................
-Phase 8.8  Global Placement (Checksum:ad77578e) REAL time: 28 secs 
+Phase 8.8  Global Placement (Checksum:ad77578e) REAL time: 26 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:ad77578e) REAL time: 28 secs 
+Phase 9.5  Local Placement Optimization (Checksum:ad77578e) REAL time: 26 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:6bb90524) REAL time: 28 secs 
+Phase 10.18  Placement Optimization (Checksum:6bb90524) REAL time: 27 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:6bb90524) REAL time: 28 secs 
+Phase 11.5  Local Placement Optimization (Checksum:6bb90524) REAL time: 27 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:6bb90524) REAL time: 28 secs 
+Phase 12.34  Placement Validation (Checksum:6bb90524) REAL time: 27 secs 
 
-Total REAL time to Placer completion: 29 secs 
-Total CPU  time to Placer completion: 26 secs 
+Total REAL time to Placer completion: 27 secs 
+Total CPU  time to Placer completion: 27 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net addr_shot is sourced by a
@@ -178,9 +178,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.56
 
-Peak Memory Usage:  919 MB
-Total REAL time to MAP completion:  30 secs 
-Total CPU time to MAP completion:   27 secs 
+Peak Memory Usage:  896 MB
+Total REAL time to MAP completion:  28 secs 
+Total CPU time to MAP completion:   28 secs 
 
 Mapping completed.
 See MAP report file "top_level_all_map.mrp" for details.

@@ -22,7 +22,7 @@ module pixel_clk(clk_in, reset, clk_out);
 	reg clk_out;
    
    //variables
-	integer i;
+	integer i = 32'b0;
 	
 	/*
 	Code divides incoming clock by number specified in 

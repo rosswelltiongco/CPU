@@ -35,7 +35,7 @@ module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
     
     //conditional continuous assignments for reading the register
     assign DA = oeA ? Dout : 16'hz;
-    assign DA = oeB ? Dout : 16'hz;
+    assign DB = oeB ? Dout : 16'hz;
 
 
 endmodule

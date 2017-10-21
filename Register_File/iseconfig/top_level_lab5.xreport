@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-17T15:54:57</DateModified>
+  <DateModified>2017-10-20T18:02:43</DateModified>
   <ModuleName>top_level_lab5</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-10-20T17:46:22</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/iseconfig/top_level_lab5.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-17T10:06:15</DateInitialized>

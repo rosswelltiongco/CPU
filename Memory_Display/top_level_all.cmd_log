@@ -83,3 +83,23 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off top_level_all_map.ncd top_level_all.ncd top_level_all.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_all.twx top_level_all.ncd -o top_level_all.twr top_level_all.pcf -ucf memory_top_level.ucf 
 bitgen -intstyle ise -f top_level_all.ut top_level_all.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc memory_top_level.ucf -p xc7a100t-csg324-3 top_level_all.ngc top_level_all.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_all_map.ncd top_level_all.ngd top_level_all.pcf 
+par -w -intstyle ise -ol high -mt off top_level_all_map.ncd top_level_all.ncd top_level_all.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_all.twx top_level_all.ncd -o top_level_all.twr top_level_all.pcf -ucf memory_top_level.ucf 
+bitgen -intstyle ise -f top_level_all.ut top_level_all.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc memory_top_level.ucf -p xc7a100t-csg324-3 top_level_all.ngc top_level_all.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_all_map.ncd top_level_all.ngd top_level_all.pcf 
+par -w -intstyle ise -ol high -mt off top_level_all_map.ncd top_level_all.ncd top_level_all.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_all.twx top_level_all.ncd -o top_level_all.twr top_level_all.pcf -ucf memory_top_level.ucf 
+bitgen -intstyle ise -f top_level_all.ut top_level_all.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Memory_Display/top_level_all.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc memory_top_level.ucf -p xc7a100t-csg324-3 top_level_all.ngc top_level_all.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_all_map.ncd top_level_all.ngd top_level_all.pcf 
+par -w -intstyle ise -ol high -mt off top_level_all_map.ncd top_level_all.ncd top_level_all.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_all.twx top_level_all.ncd -o top_level_all.twr top_level_all.pcf -ucf memory_top_level.ucf 
+bitgen -intstyle ise -f top_level_all.ut top_level_all.ncd 

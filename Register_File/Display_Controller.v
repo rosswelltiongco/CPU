@@ -45,7 +45,7 @@ module Display_Controller(clk, reset,
    
    
    //hexto7segment(Q, disp);
-   hexto7segment( hex, {a, b, c, d, e, f, g});
+   hexto7segment decoder( hex, {a, b, c, d, e, f, g});
    
    
 endmodule

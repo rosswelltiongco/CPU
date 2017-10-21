@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab5.ngc top_level_lab5.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab5_map.ncd top_level_lab5.ngd top_level_lab5.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab5_map.ncd top_level_lab5.ncd top_level_lab5.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab5.twx top_level_lab5.ncd -o top_level_lab5.twr top_level_lab5.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab5.ut top_level_lab5.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab5.ngc top_level_lab5.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab5_map.ncd top_level_lab5.ngd top_level_lab5.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab5_map.ncd top_level_lab5.ncd top_level_lab5.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab5.twx top_level_lab5.ncd -o top_level_lab5.twr top_level_lab5.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab5.ut top_level_lab5.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab5.ngc top_level_lab5.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab5_map.ncd top_level_lab5.ngd top_level_lab5.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab5_map.ncd top_level_lab5.ncd top_level_lab5.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab5.twx top_level_lab5.ncd -o top_level_lab5.twr top_level_lab5.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab5.ut top_level_lab5.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab5.ngc top_level_lab5.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab5_map.ncd top_level_lab5.ngd top_level_lab5.pcf 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/top_level_lab5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab5.ngc top_level_lab5.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab5_map.ncd top_level_lab5.ngd top_level_lab5.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab5_map.ncd top_level_lab5.ncd top_level_lab5.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab5.twx top_level_lab5.ncd -o top_level_lab5.twr top_level_lab5.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab5.ut top_level_lab5.ncd 

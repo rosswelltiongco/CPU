@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\top_level_lab5.ncd
+OUTFILE=C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\top_level_lab5.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File
+LICENSE=WebPack
+USER_INFO=211394997_0_0_518

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-23M39DF::  Mon Oct 16 13:24:27 2017
+DESKTOP-23M39DF::  Fri Oct 20 18:00:04 2017
 
 par -w -intstyle ise -ol high -mt off top_level_all_map.ncd top_level_all.ncd
 top_level_all.pcf 
@@ -181,10 +181,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 17 secs 
+Total REAL time to PAR completion: 16 secs 
 Total CPU time to PAR completion: 16 secs 
 
-Peak Memory Usage:  743 MB
+Peak Memory Usage:  739 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

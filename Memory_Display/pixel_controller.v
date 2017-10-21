@@ -79,8 +79,7 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	always @( present_state)
 		casex( present_state )
          //Moore finite state machine
-         //Output changes only when present_state value changes at
-         //top end of the clock
+         //Output changes autonomously
 			3'b000  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111110_000;
          3'b001  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111101_001;
          3'b010  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111011_010;
