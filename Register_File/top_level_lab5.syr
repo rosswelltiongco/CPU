@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: top_level_lab5.prj
 
@@ -105,22 +105,24 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\reg16.v" into library work
+Parsing module <reg16>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\pixel_controller.v" into library work
 Parsing module <pixel_controller>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\pixel_clk.v" into library work
 Parsing module <pixel_clk>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\hexto7segment.v" into library work
 Parsing module <hexto7segment>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\decoder3to8.v" into library work
+Parsing module <decoder3to8>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\ad_mux.v" into library work
 Parsing module <ad_mux>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\reg16.v" into library work
-Parsing module <reg16>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\Register_File.v" into library work
+Parsing module <Register_File>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\one_shot.v" into library work
 Parsing module <one_shot>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\Display_Controller.v" into library work
 Parsing module <Display_Controller>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\decoder3to8.v" into library work
-Parsing module <decoder3to8>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\top_level_lab5.v" into library work
 Parsing module <top_level_lab5>.
 
@@ -132,9 +134,12 @@ Elaborating module <top_level_lab5>.
 
 Elaborating module <one_shot>.
 
+Elaborating module <Register_File>.
+
 Elaborating module <decoder3to8>.
 
 Elaborating module <reg16>.
+WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\top_level_lab5.v" Line 44: Size mismatch in connection of port <W>. Formal port size is 16-bit while actual signal size is 4-bit.
 
 Elaborating module <Display_Controller>.
 
@@ -171,6 +176,12 @@ Synthesizing Unit <one_shot>.
     Summary:
 	inferred  10 D-type flip-flop(s).
 Unit <one_shot> synthesized.
+
+Synthesizing Unit <Register_File>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\Register_File.v".
+    Summary:
+	no macro.
+Unit <Register_File> synthesized.
 
 Synthesizing Unit <decoder3to8>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\decoder3to8.v".
@@ -228,8 +239,8 @@ Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Register_File\pixel_clk.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_38_o_add_2_OUT> created at line 50.
-    Found 32-bit comparator greater for signal <i[31]_GND_38_o_LessThan_2_o> created at line 44
+    Found 32-bit adder for signal <i[31]_GND_39_o_add_2_OUT> created at line 50.
+    Found 32-bit comparator greater for signal <i[31]_GND_39_o_LessThan_2_o> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -298,423 +309,4 @@ Macro Statistics
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
-
-
-Synthesizing (advanced) Unit <hexto7segment>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_disp> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 7-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <Q>             |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <disp>          |          |
-    -----------------------------------------------------------------------
-Unit <hexto7segment> synthesized (advanced).
-
-Synthesizing (advanced) Unit <pixel_clk>.
-The following registers are absorbed into counter <i>: 1 register on signal <i>.
-Unit <pixel_clk> synthesized (advanced).
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# RAMs                                                 : 1
- 16x7-bit single-port distributed Read Only RAM        : 1
-# Counters                                             : 1
- 32-bit up counter                                     : 1
-# Registers                                            : 139
- Flip-Flops                                            : 139
-# Comparators                                          : 1
- 32-bit comparator greater                             : 1
-# Multiplexers                                         : 25
- 1-bit 2-to-1 multiplexer                              : 24
- 4-bit 8-to-1 multiplexer                              : 1
-# FSMs                                                 : 1
-
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <present_state[1:8]> with one-hot encoding.
--------------------
- State | Encoding
--------------------
- 000   | 00000001
- 001   | 00000010
- 010   | 00000100
- 011   | 00001000
- 100   | 00010000
- 101   | 00100000
- 110   | 01000000
- 111   | 10000000
--------------------
-WARNING:Xst:2042 - Unit reg16: 32 internal tristates are replaced by logic (pull-up yes): DA<0>, DA<10>, DA<11>, DA<12>, DA<13>, DA<14>, DA<15>, DA<1>, DA<2>, DA<3>, DA<4>, DA<5>, DA<6>, DA<7>, DA<8>, DA<9>, DB<0>, DB<10>, DB<11>, DB<12>, DB<13>, DB<14>, DB<15>, DB<1>, DB<2>, DB<3>, DB<4>, DB<5>, DB<6>, DB<7>, DB<8>, DB<9>.
-INFO:Xst:2261 - The FF/Latch <R2/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R2/Dout_14> <R2/Dout_13> <R2/Dout_12> <R2/Dout_11> <R2/Dout_10> <R2/Dout_9> <R2/Dout_8> <R2/Dout_7> <R2/Dout_6> <R2/Dout_5> <R2/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R0/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R0/Dout_14> <R0/Dout_13> <R0/Dout_12> <R0/Dout_11> <R0/Dout_10> <R0/Dout_9> <R0/Dout_8> <R0/Dout_7> <R0/Dout_6> <R0/Dout_5> <R0/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R6/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R6/Dout_14> <R6/Dout_13> <R6/Dout_12> <R6/Dout_11> <R6/Dout_10> <R6/Dout_9> <R6/Dout_8> <R6/Dout_7> <R6/Dout_6> <R6/Dout_5> <R6/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R3/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R3/Dout_14> <R3/Dout_13> <R3/Dout_12> <R3/Dout_11> <R3/Dout_10> <R3/Dout_9> <R3/Dout_8> <R3/Dout_7> <R3/Dout_6> <R3/Dout_5> <R3/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R1/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R1/Dout_14> <R1/Dout_13> <R1/Dout_12> <R1/Dout_11> <R1/Dout_10> <R1/Dout_9> <R1/Dout_8> <R1/Dout_7> <R1/Dout_6> <R1/Dout_5> <R1/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R7/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R7/Dout_14> <R7/Dout_13> <R7/Dout_12> <R7/Dout_11> <R7/Dout_10> <R7/Dout_9> <R7/Dout_8> <R7/Dout_7> <R7/Dout_6> <R7/Dout_5> <R7/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R5/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R5/Dout_14> <R5/Dout_13> <R5/Dout_12> <R5/Dout_11> <R5/Dout_10> <R5/Dout_9> <R5/Dout_8> <R5/Dout_7> <R5/Dout_6> <R5/Dout_5> <R5/Dout_4> 
-INFO:Xst:2261 - The FF/Latch <R4/Dout_15> in Unit <top_level_lab5> is equivalent to the following 11 FFs/Latches, which will be removed : <R4/Dout_14> <R4/Dout_13> <R4/Dout_12> <R4/Dout_11> <R4/Dout_10> <R4/Dout_9> <R4/Dout_8> <R4/Dout_7> <R4/Dout_6> <R4/Dout_5> <R4/Dout_4> 
-
-Optimizing unit <top_level_lab5> ...
-
-Optimizing unit <one_shot> ...
-WARNING:Xst:1293 - FF/Latch <main/pxl/i_17> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_18> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_19> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_20> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_21> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_22> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_23> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_24> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_25> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_26> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_27> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_28> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_29> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_30> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <main/pxl/i_31> has a constant value of 0 in block <top_level_lab5>. This FF/Latch will be trimmed during the optimization process.
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top_level_lab5, actual ratio is 0.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 76
- Flip-Flops                                            : 76
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : top_level_lab5.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 129
-#      GND                         : 1
-#      INV                         : 8
-#      LUT2                        : 20
-#      LUT3                        : 6
-#      LUT4                        : 20
-#      LUT5                        : 10
-#      LUT6                        : 23
-#      MUXCY                       : 23
-#      VCC                         : 1
-#      XORCY                       : 17
-# FlipFlops/Latches                : 76
-#      FDC                         : 35
-#      FDCE                        : 40
-#      FDP                         : 1
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 30
-#      IBUF                        : 15
-#      OBUF                        : 15
-
-Device utilization summary:
----------------------------
-
-Selected Device : 7a100tcsg324-3 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:              76  out of  126800     0%  
- Number of Slice LUTs:                   87  out of  63400     0%  
-    Number used as Logic:                87  out of  63400     0%  
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    114
-   Number with an unused Flip Flop:      38  out of    114    33%  
-   Number with an unused LUT:            27  out of    114    23%  
-   Number of fully used LUT-FF pairs:    49  out of    114    42%  
-   Number of unique control sets:        10
-
-IO Utilization: 
- Number of IOs:                          31
- Number of bonded IOBs:                  31  out of    210    14%  
-
-Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+-----------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                         | Load  |
------------------------------------+-----------------------------------------------+-------+
-main/pxl/clk_out                   | NONE(main/main_control/present_state_FSM_FFd7)| 8     |
-clk                                | BUFGP                                         | 68    |
------------------------------------+-----------------------------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: 3.188ns (Maximum Frequency: 313.666MHz)
-   Minimum input arrival time before clock: 1.080ns
-   Maximum output required time after clock: 3.727ns
-   Maximum combinational path delay: 3.795ns
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'main/pxl/clk_out'
-  Clock period: 0.690ns (frequency: 1450.116MHz)
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Delay:               0.690ns (Levels of Logic = 0)
-  Source:            main/main_control/present_state_FSM_FFd8 (FF)
-  Destination:       main/main_control/present_state_FSM_FFd7 (FF)
-  Source Clock:      main/pxl/clk_out rising
-  Destination Clock: main/pxl/clk_out rising
-
-  Data Path: main/main_control/present_state_FSM_FFd8 to main/main_control/present_state_FSM_FFd7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDP:C->Q             10   0.361   0.321  main/main_control/present_state_FSM_FFd8 (main/main_control/present_state_FSM_FFd8)
-     FDC:D                     0.008          main/main_control/present_state_FSM_FFd7
-    ----------------------------------------
-    Total                      0.690ns (0.369ns logic, 0.321ns route)
-                                       (53.5% logic, 46.5% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.188ns (frequency: 313.666MHz)
-  Total number of paths / destination ports: 6206 / 67
--------------------------------------------------------------------------
-Delay:               3.188ns (Levels of Logic = 26)
-  Source:            main/pxl/i_0 (FF)
-  Destination:       main/pxl/i_16 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: main/pxl/i_0 to main/pxl/i_16
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.361   0.688  main/pxl/i_0 (main/pxl/i_0)
-     LUT5:I0->O            1   0.097   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_lut<0> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<0> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<1> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<2> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<3> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<4> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<5> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<5>)
-     MUXCY:CI->O          19   0.023   0.379  main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<6> (main/pxl/Mcompar_i[31]_GND_38_o_LessThan_2_o_cy<6>)
-     LUT2:I1->O            1   0.097   0.000  main/pxl/Mcount_i_lut<0> (main/pxl/Mcount_i_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  main/pxl/Mcount_i_cy<0> (main/pxl/Mcount_i_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<1> (main/pxl/Mcount_i_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<2> (main/pxl/Mcount_i_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<3> (main/pxl/Mcount_i_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<4> (main/pxl/Mcount_i_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<5> (main/pxl/Mcount_i_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<6> (main/pxl/Mcount_i_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<7> (main/pxl/Mcount_i_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<8> (main/pxl/Mcount_i_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<9> (main/pxl/Mcount_i_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<10> (main/pxl/Mcount_i_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<11> (main/pxl/Mcount_i_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<12> (main/pxl/Mcount_i_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<13> (main/pxl/Mcount_i_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  main/pxl/Mcount_i_cy<14> (main/pxl/Mcount_i_cy<14>)
-     MUXCY:CI->O           0   0.023   0.000  main/pxl/Mcount_i_cy<15> (main/pxl/Mcount_i_cy<15>)
-     XORCY:CI->O           1   0.370   0.000  main/pxl/Mcount_i_xor<16> (main/pxl/Mcount_i16)
-     FDC:D                     0.008          main/pxl/i_16
-    ----------------------------------------
-    Total                      3.188ns (2.122ns logic, 1.066ns route)
-                                       (66.6% logic, 33.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'main/pxl/clk_out'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              0.743ns (Levels of Logic = 1)
-  Source:            reset (PAD)
-  Destination:       main/main_control/present_state_FSM_FFd7 (FF)
-  Destination Clock: main/pxl/clk_out rising
-
-  Data Path: reset to main/main_control/present_state_FSM_FFd7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            76   0.001   0.393  reset_IBUF (reset_IBUF)
-     FDC:CLR                   0.349          main/main_control/present_state_FSM_FFd7
-    ----------------------------------------
-    Total                      0.743ns (0.350ns logic, 0.393ns route)
-                                       (47.1% logic, 52.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 221 / 141
--------------------------------------------------------------------------
-Offset:              1.080ns (Levels of Logic = 2)
-  Source:            W_Adr<0> (PAD)
-  Destination:       R0/Dout_15 (FF)
-  Destination Clock: clk rising
-
-  Data Path: W_Adr<0> to R0/Dout_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             8   0.001   0.589  W_Adr_0_IBUF (W_Adr_0_IBUF)
-     LUT4:I0->O            5   0.097   0.298  Wdec/Mmux_y111 (w1)
-     FDCE:CE                   0.095          R1/Dout_0
-    ----------------------------------------
-    Total                      1.080ns (0.193ns logic, 0.887ns route)
-                                       (17.9% logic, 82.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'main/pxl/clk_out'
-  Total number of paths / destination ports: 624 / 15
--------------------------------------------------------------------------
-Offset:              3.727ns (Levels of Logic = 6)
-  Source:            main/main_control/present_state_FSM_FFd4 (FF)
-  Destination:       a (PAD)
-  Source Clock:      main/pxl/clk_out rising
-
-  Data Path: main/main_control/present_state_FSM_FFd4 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              8   0.361   0.328  main/main_control/present_state_FSM_FFd4 (main/main_control/present_state_FSM_FFd4)
-     LUT3:I2->O            2   0.097   0.697  main/mux8to1/Mmux_Y<0>811 (main/mux8to1/Mmux_Y<0>81)
-     LUT6:I0->O            4   0.097   0.697  main/mux8to1/Mmux_Y<0>91 (main/mux8to1/Mmux_Y<0>9)
-     LUT6:I1->O            1   0.097   0.295  main/mux8to1/Mmux_Y<0>2 (main/mux8to1/Mmux_Y<0>)
-     LUT5:I4->O            7   0.097   0.584  main/mux8to1/Mmux_Y<0>8 (main/hex<0>)
-     LUT4:I0->O            1   0.097   0.279  main/decoder/Mram_disp21 (e_OBUF)
-     OBUF:I->O                 0.000          e_OBUF (e)
-    ----------------------------------------
-    Total                      3.727ns (0.846ns logic, 2.881ns route)
-                                       (22.7% logic, 77.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 672 / 7
--------------------------------------------------------------------------
-Offset:              3.250ns (Levels of Logic = 5)
-  Source:            R3/Dout_15 (FF)
-  Destination:       a (PAD)
-  Source Clock:      clk rising
-
-  Data Path: R3/Dout_15 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             2   0.361   0.561  R3/Dout_15 (R3/Dout_15)
-     LUT6:I2->O            1   0.097   0.379  main/mux8to1/Mmux_Y<0>21 (main/mux8to1/Mmux_Y<0>21)
-     LUT6:I4->O            4   0.097   0.697  main/mux8to1/Mmux_Y<0>23 (main/mux8to1/Mmux_Y<0>23)
-     LUT5:I0->O            7   0.097   0.584  main/mux8to1/Mmux_Y<0>8 (main/hex<0>)
-     LUT4:I0->O            1   0.097   0.279  main/decoder/Mram_disp21 (e_OBUF)
-     OBUF:I->O                 0.000          e_OBUF (e)
-    ----------------------------------------
-    Total                      3.250ns (0.749ns logic, 2.501ns route)
-                                       (23.0% logic, 77.0% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1624 / 7
--------------------------------------------------------------------------
-Delay:               3.795ns (Levels of Logic = 7)
-  Source:            R_Adr<2> (PAD)
-  Destination:       a (PAD)
-
-  Data Path: R_Adr<2> to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             8   0.001   0.543  R_Adr_2_IBUF (R_Adr_2_IBUF)
-     LUT3:I0->O            1   0.097   0.683  main/mux8to1/Mmux_Y<0>4_SW0 (N6)
-     LUT6:I1->O            4   0.097   0.707  main/mux8to1/Mmux_Y<0>4 (main/mux8to1/Mmux_Y<0>4)
-     LUT6:I0->O            1   0.097   0.511  main/mux8to1/Mmux_Y<0>6 (main/mux8to1/Mmux_Y<0>10)
-     LUT5:I2->O            7   0.097   0.584  main/mux8to1/Mmux_Y<0>8 (main/hex<0>)
-     LUT4:I0->O            1   0.097   0.279  main/decoder/Mram_disp21 (e_OBUF)
-     OBUF:I->O                 0.000          e_OBUF (e)
-    ----------------------------------------
-    Total                      3.795ns (0.486ns logic, 3.309ns route)
-                                       (12.8% logic, 87.2% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    3.188|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock main/pxl/clk_out
-----------------+---------+---------+---------+---------+
-                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------+---------+---------+---------+---------+
-main/pxl/clk_out|    0.690|         |         |         |
-----------------+---------+---------+---------+---------+
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.09 secs
- 
---> 
-
-Total memory usage is 410328 kilobytes
-
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
 

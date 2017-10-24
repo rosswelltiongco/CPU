@@ -13,10 +13,10 @@
  * Debug Time: 
  *******************************************************************************/
 module Register_File(clk, reset, W_Adr, we, R_Adr, S_Adr, W, R, S);
-	input clk, reset, we;
-	input [2:0] W_Adr, R_Adr, S_Adr;
-	input [15:0] W;
-	output [15:0] R, S;
+	input           clk, reset,    we;
+	input  [2:0]  W_Adr, R_Adr, S_Adr;
+	input  [15:0]     W;
+	output [15:0]     R,     S;
 	
    //Wdec decoder wires
    wire  w7, w6, w5, w4, w3, w2, w1, w0;
