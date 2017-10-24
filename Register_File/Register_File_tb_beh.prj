@@ -1,0 +1,5 @@
+verilog work "reg16.v"
+verilog work "decoder3to8.v"
+verilog work "Register_File.v"
+verilog work "Register_File_tb.v"
+verilog work "C:/Xilinx_ISE_Design_Suite/14.7/ISE_DS/ISE//verilog/src/glbl.v"

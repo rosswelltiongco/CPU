@@ -1,0 +1,37 @@
+ISim log file
+Running: C:\Users\Rosswell\Documents\CPU\Register_File\Register_File_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Rosswell/Documents/CPU/Register_File/Register_File_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING:  For instance uut/R7/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R6/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R5/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R4/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R3/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R2/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R1/, width 16 of formal port Din is not equal to width 28 of actual constant.
+WARNING:  For instance uut/R0/, width 16 of formal port Din is not equal to width 28 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+T=               35000, Radr = 0, R = xxxx, S_Adr = 7  , S = xxxx
+T=               45000, Radr = 1, R = xxxx, S_Adr = 6  , S = xxxx
+T=               55000, Radr = 2, R = xxxx, S_Adr = 5  , S = xxxx
+T=               65000, Radr = 3, R = xxxx, S_Adr = 4  , S = xxxx
+T=               75000, Radr = 4, R = xxxx, S_Adr = 3  , S = xxxx
+T=               85000, Radr = 5, R = xxxx, S_Adr = 2  , S = xxxx
+T=               95000, Radr = 6, R = xxxx, S_Adr = 1  , S = xxxx
+T=              105000, Radr = 7, R = xxxx, S_Adr = 0  , S = xxxx
+T=              195000, Radr = 0, R = xxxx, S_Adr = 7  , S = xxxx
+T=              205000, Radr = 1, R = xxxx, S_Adr = 6  , S = xxxx
+T=              215000, Radr = 2, R = xxxx, S_Adr = 5  , S = xxxx
+T=              225000, Radr = 3, R = xxxx, S_Adr = 4  , S = xxxx
+T=              235000, Radr = 4, R = xxxx, S_Adr = 3  , S = xxxx
+T=              245000, Radr = 5, R = xxxx, S_Adr = 2  , S = xxxx
+T=              255000, Radr = 6, R = xxxx, S_Adr = 1  , S = xxxx
+T=              265000, Radr = 7, R = xxxx, S_Adr = 0  , S = xxxx
