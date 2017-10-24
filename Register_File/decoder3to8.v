@@ -7,8 +7,8 @@
  * Date:     
  * Version:  1.0
  *
- * Description: 3 to 8 decoder <= add more
- * Must be behavioral
+ * Description: Behavioral implementation of a 3-8 decoder that enables a single
+ *	  			    output at any time.	
  *
  * Work  Time: 15 mins
  * Debug Time: 

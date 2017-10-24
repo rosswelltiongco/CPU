@@ -7,7 +7,7 @@
  * Date:     
  * Version:  1.0
  *
- * Description: 
+ * Description: Converts signal into a user convenient 7-segement display
  *
  *
  * Work Time: 15 mins - Jesus

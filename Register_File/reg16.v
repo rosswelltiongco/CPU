@@ -7,8 +7,9 @@
  * Date:     
  * Version:  1.0
  *
- * Description: Register File <= Add more
- *
+ * Description: A 16 bit register with a 16 bit load that activates one of its
+ *              outputs whenever its corresponding output is enabled in order
+ *              to prevent bus contention.
  *
  * Work Time: Jesus - 5min writing, no debugging
  *******************************************************************************/
