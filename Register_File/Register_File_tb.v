@@ -28,6 +28,8 @@ module Register_File_tb;
 	wire [15:0] R;
 	wire [15:0] S;
 
+	integer address;
+	
 	// Instantiate the Unit Under Test (UUT)
 	Register_File uut (
 		.clk(clk), 
@@ -40,8 +42,6 @@ module Register_File_tb;
 		.R(R), 
 		.S(S)
 	);
-	
-	integer address;
 	
 	//Producing a clk
 	always #5 clk = ~clk;	
@@ -56,16 +56,14 @@ module Register_File_tb;
 		S_Adr = 0;
 		W = 0;
 
-		// Wait 100 ns for global reset to finish
-				//One time reset assertion
+		//One time reset assertion
 		@ (negedge clk) reset = 1'b1;
 		@ (negedge clk) reset = 1'b0;
 		
 		//Reading the register
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk) begin //Assign ALL inputs on negedge
+			@ (negedge clk) //Assign ALL inputs on negedge
 				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
-			end
 			@ (posedge clk)// read on posedge
 				$display("T=%t, Radr = %h, R = %h, S_Adr = %h  , S = %h",
 				         $time, R_Adr    , R     , S_Adr       , S      );
@@ -74,17 +72,15 @@ module Register_File_tb;
 		
 		//Writing pattern to the register
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk) begin //Assign ALL inputs on negedge
-				R_Adr = 0; S_Adr = 0 - address; W_Adr = ~address; we = 1; W = 0; reset = 0;
-			end
+			@ (negedge clk)//Assign ALL inputs on negedge
+				R_Adr = 0; S_Adr = 0; W_Adr = address; we = 1; W = ~address; reset = 0;
 			//No display needed since we are writing to register
 		end
 		
 		//Reading the pattern
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk) begin //Assign ALL inputs on negedge
+			@ (negedge clk)  //Assign ALL inputs on negedge
 				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
-			end
 			@ (posedge clk)// read on posedge
 				$display("T=%t, Radr = %h, R = %h, S_Adr = %h  , S = %h",
 				         $time, R_Adr    , R     , S_Adr       , S      );

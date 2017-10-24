@@ -5,53 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 39: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 40: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 41: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 42: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 43: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 44: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 45: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 46: Target &lt;<arg fmt="%s" index="1">R</arg>&gt; of concurrent assignment or output port connection should be a net type.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 40: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 41: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 42: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 43: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 44: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 45: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 46: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/Rosswell/Documents/CPU/Register_File/Register_File.v" Line 39: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">28</arg>-bit.
-</msg>
-
 </messages>
 
