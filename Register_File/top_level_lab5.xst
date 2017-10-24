@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn top_level_lab5.prj
--ofn top_level_lab5
--ofmt NGC
+set -tmpdir "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jesus/Documents/Xilinx_Files/CPU/Register_File/xst"
+run -compileonly yes
 -p xc7a100t-3-csg324
 -top top_level_lab5
 -opt_mode Speed
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn top_level_lab5.prj
