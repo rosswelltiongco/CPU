@@ -11,19 +11,19 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-T=               35000, Radr = 0, R = 0000, S_Adr = 7  , S = 0000
-T=               45000, Radr = 1, R = 0000, S_Adr = 6  , S = 0000
-T=               55000, Radr = 2, R = 0000, S_Adr = 5  , S = 0000
-T=               65000, Radr = 3, R = 0000, S_Adr = 4  , S = 0000
-T=               75000, Radr = 4, R = 0000, S_Adr = 3  , S = 0000
-T=               85000, Radr = 5, R = 0000, S_Adr = 2  , S = 0000
-T=               95000, Radr = 6, R = 0000, S_Adr = 1  , S = 0000
-T=              105000, Radr = 7, R = 0000, S_Adr = 0  , S = 0000
-T=              195000, Radr = 0, R = ffff, S_Adr = 7  , S = fff8
-T=              205000, Radr = 1, R = fffe, S_Adr = 6  , S = fff9
-T=              215000, Radr = 2, R = fffd, S_Adr = 5  , S = fffa
-T=              225000, Radr = 3, R = fffc, S_Adr = 4  , S = fffb
-T=              235000, Radr = 4, R = fffb, S_Adr = 3  , S = fffc
-T=              245000, Radr = 5, R = fffa, S_Adr = 2  , S = fffd
-T=              255000, Radr = 6, R = fff9, S_Adr = 1  , S = fffe
-T=              265000, Radr = 7, R = fff8, S_Adr = 0  , S = ffff
+T=               35000, R_Adr = 0, R_Adr = 0000, S_Adr = 7  , S = 0000
+T=               45000, R_Adr = 1, R_Adr = 0000, S_Adr = 6  , S = 0000
+T=               55000, R_Adr = 2, R_Adr = 0000, S_Adr = 5  , S = 0000
+T=               65000, R_Adr = 3, R_Adr = 0000, S_Adr = 4  , S = 0000
+T=               75000, R_Adr = 4, R_Adr = 0000, S_Adr = 3  , S = 0000
+T=               85000, R_Adr = 5, R_Adr = 0000, S_Adr = 2  , S = 0000
+T=               95000, R_Adr = 6, R_Adr = 0000, S_Adr = 1  , S = 0000
+T=              105000, R_Adr = 7, R_Adr = 0000, S_Adr = 0  , S = 0000
+T=              195000, R_Adr = 0, R_Adr = ffff, S_Adr = 7  , S = fff8
+T=              205000, R_Adr = 1, R_Adr = fffe, S_Adr = 6  , S = fff9
+T=              215000, R_Adr = 2, R_Adr = fffd, S_Adr = 5  , S = fffa
+T=              225000, R_Adr = 3, R_Adr = fffc, S_Adr = 4  , S = fffb
+T=              235000, R_Adr = 4, R_Adr = fffb, S_Adr = 3  , S = fffc
+T=              245000, R_Adr = 5, R_Adr = fffa, S_Adr = 2  , S = fffd
+T=              255000, R_Adr = 6, R_Adr = fff9, S_Adr = 1  , S = fffe
+T=              265000, R_Adr = 7, R_Adr = fff8, S_Adr = 0  , S = ffff

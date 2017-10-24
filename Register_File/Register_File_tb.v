@@ -7,8 +7,8 @@
  * Date:     October 23, 2017
  * Version:  1.0
  *
- * Description: Verilog test fixture to test 16 bit register functinoality by
- * reading the contents, writing new values, and reading the recently written
+ * Description: Verilog test fixture to test register file functinoality by
+ * reading the contents, writing new values, and reading the newly written
  * values. 
  *
  *******************************************************************************/
@@ -43,7 +43,7 @@ module Register_File_tb;
 		.S(S)
 	);
 	
-	//Producing a clk
+	//Producing a clk that toggles at half the desired clock time
 	always #5 clk = ~clk;	
 
 	initial begin
@@ -60,32 +60,39 @@ module Register_File_tb;
 		@ (negedge clk) reset = 1'b1;
 		@ (negedge clk) reset = 1'b0;
 		
+		
 		//Reading the register
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk) //Assign ALL inputs on negedge
+			//Assigning ALL INPUTS on the negative edge of clk
+			@ (negedge clk)
 				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
-			@ (posedge clk)// read on posedge
-				$display("T=%t, Radr = %h, R = %h, S_Adr = %h  , S = %h",
-				         $time, R_Adr    , R     , S_Adr       , S      );
+			//Reading on the positive edge of clk
+			@ (posedge clk)
+				$display("T=%t, R_Adr = %h, R_Adr = %h, S_Adr = %h  , S = %h",
+				         $time, R_Adr     , R         , S_Adr       , S      );
 		end
 		
 		
-		//Writing pattern to the register
+		//Writing pattern to the register file
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk)//Assign ALL inputs on negedge
+			//Assigning ALL INPUTS on the negative edge of clk
+			@ (negedge clk)
 				R_Adr = 0; S_Adr = 0; W_Adr = address; we = 1; W = ~address; reset = 0;
 			//No display needed since we are writing to register
 		end
 		
 		//Reading the pattern
 		for (address = 0; address < 8; address = address + 1) begin
-			@ (negedge clk)  //Assign ALL inputs on negedge
+			//Assigning ALL INPUTS on the negative edge of clk
+			@ (negedge clk)
 				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
-			@ (posedge clk)// read on posedge
-				$display("T=%t, Radr = %h, R = %h, S_Adr = %h  , S = %h",
-				         $time, R_Adr    , R     , S_Adr       , S      );
+			//Reading on the positive edge of clk
+			@ (posedge clk)
+				$display("T=%t, R_Adr = %h, R_Adr = %h, S_Adr = %h  , S = %h",
+				         $time, R_Adr     , R         , S_Adr       , S      );
 		end		
 
-	end   
+	end  
+	
 endmodule
 
