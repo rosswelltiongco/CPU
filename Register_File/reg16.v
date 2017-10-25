@@ -7,8 +7,8 @@
  * Date:     
  * Version:  1.0
  *
- * Description: A 16 bit register with a 16 bit load that activates one of its
- *              outputs whenever its corresponding output is enabled in order
+ * Description: A 16 bit register with a 16 bit load that outputs 
+ *              DA or DB whenever their corresponding inputs are enabled in order
  *              to prevent bus contention.
  *
  * Work Time: Jesus - 5min writing, no debugging
@@ -25,16 +25,18 @@ module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
     output [15:0] DA, DB;
 
     //Behavioral section for writing to the register
-   always @ ( posedge clk or posedge reset)
+    always @ ( posedge clk or posedge reset)
+      //If reset is asserted, set register to 0
       if(reset)
          Dout <= 16'b0;
+      //If reset is unasserted, Dout will load Din whenever the load is active
       else
          if(ld)
             Dout <= Din;
          else
             Dout <= Dout;
     
-    //conditional continuous assignments for reading the register
+    //conditional continuous assignments for reading the register with tri-state
     assign DA = oeA ? Dout : 16'hz;
     assign DB = oeB ? Dout : 16'hz;
 

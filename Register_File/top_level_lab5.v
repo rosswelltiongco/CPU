@@ -39,13 +39,13 @@ module top_level_lab5(clk, reset, we, W, W_Adr, R_Adr, S_Adr, anode[7:0],
    
    
    //write enable debouncer
-   //          one_shot( clk_in, reset, Din, Dout       );
+ //one_shot            ( clk_in, reset, Din, Dout       );
    one_shot we_debounce( clk   , reset, we , we_one_shot);
    
-   //       Register_File(clk, reset, W_Adr,          we, R_Adr, S_Adr, W, R, S);
+ //Register_File         (clk, reset, W_Adr,          we, R_Adr, S_Adr, W, R, S);
    Register_File reg_file(clk, reset, W_Adr, we_one_shot, R_Adr, S_Adr, W, R, S);
    
-   //Display_Controller   (      clk,    reset,
+ //Display_Controller     (      clk,    reset,
    Display_Controller main(      clk,    reset, 
    //                           seg7,     seg6,     seg5,     seg4,
                             R[15:12],  R[11:8],   R[7:4],   R[3:0], 

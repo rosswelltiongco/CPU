@@ -4,12 +4,12 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: Register_File.tb
- * Date:     October 23, 2017
+ * Date:     
  * Version:  1.0
  *
  * Description: Verilog test fixture to test register file functinoality by
- * reading the contents, writing new values, and reading the newly written
- * values. 
+ * reading the contents of a register, writing new values, and reading the newly
+ * written values. 
  *
  *******************************************************************************/
 
@@ -66,7 +66,7 @@ module Register_File_tb;
 			//Assigning ALL INPUTS on the negative edge of clk
 			@ (negedge clk)
 				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
-			//Reading on the positive edge of clk
+			//Reading values on the positive edge of clk
 			@ (posedge clk)
 				$display("T=%t, R_Adr = %h, R_Adr = %h, S_Adr = %h  , S = %h",
 				         $time, R_Adr     , R         , S_Adr       , S      );
