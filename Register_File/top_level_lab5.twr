@@ -37,15 +37,15 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-W<0>        |    0.368(R)|      FAST  |    1.691(R)|      SLOW  |clk_BUFGP         |   0.000|
-W<1>        |    0.163(R)|      FAST  |    1.923(R)|      SLOW  |clk_BUFGP         |   0.000|
-W<2>        |    0.224(R)|      FAST  |    1.813(R)|      SLOW  |clk_BUFGP         |   0.000|
-W<3>        |   -0.086(R)|      FAST  |    2.116(R)|      SLOW  |clk_BUFGP         |   0.000|
-W_Adr<0>    |    0.352(R)|      FAST  |    1.485(R)|      SLOW  |clk_BUFGP         |   0.000|
-W_Adr<1>    |    0.428(R)|      FAST  |    1.462(R)|      SLOW  |clk_BUFGP         |   0.000|
-W_Adr<2>    |    0.605(R)|      FAST  |    1.369(R)|      SLOW  |clk_BUFGP         |   0.000|
-reset       |    0.503(R)|      FAST  |    1.988(R)|      SLOW  |clk_BUFGP         |   0.000|
-we          |   -0.410(R)|      FAST  |    2.300(R)|      SLOW  |clk_BUFGP         |   0.000|
+W<0>        |   -0.180(R)|      FAST  |    2.121(R)|      SLOW  |clk_BUFGP         |   0.000|
+W<1>        |   -0.292(R)|      FAST  |    2.290(R)|      SLOW  |clk_BUFGP         |   0.000|
+W<2>        |   -0.165(R)|      FAST  |    2.310(R)|      SLOW  |clk_BUFGP         |   0.000|
+W<3>        |   -0.238(R)|      FAST  |    2.488(R)|      SLOW  |clk_BUFGP         |   0.000|
+W_Adr<0>    |    0.193(R)|      FAST  |    1.783(R)|      SLOW  |clk_BUFGP         |   0.000|
+W_Adr<1>    |    0.247(R)|      FAST  |    1.651(R)|      SLOW  |clk_BUFGP         |   0.000|
+W_Adr<2>    |    0.153(R)|      FAST  |    1.760(R)|      SLOW  |clk_BUFGP         |   0.000|
+reset       |    0.109(R)|      FAST  |    2.033(R)|      SLOW  |clk_BUFGP         |   0.000|
+we          |   -0.729(R)|      FAST  |    2.662(R)|      SLOW  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -53,13 +53,13 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-a           |        13.017(R)|      SLOW  |         4.335(R)|      FAST  |clk_BUFGP         |   0.000|
-b           |        13.032(R)|      SLOW  |         4.203(R)|      FAST  |clk_BUFGP         |   0.000|
-c           |        12.973(R)|      SLOW  |         4.220(R)|      FAST  |clk_BUFGP         |   0.000|
-d           |        13.089(R)|      SLOW  |         4.363(R)|      FAST  |clk_BUFGP         |   0.000|
-e           |        12.372(R)|      SLOW  |         3.923(R)|      FAST  |clk_BUFGP         |   0.000|
-f           |        12.725(R)|      SLOW  |         4.121(R)|      FAST  |clk_BUFGP         |   0.000|
-g           |        12.850(R)|      SLOW  |         4.147(R)|      FAST  |clk_BUFGP         |   0.000|
+a           |        13.899(R)|      SLOW  |         4.345(R)|      FAST  |clk_BUFGP         |   0.000|
+b           |        13.934(R)|      SLOW  |         4.309(R)|      FAST  |clk_BUFGP         |   0.000|
+c           |        13.643(R)|      SLOW  |         4.137(R)|      FAST  |clk_BUFGP         |   0.000|
+d           |        13.970(R)|      SLOW  |         4.355(R)|      FAST  |clk_BUFGP         |   0.000|
+e           |        13.377(R)|      SLOW  |         4.084(R)|      FAST  |clk_BUFGP         |   0.000|
+f           |        13.426(R)|      SLOW  |         4.085(R)|      FAST  |clk_BUFGP         |   0.000|
+g           |        13.668(R)|      SLOW  |         4.221(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -67,66 +67,66 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.334|         |         |         |
+clk            |    3.335|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-R_Adr<0>       |a              |   11.160|
-R_Adr<0>       |b              |   10.870|
-R_Adr<0>       |c              |   11.121|
-R_Adr<0>       |d              |   11.232|
-R_Adr<0>       |e              |   10.727|
-R_Adr<0>       |f              |   10.871|
-R_Adr<0>       |g              |   11.205|
-R_Adr<1>       |a              |   11.359|
-R_Adr<1>       |b              |   11.392|
-R_Adr<1>       |c              |   11.442|
-R_Adr<1>       |d              |   11.431|
-R_Adr<1>       |e              |   10.926|
-R_Adr<1>       |f              |   11.180|
-R_Adr<1>       |g              |   11.404|
-R_Adr<2>       |a              |   11.426|
-R_Adr<2>       |b              |   11.668|
-R_Adr<2>       |c              |   11.718|
-R_Adr<2>       |d              |   11.494|
-R_Adr<2>       |e              |   11.007|
-R_Adr<2>       |f              |   11.456|
-R_Adr<2>       |g              |   11.487|
-S_Adr<0>       |a              |   10.753|
-S_Adr<0>       |b              |   10.769|
-S_Adr<0>       |c              |   10.710|
-S_Adr<0>       |d              |   10.825|
-S_Adr<0>       |e              |    9.815|
-S_Adr<0>       |f              |   10.462|
-S_Adr<0>       |g              |   10.307|
-S_Adr<1>       |a              |   11.065|
-S_Adr<1>       |b              |   10.956|
-S_Adr<1>       |c              |   10.897|
-S_Adr<1>       |d              |   11.137|
-S_Adr<1>       |e              |   10.296|
-S_Adr<1>       |f              |   10.649|
-S_Adr<1>       |g              |   10.774|
-S_Adr<2>       |a              |   12.102|
-S_Adr<2>       |b              |   12.018|
-S_Adr<2>       |c              |   12.068|
-S_Adr<2>       |d              |   12.174|
-S_Adr<2>       |e              |   11.390|
-S_Adr<2>       |f              |   11.806|
-S_Adr<2>       |g              |   11.868|
+R_Adr<0>       |a              |   10.739|
+R_Adr<0>       |b              |   10.774|
+R_Adr<0>       |c              |   10.483|
+R_Adr<0>       |d              |   10.810|
+R_Adr<0>       |e              |   10.217|
+R_Adr<0>       |f              |   10.266|
+R_Adr<0>       |g              |   10.508|
+R_Adr<1>       |a              |   11.184|
+R_Adr<1>       |b              |   11.219|
+R_Adr<1>       |c              |   10.928|
+R_Adr<1>       |d              |   11.255|
+R_Adr<1>       |e              |   10.662|
+R_Adr<1>       |f              |   10.711|
+R_Adr<1>       |g              |   10.953|
+R_Adr<2>       |a              |   11.059|
+R_Adr<2>       |b              |   11.094|
+R_Adr<2>       |c              |   10.803|
+R_Adr<2>       |d              |   11.130|
+R_Adr<2>       |e              |   10.537|
+R_Adr<2>       |f              |   10.586|
+R_Adr<2>       |g              |   10.828|
+S_Adr<0>       |a              |   10.800|
+S_Adr<0>       |b              |   10.835|
+S_Adr<0>       |c              |   10.544|
+S_Adr<0>       |d              |   10.871|
+S_Adr<0>       |e              |   10.278|
+S_Adr<0>       |f              |   10.327|
+S_Adr<0>       |g              |   10.569|
+S_Adr<1>       |a              |   10.562|
+S_Adr<1>       |b              |   10.597|
+S_Adr<1>       |c              |   10.368|
+S_Adr<1>       |d              |   10.633|
+S_Adr<1>       |e              |   10.040|
+S_Adr<1>       |f              |   10.151|
+S_Adr<1>       |g              |   10.331|
+S_Adr<2>       |a              |   12.171|
+S_Adr<2>       |b              |   12.042|
+S_Adr<2>       |c              |   12.191|
+S_Adr<2>       |d              |   12.238|
+S_Adr<2>       |e              |   11.804|
+S_Adr<2>       |f              |   11.974|
+S_Adr<2>       |g              |   12.102|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Oct 20 18:08:34 2017 
+Analysis completed Wed Oct 25 13:22:46 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 668 MB
+Peak Memory Usage: 672 MB
 
 
 

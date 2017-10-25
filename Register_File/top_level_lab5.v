@@ -41,8 +41,10 @@ module top_level_lab5(clk, reset, we, W, W_Adr, R_Adr, S_Adr, anode[7:0],
    //one_shot          ( clk_in, reset, Din, Dout       );
    one_shot we_debounce( clk   , reset, we , we_one_shot);
    
-   //Register_File       (clk, reset, W_Adr,          we, R_Adr, S_Adr, W, R, S);
-   Register_File reg_file(clk, reset, W_Adr, we_one_shot, R_Adr, S_Adr, W, R, S);
+   //Register_File       (clk, reset, W_Adr,          we, R_Adr, S_Adr, 
+   Register_File reg_file(clk, reset, W_Adr, we_one_shot, R_Adr, S_Adr,
+   //                               W, R, S);
+                         {12'hFFF, W}, R, S);
    
    //Display_Controller   (      clk,    reset,
    Display_Controller main(      clk,    reset, 

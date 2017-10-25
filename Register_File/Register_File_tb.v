@@ -65,7 +65,8 @@ module Register_File_tb;
 		for (address = 0; address < 8; address = address + 1) begin
 			//Assigning ALL INPUTS on the negative edge of clk
 			@ (negedge clk)
-				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
+				R_Adr = address; S_Adr = 7 - address; 
+            W_Adr = 0; we = 0; W = 0; reset = 0;
 			//Reading values on the positive edge of clk
 			@ (posedge clk)
 				$display("T=%t, R_Adr = %h, R_Adr = %h, S_Adr = %h  , S = %h",
@@ -77,7 +78,8 @@ module Register_File_tb;
 		for (address = 0; address < 8; address = address + 1) begin
 			//Assigning ALL INPUTS on the negative edge of clk
 			@ (negedge clk)
-				R_Adr = 0; S_Adr = 0; W_Adr = address; we = 1; W = ~address; reset = 0;
+				R_Adr = 0; S_Adr = 0; W_Adr = address; 
+            we = 1; W = ~address; reset = 0;
 			//No display needed since we are writing to register
 		end
 		
@@ -85,7 +87,8 @@ module Register_File_tb;
 		for (address = 0; address < 8; address = address + 1) begin
 			//Assigning ALL INPUTS on the negative edge of clk
 			@ (negedge clk)
-				R_Adr = address; S_Adr = 7 - address; W_Adr = 0; we = 0; W = 0; reset = 0;
+				R_Adr = address; S_Adr = 7 - address; 
+            W_Adr = 0; we = 0; W = 0; reset = 0;
 			//Reading on the positive edge of clk
 			@ (posedge clk)
 				$display("T=%t, R_Adr = %h, R_Adr = %h, S_Adr = %h  , S = %h",
