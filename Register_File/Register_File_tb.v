@@ -3,8 +3,8 @@
  *
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
- * Filename: Register_File.tb
- * Date:     
+ * Filename: Register_File_tb.v
+ * Date:     October 25, 2017
  * Version:  1.0
  *
  * Description: Verilog test fixture to test register file functinoality by

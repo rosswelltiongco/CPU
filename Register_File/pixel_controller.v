@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: pixel_controller.v
- * Date:     October 16, 2017
+ * Date:     October 25, 2017
  * Version:  1.0
  *
  * Description: Generates the signals for the common anode inputs to the
@@ -91,4 +91,5 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
          3'b111  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b01111111_111;
 			default   : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111111_xxx;
 		endcase
+      
 endmodule 

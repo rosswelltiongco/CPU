@@ -4,14 +4,13 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: reg16.v
- * Date:     
+ * Date:     October 25, 2017
  * Version:  1.0
  *
  * Description: A 16 bit register with a 16 bit load that outputs 
  *              DA or DB whenever their corresponding inputs are enabled in order
  *              to prevent bus contention.
  *
- * Work Time: Jesus - 5min writing, no debugging
  *******************************************************************************/
 module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
     //Declare Inputs
@@ -39,6 +38,5 @@ module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
     //conditional continuous assignments for reading the register with tri-state
     assign DA = oeA ? Dout : 16'hz;
     assign DB = oeB ? Dout : 16'hz;
-
 
 endmodule

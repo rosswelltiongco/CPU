@@ -4,21 +4,19 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: Display_Controller.v
- * Date:     
+ * Date:     October 25, 2017
  * Version:  1.0
  *
- * Description: Converts signal into a user convenient 7-segement display
+ * Description: Outputs 8 4-bit values to 8 different seven segment displays
+ * at a refresh rate of 60Hz
  *
- *
- * Work Time: 15 mins - Jesus
- * Debug Time: 15 mins - Jesus
  *******************************************************************************/
 module Display_Controller(clk, reset, 
                           seg7, seg6, seg5, seg4, seg3, seg2, seg1, seg0, 
                             A7,   A6,   A5,   A4,   A3,   A2,   A1,   A0, 
                              a,    b,    c,    d,    e,    f,    g);
    //Declare inputs
-   input clk, reset;
+   input       clk, reset;
    input [3:0] seg7, seg6, seg5, seg4, seg3, seg2, seg1, seg0;
    
    
@@ -33,18 +31,20 @@ module Display_Controller(clk, reset,
    
    //Declare modules
    
-   //pixel_clk(clk_in, reset, clk_out);
-   pixel_clk pxl(clk, reset, pixel_clk_out);
+   //pixel_clk  (clk_in, reset, clk_out      );
+   pixel_clk pxl(   clk, reset, pixel_clk_out);
    
-   //pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_sel);
-   pixel_controller main_control(pixel_clk_out, reset, A7, A6, A5, A4, A3, A2, A1, A0, seg_sel);
+   //pixel_controller           (clk_480Hz    , reset, 
+   pixel_controller main_control(pixel_clk_out, reset, 
+                               //a7, a6, a5, a4, a3, a2, a1, a0, seg_sel);
+                                 A7, A6, A5, A4, A3, A2, A1, A0, seg_sel);
    
    
-   //ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
+   //ad_mux      (d7  , d6  , d5  , d4  , d3  , d2  , d1  , d0  , sel    , Y  );
    ad_mux mux8to1(seg7, seg6, seg5, seg4, seg3, seg2, seg1, seg0, seg_sel, hex);
    
    
-   //hexto7segment(Q, disp);
+   //hexto7segment      (Q   , disp                 );
    hexto7segment decoder( hex, {a, b, c, d, e, f, g});
    
    
