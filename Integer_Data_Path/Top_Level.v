@@ -1,23 +1,15 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    17:33:58 10/25/2017 
-// Design Name: 
-// Module Name:    Top_Level 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+/********************************************************************************
+ *
+ * Author:   Rosswell Tiongco & Jesus Luciano
+ * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
+ * Filename: Top_Level.v
+ * Date:     October 25, 2017
+ * Version:  1.0
+ *
+ * Description: FILL ME
+ *
+ *******************************************************************************/
 module Top_Level();
 
 
