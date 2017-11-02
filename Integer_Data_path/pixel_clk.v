@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: pixel_clk.v
- * Date:     October 25, 2017
+ * Date:     November 6, 2017
  * Version:  1.0
  *
  * Description:  A 480 Hz clock divider used to time multiplex the common

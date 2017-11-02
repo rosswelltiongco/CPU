@@ -1,0 +1,167 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf
+-ucf top_level.ucf
+
+Design file:              Top_Level.ncd
+Physical constraint file: Top_Level.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |    0.667(R)|      FAST  |    1.288(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.664|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Alu_Op<0>      |N              |    9.298|
+Alu_Op<0>      |Z              |   10.617|
+Alu_Op<0>      |segs<0>        |   13.151|
+Alu_Op<0>      |segs<1>        |   12.998|
+Alu_Op<0>      |segs<2>        |   12.729|
+Alu_Op<0>      |segs<3>        |   13.468|
+Alu_Op<0>      |segs<4>        |   13.258|
+Alu_Op<0>      |segs<5>        |   12.444|
+Alu_Op<0>      |segs<6>        |   13.496|
+Alu_Op<1>      |N              |    8.656|
+Alu_Op<1>      |Z              |   10.459|
+Alu_Op<1>      |segs<0>        |   13.230|
+Alu_Op<1>      |segs<1>        |   13.077|
+Alu_Op<1>      |segs<2>        |   12.808|
+Alu_Op<1>      |segs<3>        |   13.547|
+Alu_Op<1>      |segs<4>        |   13.337|
+Alu_Op<1>      |segs<5>        |   12.523|
+Alu_Op<1>      |segs<6>        |   13.575|
+Alu_Op<2>      |N              |    8.596|
+Alu_Op<2>      |Z              |    9.044|
+Alu_Op<2>      |segs<0>        |    9.102|
+Alu_Op<2>      |segs<1>        |    8.949|
+Alu_Op<2>      |segs<2>        |    8.680|
+Alu_Op<2>      |segs<3>        |    9.419|
+Alu_Op<2>      |segs<4>        |    9.209|
+Alu_Op<2>      |segs<5>        |    8.395|
+Alu_Op<2>      |segs<6>        |    9.447|
+Alu_Op<3>      |N              |    8.015|
+Alu_Op<3>      |Z              |    8.434|
+Alu_Op<3>      |segs<0>        |   11.182|
+Alu_Op<3>      |segs<1>        |   11.029|
+Alu_Op<3>      |segs<2>        |   10.760|
+Alu_Op<3>      |segs<3>        |   11.499|
+Alu_Op<3>      |segs<4>        |   11.289|
+Alu_Op<3>      |segs<5>        |   10.475|
+Alu_Op<3>      |segs<6>        |   11.527|
+R_Adr<0>       |N              |   11.631|
+R_Adr<0>       |Z              |   11.530|
+R_Adr<0>       |segs<0>        |   13.730|
+R_Adr<0>       |segs<1>        |   13.577|
+R_Adr<0>       |segs<2>        |   13.308|
+R_Adr<0>       |segs<3>        |   14.047|
+R_Adr<0>       |segs<4>        |   13.837|
+R_Adr<0>       |segs<5>        |   13.023|
+R_Adr<0>       |segs<6>        |   14.075|
+R_Adr<1>       |N              |   12.191|
+R_Adr<1>       |Z              |   12.090|
+R_Adr<1>       |segs<0>        |   14.168|
+R_Adr<1>       |segs<1>        |   14.015|
+R_Adr<1>       |segs<2>        |   13.746|
+R_Adr<1>       |segs<3>        |   14.485|
+R_Adr<1>       |segs<4>        |   14.275|
+R_Adr<1>       |segs<5>        |   13.461|
+R_Adr<1>       |segs<6>        |   14.513|
+R_Adr<2>       |N              |   11.548|
+R_Adr<2>       |Z              |   11.829|
+R_Adr<2>       |segs<0>        |   14.205|
+R_Adr<2>       |segs<1>        |   14.052|
+R_Adr<2>       |segs<2>        |   13.783|
+R_Adr<2>       |segs<3>        |   14.522|
+R_Adr<2>       |segs<4>        |   14.312|
+R_Adr<2>       |segs<5>        |   13.498|
+R_Adr<2>       |segs<6>        |   14.550|
+S_Adr<0>       |N              |   11.265|
+S_Adr<0>       |Z              |   11.421|
+S_Adr<0>       |segs<0>        |   13.776|
+S_Adr<0>       |segs<1>        |   13.623|
+S_Adr<0>       |segs<2>        |   13.354|
+S_Adr<0>       |segs<3>        |   14.093|
+S_Adr<0>       |segs<4>        |   13.883|
+S_Adr<0>       |segs<5>        |   13.069|
+S_Adr<0>       |segs<6>        |   14.121|
+S_Adr<1>       |N              |   11.876|
+S_Adr<1>       |Z              |   12.080|
+S_Adr<1>       |segs<0>        |   14.617|
+S_Adr<1>       |segs<1>        |   14.464|
+S_Adr<1>       |segs<2>        |   14.195|
+S_Adr<1>       |segs<3>        |   14.934|
+S_Adr<1>       |segs<4>        |   14.724|
+S_Adr<1>       |segs<5>        |   13.910|
+S_Adr<1>       |segs<6>        |   14.962|
+S_Adr<2>       |N              |   14.036|
+S_Adr<2>       |Z              |   14.192|
+S_Adr<2>       |segs<0>        |   16.777|
+S_Adr<2>       |segs<1>        |   16.624|
+S_Adr<2>       |segs<2>        |   16.355|
+S_Adr<2>       |segs<3>        |   17.094|
+S_Adr<2>       |segs<4>        |   16.884|
+S_Adr<2>       |segs<5>        |   16.070|
+S_Adr<2>       |segs<6>        |   17.122|
+S_Sel          |N              |   12.729|
+S_Sel          |Z              |   12.909|
+S_Sel          |segs<0>        |   14.803|
+S_Sel          |segs<1>        |   14.650|
+S_Sel          |segs<2>        |   14.381|
+S_Sel          |segs<3>        |   15.120|
+S_Sel          |segs<4>        |   14.910|
+S_Sel          |segs<5>        |   14.096|
+S_Sel          |segs<6>        |   15.148|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Nov 02 15:55:51 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 673 MB
+
+
+

@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: alu16.v
- * Date:     October 25, 2017
+ * Date:     November 6, 2017
  * Version:  1.0
  *
  * Description: This 16-bit ALU will be used in the 301 "Integer Datapath" project

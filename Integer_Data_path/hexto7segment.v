@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: hexto7segment.v
- * Date:     October 25, 2017
+ * Date:     November 6, 2017
  * Version:  1.0
  *
  * Description: Module has 4 bit input and uses case statement to convert 4 bit
