@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Top_Level.prj
 
@@ -137,7 +137,6 @@ Parsing module <Top_Level>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v" Line 38: Port Alu_out is not connected to this instance
 
 Elaborating module <Top_Level>.
 
@@ -158,7 +157,6 @@ Elaborating module <reg16>.
 Elaborating module <alu16>.
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\alu16.v" Line 30: Result of 32-bit expression is truncated to fit in 17-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\alu16.v" Line 46: Result of 32-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v" Line 38: Size mismatch in connection of port <Z>. Formal port size is 1-bit while actual signal size is 16-bit.
 
 Elaborating module <Display_Controller>.
 
@@ -176,8 +174,6 @@ Elaborating module <hexto7segment>.
 
 Synthesizing Unit <Top_Level>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v".
-INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v" line 38: Output port <Alu_out> of the instance <main> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <C> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <Top_Level> synthesized.
@@ -298,8 +294,8 @@ Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\pixel_clk.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_58_o_add_2_OUT> created at line 50.
-    Found 32-bit comparator greater for signal <i[31]_GND_58_o_LessThan_2_o> created at line 44
+    Found 32-bit adder for signal <i[31]_GND_43_o_add_2_OUT> created at line 50.
+    Found 32-bit comparator greater for signal <i[31]_GND_43_o_LessThan_2_o> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -329,7 +325,7 @@ Unit <pixel_controller> synthesized.
 
 Synthesizing Unit <ad_mux>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\ad_mux.v".
-    Found 4-bit 7-to-1 multiplexer for signal <Y> created at line 34.
+    Found 4-bit 8-to-1 multiplexer for signal <Y> created at line 34.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ad_mux> synthesized.
@@ -362,7 +358,7 @@ Macro Statistics
  16-bit 15-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 1
  32-bit 2-to-1 multiplexer                             : 2
- 4-bit 7-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 1
 # Tristates                                            : 256
  1-bit tristate buffer                                 : 256
 # FSMs                                                 : 1
@@ -415,7 +411,7 @@ Macro Statistics
  16-bit 15-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 1
  32-bit 2-to-1 multiplexer                             : 1
- 4-bit 7-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 # Xors                                                 : 1
  16-bit xor2                                           : 1
@@ -518,23 +514,22 @@ Top Level Output File Name         : Top_Level.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 621
+# BELS                             : 627
 #      GND                         : 1
 #      INV                         : 12
 #      LUT1                        : 16
-#      LUT2                        : 34
-#      LUT3                        : 21
+#      LUT2                        : 35
+#      LUT3                        : 23
 #      LUT4                        : 121
-#      LUT5                        : 20
-#      LUT6                        : 150
+#      LUT5                        : 18
+#      LUT6                        : 155
 #      MUXCY                       : 126
 #      MUXF7                       : 4
 #      VCC                         : 1
 #      XORCY                       : 115
 # FlipFlops/Latches                : 179
 #      FDC                         : 48
-#      FDCE                        : 2
-#      FDE                         : 128
+#      FDCE                        : 130
 #      FDP                         : 1
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -551,14 +546,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             179  out of  126800     0%  
- Number of Slice LUTs:                  374  out of  63400     0%  
-    Number used as Logic:               374  out of  63400     0%  
+ Number of Slice LUTs:                  380  out of  63400     0%  
+    Number used as Logic:               380  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    476
-   Number with an unused Flip Flop:     297  out of    476    62%  
-   Number with an unused LUT:           102  out of    476    21%  
-   Number of fully used LUT-FF pairs:    77  out of    476    16%  
+ Number of LUT Flip Flop pairs used:    484
+   Number with an unused Flip Flop:     305  out of    484    63%  
+   Number with an unused LUT:           104  out of    484    21%  
+   Number of fully used LUT-FF pairs:    75  out of    484    15%  
    Number of unique control sets:        13
 
 IO Utilization: 
@@ -591,8 +586,8 @@ Clock Signal                       | Clock buffer(FF name)                      
 -----------------------------------+-----------------------------------------------+-------+
 clk                                | BUFGP                                         | 33    |
 disp/pxl/clk_out                   | NONE(disp/main_control/present_state_FSM_FFd7)| 8     |
-regclk/clk500/clk_out              | NONE(regclk/regclk/q9)                        | 10    |
 regclk_out(regclk/regclk/Dout:O)   | BUFG(*)(main/regfile/R7/Dout_0)               | 128   |
+regclk/clk500/clk_out              | NONE(regclk/regclk/q9)                        | 10    |
 -----------------------------------+-----------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -609,8 +604,8 @@ Speed Grade: -3
 
    Minimum period: 3.860ns (Maximum Frequency: 259.034MHz)
    Minimum input arrival time before clock: 3.734ns
-   Maximum output required time after clock: 6.403ns
-   Maximum combinational path delay: 6.277ns
+   Maximum output required time after clock: 5.986ns
+   Maximum combinational path delay: 5.860ns
 
 Timing Details:
 ---------------
@@ -679,6 +674,48 @@ Delay:               0.671ns (Levels of Logic = 0)
                                        (55.0% logic, 45.0% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'regclk_out'
+  Clock period: 3.860ns (frequency: 259.034MHz)
+  Total number of paths / destination ports: 83328 / 128
+-------------------------------------------------------------------------
+Delay:               3.860ns (Levels of Logic = 21)
+  Source:            main/regfile/R2/Dout_0 (FF)
+  Destination:       main/regfile/R7/Dout_15 (FF)
+  Source Clock:      regclk_out rising
+  Destination Clock: regclk_out rising
+
+  Data Path: main/regfile/R2/Dout_0 to main/regfile/R7/Dout_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.361   0.566  main/regfile/R2/Dout_0 (main/regfile/R2/Dout_0)
+     LUT6:I2->O            4   0.097   0.393  main/Mmux_smux11 (main/Mmux_smux1)
+     LUT4:I2->O            7   0.097   0.323  main/Mmux_smux13 (main/smux<0>)
+     LUT4:I3->O            1   0.097   0.000  main/ALU/Madd_n0036_lut<0>1 (main/ALU/Madd_n0036_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  main/ALU/Madd_n0036_cy<0> (main/ALU/Madd_n0036_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<1> (main/ALU/Madd_n0036_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<2> (main/ALU/Madd_n0036_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<3> (main/ALU/Madd_n0036_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<4> (main/ALU/Madd_n0036_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<5> (main/ALU/Madd_n0036_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<6> (main/ALU/Madd_n0036_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<7> (main/ALU/Madd_n0036_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<8> (main/ALU/Madd_n0036_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<9> (main/ALU/Madd_n0036_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<10> (main/ALU/Madd_n0036_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<11> (main/ALU/Madd_n0036_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<12> (main/ALU/Madd_n0036_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<13> (main/ALU/Madd_n0036_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<14> (main/ALU/Madd_n0036_cy<14>)
+     XORCY:CI->O           1   0.370   0.379  main/ALU/Madd_n0036_xor<15> (main/ALU/n0036<15>)
+     LUT5:I3->O            2   0.097   0.299  main/ALU/Alu_Op<3>_710 (main/ALU/Alu_Op<3>_710)
+     LUT6:I5->O           10   0.097   0.000  main/ALU/Alu_Op<3>61 (Alu_out<15>)
+     FDCE:D                    0.008          main/regfile/R0/Dout_15
+    ----------------------------------------
+    Total                      3.860ns (1.899ns logic, 1.962ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'regclk/clk500/clk_out'
   Clock period: 0.653ns (frequency: 1532.567MHz)
   Total number of paths / destination ports: 9 / 9
@@ -700,52 +737,10 @@ Delay:               0.653ns (Levels of Logic = 0)
                                        (56.6% logic, 43.4% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'regclk_out'
-  Clock period: 3.860ns (frequency: 259.034MHz)
-  Total number of paths / destination ports: 83328 / 128
--------------------------------------------------------------------------
-Delay:               3.860ns (Levels of Logic = 21)
-  Source:            main/regfile/R2/Dout_0 (FF)
-  Destination:       main/regfile/R7/Dout_15 (FF)
-  Source Clock:      regclk_out rising
-  Destination Clock: regclk_out rising
-
-  Data Path: main/regfile/R2/Dout_0 to main/regfile/R7/Dout_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              3   0.361   0.566  main/regfile/R2/Dout_0 (main/regfile/R2/Dout_0)
-     LUT6:I2->O            4   0.097   0.393  main/Mmux_smux11 (main/Mmux_smux1)
-     LUT4:I2->O            7   0.097   0.323  main/Mmux_smux13 (main/smux<0>)
-     LUT4:I3->O            1   0.097   0.000  main/ALU/Madd_n0036_lut<0>1 (main/ALU/Madd_n0036_lut<0>1)
-     MUXCY:S->O            1   0.353   0.000  main/ALU/Madd_n0036_cy<0> (main/ALU/Madd_n0036_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<1> (main/ALU/Madd_n0036_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<2> (main/ALU/Madd_n0036_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<3> (main/ALU/Madd_n0036_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<4> (main/ALU/Madd_n0036_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<5> (main/ALU/Madd_n0036_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<6> (main/ALU/Madd_n0036_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<7> (main/ALU/Madd_n0036_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<8> (main/ALU/Madd_n0036_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<9> (main/ALU/Madd_n0036_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<10> (main/ALU/Madd_n0036_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<11> (main/ALU/Madd_n0036_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<12> (main/ALU/Madd_n0036_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<13> (main/ALU/Madd_n0036_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<14> (main/ALU/Madd_n0036_cy<14>)
-     XORCY:CI->O           1   0.370   0.379  main/ALU/Madd_n0036_xor<15> (main/ALU/n0036<15>)
-     LUT5:I3->O            2   0.097   0.299  main/ALU/Alu_Op<3>_710 (main/ALU/Alu_Op<3>_710)
-     LUT6:I5->O            9   0.097   0.000  main/ALU/Alu_Op<3>61 (Z_OBUF)
-     FDE:D                     0.008          main/regfile/R7/Dout_15
-    ----------------------------------------
-    Total                      3.860ns (1.899ns logic, 1.962ns route)
-                                       (49.2% logic, 50.8% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 33 / 33
 -------------------------------------------------------------------------
-Offset:              0.739ns (Levels of Logic = 1)
+Offset:              0.759ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       disp/pxl/clk_out (FF)
   Destination Clock: clk rising
@@ -754,17 +749,17 @@ Offset:              0.739ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            51   0.001   0.389  reset_IBUF (reset_IBUF)
+     IBUF:I->O           179   0.001   0.409  reset_IBUF (reset_IBUF)
      FDCE:CLR                  0.349          disp/pxl/clk_out
     ----------------------------------------
-    Total                      0.739ns (0.350ns logic, 0.389ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      0.759ns (0.350ns logic, 0.409ns route)
+                                       (46.1% logic, 53.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'disp/pxl/clk_out'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              0.739ns (Levels of Logic = 1)
+Offset:              0.759ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       disp/main_control/present_state_FSM_FFd7 (FF)
   Destination Clock: disp/pxl/clk_out rising
@@ -773,34 +768,15 @@ Offset:              0.739ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            51   0.001   0.389  reset_IBUF (reset_IBUF)
+     IBUF:I->O           179   0.001   0.409  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.349          disp/main_control/present_state_FSM_FFd7
     ----------------------------------------
-    Total                      0.739ns (0.350ns logic, 0.389ns route)
-                                       (47.4% logic, 52.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'regclk/clk500/clk_out'
-  Total number of paths / destination ports: 11 / 11
--------------------------------------------------------------------------
-Offset:              0.739ns (Levels of Logic = 1)
-  Source:            reset (PAD)
-  Destination:       regclk/regclk/q9 (FF)
-  Destination Clock: regclk/clk500/clk_out rising
-
-  Data Path: reset to regclk/regclk/q9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            51   0.001   0.389  reset_IBUF (reset_IBUF)
-     FDC:CLR                   0.349          regclk/regclk/q0
-    ----------------------------------------
-    Total                      0.739ns (0.350ns logic, 0.389ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      0.759ns (0.350ns logic, 0.409ns route)
+                                       (46.1% logic, 53.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'regclk_out'
-  Total number of paths / destination ports: 59808 / 256
+  Total number of paths / destination ports: 59936 / 384
 -------------------------------------------------------------------------
 Offset:              3.734ns (Levels of Logic = 22)
   Source:            S_Adr<1> (PAD)
@@ -832,40 +808,60 @@ Offset:              3.734ns (Levels of Logic = 22)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Madd_n0036_cy<14> (main/ALU/Madd_n0036_cy<14>)
      XORCY:CI->O           1   0.370   0.379  main/ALU/Madd_n0036_xor<15> (main/ALU/n0036<15>)
      LUT5:I3->O            2   0.097   0.299  main/ALU/Alu_Op<3>_710 (main/ALU/Alu_Op<3>_710)
-     LUT6:I5->O            9   0.097   0.000  main/ALU/Alu_Op<3>61 (Z_OBUF)
-     FDE:D                     0.008          main/regfile/R7/Dout_15
+     LUT6:I5->O           10   0.097   0.000  main/ALU/Alu_Op<3>61 (Alu_out<15>)
+     FDCE:D                    0.008          main/regfile/R0/Dout_15
     ----------------------------------------
     Total                      3.734ns (1.539ns logic, 2.195ns route)
                                        (41.2% logic, 58.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/pxl/clk_out'
-  Total number of paths / destination ports: 127 / 15
+Timing constraint: Default OFFSET IN BEFORE for Clock 'regclk/clk500/clk_out'
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              2.910ns (Levels of Logic = 5)
-  Source:            disp/main_control/present_state_FSM_FFd7 (FF)
-  Destination:       segs<6> (PAD)
-  Source Clock:      disp/pxl/clk_out rising
+Offset:              0.759ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       regclk/regclk/q9 (FF)
+  Destination Clock: regclk/clk500/clk_out rising
 
-  Data Path: disp/main_control/present_state_FSM_FFd7 to segs<6>
+  Data Path: reset to regclk/regclk/q9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              6   0.361   0.706  disp/main_control/present_state_FSM_FFd7 (disp/main_control/present_state_FSM_FFd7)
-     LUT6:I1->O            1   0.097   0.295  disp/mux8to1/Mmux_Y<0>1 (disp/mux8to1/Mmux_Y<0>)
-     LUT5:I4->O            1   0.097   0.295  disp/mux8to1/Mmux_Y<0>2 (disp/mux8to1/Mmux_Y<0>1)
-     LUT6:I5->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>20 (disp/hex<0>)
+     IBUF:I->O           179   0.001   0.409  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.349          regclk/regclk/q0
+    ----------------------------------------
+    Total                      0.759ns (0.350ns logic, 0.409ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/pxl/clk_out'
+  Total number of paths / destination ports: 232 / 15
+-------------------------------------------------------------------------
+Offset:              4.078ns (Levels of Logic = 6)
+  Source:            disp/main_control/present_state_FSM_FFd1 (FF)
+  Destination:       segs<6> (PAD)
+  Source Clock:      disp/pxl/clk_out rising
+
+  Data Path: disp/main_control/present_state_FSM_FFd1 to segs<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.706  disp/main_control/present_state_FSM_FFd1 (disp/main_control/present_state_FSM_FFd1)
+     LUT6:I1->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>1 (disp/mux8to1/Mmux_Y<0>)
+     LUT5:I0->O            1   0.097   0.295  disp/mux8to1/Mmux_Y<0>2 (disp/mux8to1/Mmux_Y<0>1)
+     LUT3:I2->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>3 (disp/mux8to1/Mmux_Y<0>2)
+     LUT5:I0->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>4 (disp/hex<0>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp21 (segs_2_OBUF)
      OBUF:I->O                 0.000          segs_2_OBUF (segs<2>)
     ----------------------------------------
-    Total                      2.910ns (0.749ns logic, 2.161ns route)
-                                       (25.7% logic, 74.3% route)
+    Total                      4.078ns (0.846ns logic, 3.232ns route)
+                                       (20.7% logic, 79.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'regclk_out'
-  Total number of paths / destination ports: 76160 / 9
+  Total number of paths / destination ports: 86576 / 10
 -------------------------------------------------------------------------
-Offset:              6.403ns (Levels of Logic = 16)
+Offset:              5.986ns (Levels of Logic = 14)
   Source:            main/regfile/R2/Dout_0 (FF)
   Destination:       segs<6> (PAD)
   Source Clock:      regclk_out rising
@@ -874,7 +870,7 @@ Offset:              6.403ns (Levels of Logic = 16)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.361   0.566  main/regfile/R2/Dout_0 (main/regfile/R2/Dout_0)
+     FDCE:C->Q             3   0.361   0.566  main/regfile/R2/Dout_0 (main/regfile/R2/Dout_0)
      LUT6:I2->O            4   0.097   0.393  main/Mmux_smux11 (main/Mmux_smux1)
      LUT4:I2->O            7   0.097   0.323  main/Mmux_smux13 (main/smux<0>)
      LUT4:I3->O            1   0.097   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_lut<0> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_lut<0>)
@@ -882,24 +878,22 @@ Offset:              6.403ns (Levels of Logic = 16)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<1> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<2> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<2>)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<3> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<4> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<5> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<5>)
-     XORCY:CI->O           1   0.370   0.379  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_xor<6> (main/ALU/GND_41_o_GND_41_o_sub_4_OUT<6>)
-     LUT6:I4->O            2   0.097   0.697  main/ALU/Alu_Op<3>_722 (main/ALU/Alu_Op<3>_722)
-     LUT6:I0->O            1   0.097   0.693  disp/mux8to1/Mmux_Y<0>7 (disp/mux8to1/Mmux_Y<0>6)
-     LUT6:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<0>10 (disp/mux8to1/Mmux_Y<0>9)
-     LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>20 (disp/hex<0>)
+     XORCY:CI->O           1   0.370   0.379  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_xor<4> (main/ALU/GND_41_o_GND_41_o_sub_4_OUT<4>)
+     LUT6:I4->O            2   0.097   0.299  main/ALU/Alu_Op<3>_718 (main/ALU/Alu_Op<3>_718)
+     LUT6:I5->O            9   0.097   0.548  main/ALU/Alu_Op<3>101 (Alu_out<4>)
+     LUT3:I0->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>3 (disp/mux8to1/Mmux_Y<0>2)
+     LUT5:I0->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>4 (disp/hex<0>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp21 (segs_2_OBUF)
      OBUF:I->O                 0.000          segs_2_OBUF (segs<2>)
     ----------------------------------------
-    Total                      6.403ns (1.975ns logic, 4.428ns route)
-                                       (30.8% logic, 69.2% route)
+    Total                      5.986ns (1.929ns logic, 4.057ns route)
+                                       (32.2% logic, 67.8% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 54006 / 9
+  Total number of paths / destination ports: 61608 / 10
 -------------------------------------------------------------------------
-Delay:               6.277ns (Levels of Logic = 17)
+Delay:               5.860ns (Levels of Logic = 15)
   Source:            S_Adr<1> (PAD)
   Destination:       segs<6> (PAD)
 
@@ -915,18 +909,16 @@ Delay:               6.277ns (Levels of Logic = 17)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<1> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<2> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<2>)
      MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<3> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<4> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<5> (main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_cy<5>)
-     XORCY:CI->O           1   0.370   0.379  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_xor<6> (main/ALU/GND_41_o_GND_41_o_sub_4_OUT<6>)
-     LUT6:I4->O            2   0.097   0.697  main/ALU/Alu_Op<3>_722 (main/ALU/Alu_Op<3>_722)
-     LUT6:I0->O            1   0.097   0.693  disp/mux8to1/Mmux_Y<0>7 (disp/mux8to1/Mmux_Y<0>6)
-     LUT6:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<0>10 (disp/mux8to1/Mmux_Y<0>9)
-     LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>20 (disp/hex<0>)
+     XORCY:CI->O           1   0.370   0.379  main/ALU/Msub_GND_41_o_GND_41_o_sub_4_OUT_xor<4> (main/ALU/GND_41_o_GND_41_o_sub_4_OUT<4>)
+     LUT6:I4->O            2   0.097   0.299  main/ALU/Alu_Op<3>_718 (main/ALU/Alu_Op<3>_718)
+     LUT6:I5->O            9   0.097   0.548  main/ALU/Alu_Op<3>101 (Alu_out<4>)
+     LUT3:I0->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>3 (disp/mux8to1/Mmux_Y<0>2)
+     LUT5:I0->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>4 (disp/hex<0>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp21 (segs_2_OBUF)
      OBUF:I->O                 0.000          segs_2_OBUF (segs<2>)
     ----------------------------------------
-    Total                      6.277ns (1.615ns logic, 4.662ns route)
-                                       (25.7% logic, 74.3% route)
+    Total                      5.860ns (1.569ns logic, 4.291ns route)
+                                       (26.8% logic, 73.2% route)
 
 =========================================================================
 
@@ -969,13 +961,13 @@ regclk_out     |    3.860|         |         |         |
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.97 secs
+Total CPU time to Xst completion: 11.02 secs
  
 --> 
 
-Total memory usage is 415524 kilobytes
+Total memory usage is 415492 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   36 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

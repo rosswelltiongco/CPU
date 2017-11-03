@@ -5,22 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v" Line 38: Port <arg fmt="%s" index="1">Alu_out</arg> is not connected to this instance
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\alu16.v" Line 30: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\alu16.v" Line 46: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v" Line 38: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Z</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">16</arg>-bit.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\Top_Level.v</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">Alu_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">main</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">C</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_disp</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
