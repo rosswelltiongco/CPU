@@ -75,7 +75,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Design Summary/Reports</CurrentItem>
    </ItemView>
@@ -101,13 +101,21 @@
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem>Unassigned User Library Modules</SelectedItem>
+=======
+         <SelectedItem>disp - Display_Controller (C:/Users/Rosswell/Documents/CPU/Integer_Data_Path/Display_Controller.v)</SelectedItem>
+>>>>>>> parent of f1caf45... Added 90% completed testbench
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e4000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+<<<<<<< HEAD
       <CurrentItem>Unassigned User Library Modules</CurrentItem>
+=======
+      <CurrentItem>disp - Display_Controller (C:/Users/Rosswell/Documents/CPU/Integer_Data_Path/Display_Controller.v)</CurrentItem>
+>>>>>>> parent of f1caf45... Added 90% completed testbench
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -129,12 +137,20 @@
          <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem/>
+=======
+         <SelectedItem></SelectedItem>
+>>>>>>> parent of f1caf45... Added 90% completed testbench
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+<<<<<<< HEAD
       <CurrentItem/>
+=======
+      <CurrentItem></CurrentItem>
+>>>>>>> parent of f1caf45... Added 90% completed testbench
    </ItemView>
 </Project>

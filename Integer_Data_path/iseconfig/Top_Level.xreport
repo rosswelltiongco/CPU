@@ -1,7 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2017-11-04T23:46:53</DateModified>
+=======
+  <DateModified>2017-11-04T22:18:51</DateModified>
+>>>>>>> parent of f1caf45... Added 90% completed testbench
   <ModuleName>Top_Level</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Rosswell/Documents/CPU/Integer_Data_Path/iseconfig/Top_Level.xreport</SavedFilePath>
