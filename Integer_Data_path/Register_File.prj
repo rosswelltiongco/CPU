@@ -1,3 +1,0 @@
-verilog work "reg16.v"
-verilog work "decoder3to8.v"
-verilog work "Register_File.v"
