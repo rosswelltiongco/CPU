@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Rosswell/Documents/CPU/Integer_Data_Path/alu16_tb_isim_beh.exe" -prj "C:/Users/Rosswell/Documents/CPU/Integer_Data_Path/alu16_tb_beh.prj" "work.alu16_tb" "work.glbl" 
