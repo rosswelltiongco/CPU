@@ -1,0 +1,3 @@
+verilog work "one_shot.v"
+verilog work "clk_500Hz.v"
+verilog work "debounce.v"
