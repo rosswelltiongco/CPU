@@ -40,9 +40,8 @@ module Top_Level(clk, reset, W_Adr, R_Adr, S_Adr, Alu_Op, S_Sel, reg_step,
    
    //   IDP(       clk, W_En, W_Adr,   S_Adr,   R_Adr,       DS, S_Sel, 
    IDP main(regclk_out, 1'b1, W_Adr,   S_Adr,   R_Adr, 16'hAA55, S_Sel, 
-   //       ALU_OP, reset,    C,     N,     Z, Reg_Out, Alu_out);
-            Alu_Op, reset,    C,     N,     Z, Reg_out, Alu_out);
-
+   //       ALU_OP, reset,    C,     N,     Z, Reg_Out, Alu_out       );
+            Alu_Op, reset,    C,     N,     Z, Reg_out, Alu_out       );
 
 
    //Display_Controller 

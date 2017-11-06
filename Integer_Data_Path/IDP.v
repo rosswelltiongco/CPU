@@ -32,8 +32,10 @@ module IDP(clk, W_En, W_Adr, S_Adr, R_Adr, DS, S_Sel, ALU_OP, reset,
     //declare wires
     wire [15:0] smux, S;
 
-//  Register_File        (clk, reset, W_Adr,   we, R_Adr, S_Adr,        W,       R, S);
-    Register_File regfile(clk, reset, W_Adr, W_En, R_Adr, S_Adr,  Alu_out, Reg_Out, S);
+  //Register_File        (clk, reset, W_Adr,   we, 
+    Register_File regfile(clk, reset, W_Adr, W_En, 
+  //                      R_Adr, S_Adr,        W,       R, S);
+                          R_Adr, S_Adr,  Alu_out, Reg_Out, S);
    
 
     //mux - continuous assign statement implements 16 bit 2to1 mux
