@@ -8,8 +8,8 @@
  * Version:  1.0
  *
  * Description: Behavioral implementation of a 3-8 decoder that asserts a single
- *	  			    output at any time for any given combination of inputs. If the
- *              chip enable is deactive, the decoder will output 8'b0 by default.
+ *	output at any time for any given combination of inputs. If the chip enable 
+ * is deactive, the decoder will output 8'b0 by default.
  *
  *******************************************************************************/
 module decoder3to8( In, en, y7, y6, y5, y4, y3, y2, y1, y0 );

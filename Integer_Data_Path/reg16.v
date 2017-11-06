@@ -7,9 +7,9 @@
  * Date:     November 6, 2017
  * Version:  1.0
  *
- * Description: A 16 bit register with a 16 bit load that outputs 
- *              DA or DB whenever their corresponding inputs are enabled in order
- *              to prevent bus contention.
+ * Description: A 16 bit register with a 16 bit load that outputs  DA or DB 
+ * whenever their corresponding inputs are enabled in order to prevent bus 
+ * contention.
  *
  *******************************************************************************/
 module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);

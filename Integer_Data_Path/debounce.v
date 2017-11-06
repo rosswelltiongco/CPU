@@ -10,7 +10,6 @@
  * Description: Module instantiates clk_divider and one_shot to produce a 
  * one clock length pulse
  *
- * Work time: 15 mins Jesus
  *******************************************************************************/
 module debounce(clk, reset, Din, Dout);
    //declare inputs
@@ -19,8 +18,8 @@ module debounce(clk, reset, Din, Dout);
    //declare outputs
    output Dout;
    
+   //declare wires
    wire clk500_out;
-   
 
    //clk_500Hz     ( clk_in, reset, clk_out );
    clk_500Hz clk500( clk, reset, clk500_out);

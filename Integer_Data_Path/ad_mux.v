@@ -10,7 +10,6 @@
  * Description: A four bit 8 to 1 multiplexer that selects address/data
  * information to be displayed based on the pixel controller
  *
- *
  *******************************************************************************/
 module ad_mux(d7, d6, d5, d4, d3, d2, d1, d0, sel, Y);
 

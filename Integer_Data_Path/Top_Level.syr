@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.40 secs
  
 --> Reading design: Top_Level.prj
 
@@ -325,7 +325,7 @@ Unit <pixel_controller> synthesized.
 
 Synthesizing Unit <ad_mux>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\Integer_Data_path\ad_mux.v".
-    Found 4-bit 8-to-1 multiplexer for signal <Y> created at line 34.
+    Found 4-bit 8-to-1 multiplexer for signal <Y> created at line 33.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ad_mux> synthesized.
@@ -960,12 +960,12 @@ regclk_out     |    3.860|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.41 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.87 secs
  
 --> 
 
-Total memory usage is 415456 kilobytes
+Total memory usage is 415512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   33 (   0 filtered)

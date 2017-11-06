@@ -12,7 +12,7 @@
  * There are 4 "Op" inputs to perform up to 16 basic operations.
  * Currently, there are only 13 of the 16 operations used.
  *
- * The alu status flags represent the Y output being negative (N),
+ * The ALU status flags represent the Y output being negative (N),
  * zero (Z), and a carry out (C).
  *
  *******************************************************************************/

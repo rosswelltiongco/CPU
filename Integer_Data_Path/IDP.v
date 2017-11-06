@@ -7,10 +7,13 @@
  * Date:     November 6, 2017
  * Version:  1.0
  *
- * Description: 
- *
- *
- * Work times: Jesus 15 mins 11/2
+ * Description: Integer Datapath Module instantiates a 8x16 bit register file,
+ * a 16 bit arithmetic logic unit and a 2to1mux. One of the ALU's inputs comes
+ * from one of the register file's outputs. The other input is slected by a
+ * 2to1 mux that chooses between the register file's other output or an 
+ * external output. The module outputs a 32 bit out, with 16 coming from the
+ * register file's output going into the ALu and the other from the ALU's
+ * output.
  *
  *******************************************************************************/
 module IDP(clk, W_En, W_Adr, S_Adr, R_Adr, DS, S_Sel, ALU_OP, reset,
