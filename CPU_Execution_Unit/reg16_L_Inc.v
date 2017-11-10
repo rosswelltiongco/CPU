@@ -10,7 +10,7 @@
  * Description: A 16 bit register with load and incrementation capabilities.
  *
  *******************************************************************************/
-module reg16_L_Inc(clk, reset, ld, inc, D, q);
+module reg16_L_Inc(clk, reset, ld, inc, D, Q);
    input               clk, reset, ld, inc;
    input      [15:0]   D;
    output reg [15:0]   Q;
