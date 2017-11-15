@@ -13,9 +13,9 @@
  * Work  Time: 45 mins Jesus 11/9
  * Debug Time: 
  *******************************************************************************/
-module CPU_EU(clk, reset, Din, s_sel, pc_ld, pc_inc, reg_w_en, ir_ld);
+module CPU_EU(clk, reset,W_En, pc_ld, adr_sel, Din, S_Sel, pc_inc, reg_w_en, ir_ld);
    //declare inputs
-   input clk, W_En; 
+   input clk, W_En, reset, S_Sel, adr_sel, pc_ld, pc_inc, reg_w_en, ir_ld; 
    
    input [15:0] Din;
    //Din[15:12], Din[11:9], Din[8:6], Din[5:3], Din[2:0]

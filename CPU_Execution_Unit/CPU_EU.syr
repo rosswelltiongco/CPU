@@ -1,0 +1,372 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: CPU_EU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU_EU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU_EU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU_EU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16.v" into library work
+Parsing module <reg16>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\decoder3to8.v" into library work
+Parsing module <decoder3to8>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\Register_File.v" into library work
+Parsing module <Register_File>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" into library work
+Parsing module <alu16>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" into library work
+Parsing module <reg16_L_Inc>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\IDP.v" into library work
+Parsing module <IDP>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" into library work
+Parsing module <CPU_EU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU_EU>.
+
+Elaborating module <IDP>.
+
+Elaborating module <Register_File>.
+
+Elaborating module <decoder3to8>.
+
+Elaborating module <reg16>.
+
+Elaborating module <alu16>.
+WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" Line 30: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" Line 46: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 32: Size mismatch in connection of port <W_Adr>. Formal port size is 3-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 32: Assignment to C ignored, since the identifier is never used
+
+Elaborating module <reg16_L_Inc>.
+WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" Line 24: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 36: Size mismatch in connection of port <D>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 39: Size mismatch in connection of port <D>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 39: Assignment to IR_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 41: Assignment to Address ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 32: Net <W_Adr> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 39: Net <D_in> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 32. All outputs of instance <main> of block <IDP> are unconnected in block <CPU_EU>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 36. All outputs of instance <PC> of block <reg16_L_Inc> are unconnected in block <CPU_EU>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 39. All outputs of instance <IR> of block <reg16_L_Inc> are unconnected in block <CPU_EU>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU_EU>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v".
+WARNING:Xst:647 - Input <Din> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <W_En> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <adr_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 32: Output port <Reg_Out> of the instance <main> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 32: Output port <C> of the instance <main> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 32: Output port <N> of the instance <main> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 32: Output port <Z> of the instance <main> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 36: Output port <Q> of the instance <PC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" line 39: Output port <Q> of the instance <IR> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <W_Adr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <S_Adr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <R_Adr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <DS> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ALU_OP> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <D_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <CPU_EU> synthesized.
+
+Synthesizing Unit <Register_File>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\Register_File.v".
+    Summary:
+	no macro.
+Unit <Register_File> synthesized.
+
+Synthesizing Unit <decoder3to8>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\decoder3to8.v".
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <decoder3to8> synthesized.
+
+Synthesizing Unit <reg16>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16.v".
+    Found 16-bit register for signal <Dout>.
+    Found 1-bit tristate buffer for signal <DA<15>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<14>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<13>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<12>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<11>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<10>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<9>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<8>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<7>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<6>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<5>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<4>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<3>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<2>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<1>> created at line 39
+    Found 1-bit tristate buffer for signal <DA<0>> created at line 39
+    Found 1-bit tristate buffer for signal <DB<15>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<14>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<13>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<12>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<11>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<10>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<9>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<8>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<7>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<6>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<5>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<4>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<3>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<2>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<1>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<0>> created at line 40
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred  32 Tristate(s).
+Unit <reg16> synthesized.
+
+Synthesizing Unit <alu16>.
+    Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v".
+    Summary:
+	no macro.
+Unit <alu16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CPU_EU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU_EU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU_EU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                   0  out of    210     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.09 secs
+ 
+--> 
+
+Total memory usage is 414272 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

@@ -16,6 +16,7 @@
 module top_level_lab7();
 
    //CPU_EU
+   //IDP shoares input with IR
    CPU_EU execution_unit();
    
    //debounce   (clk, reset,      Din,         Dout);
