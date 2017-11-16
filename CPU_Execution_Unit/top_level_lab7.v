@@ -13,8 +13,12 @@
  * Work  Time: 45 mins Jesus 11/9
  * Debug Time: 
  *******************************************************************************/
-module top_level_lab7();
+module top_level_lab7(clk, reset, );
 
+   //input 
+   
+   output 
+   
    //CPU_EU
    //IDP shoares input with IR
    CPU_EU execution_unit();
