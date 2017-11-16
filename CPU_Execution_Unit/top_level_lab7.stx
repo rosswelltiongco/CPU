@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst
 
@@ -12,7 +12,7 @@ Total CPU time to Xst completion: 0.11 secs
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
---> Reading design: CPU_EU.prj
+--> Reading design: top_level_lab7.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -49,18 +49,40 @@ Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\alu16
 Parsing module <alu16>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16_L_Inc.v" into library work
 Parsing module <reg16_L_Inc>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\pixel_controller.v" into library work
+Parsing module <pixel_controller>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\pixel_clk.v" into library work
+Parsing module <pixel_clk>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\one_shot.v" into library work
+Parsing module <one_shot>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" into library work
+Parsing module <ram_256x16>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\IDP.v" into library work
 Parsing module <IDP>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\hexto7segment.v" into library work
+Parsing module <hexto7segment>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\clk_500Hz.v" into library work
+Parsing module <clk_500Hz>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ad_mux.v" into library work
+Parsing module <ad_mux>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" into library work
+Parsing module <ram7>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\Display_Controller.v" into library work
+Parsing module <Display_Controller>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\debounce.v" into library work
+Parsing module <debounce>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" into library work
 Parsing module <CPU_EU>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" into library work
+Parsing module <top_level_lab7>.
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.69 secs
+Total CPU time to Xst completion: 8.45 secs
  
 --> 
 
-Total memory usage is 264044 kilobytes
+Total memory usage is 264556 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
