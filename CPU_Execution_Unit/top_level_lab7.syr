@@ -4,13 +4,21 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
+<<<<<<< HEAD
 Total CPU time to Xst completion: 0.08 secs
+=======
+Total CPU time to Xst completion: 0.11 secs
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
+<<<<<<< HEAD
 Total CPU time to Xst completion: 0.08 secs
+=======
+Total CPU time to Xst completion: 0.11 secs
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
  
 --> Reading design: top_level_lab7.prj
 
@@ -108,41 +116,45 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16.v" into library work
 Parsing module <reg16>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\decoder3to8.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\decoder3to8.v" into library work
 Parsing module <decoder3to8>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\Register_File.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\Register_File.v" into library work
 Parsing module <Register_File>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\alu16.v" into library work
 Parsing module <alu16>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16_L_Inc.v" into library work
 Parsing module <reg16_L_Inc>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\pixel_controller.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\pixel_controller.v" into library work
 Parsing module <pixel_controller>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\pixel_clk.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\pixel_clk.v" into library work
 Parsing module <pixel_clk>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\one_shot.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\one_shot.v" into library work
 Parsing module <one_shot>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" into library work
 Parsing module <ram_256x16>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\IDP.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\IDP.v" into library work
 Parsing module <IDP>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\hexto7segment.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\hexto7segment.v" into library work
 Parsing module <hexto7segment>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\clk_500Hz.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\clk_500Hz.v" into library work
 Parsing module <clk_500Hz>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ad_mux.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ad_mux.v" into library work
 Parsing module <ad_mux>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ram7.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" into library work
 Parsing module <ram7>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\Display_Controller.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\Display_Controller.v" into library work
 Parsing module <Display_Controller>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\debounce.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\debounce.v" into library work
 Parsing module <debounce>.
-Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" into library work
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" into library work
 Parsing module <CPU_EU>.
+<<<<<<< HEAD
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\top_level_lab7.v" into library work
+=======
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" into library work
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 Parsing module <top_level_lab7>.
 
 =========================================================================
@@ -151,6 +163,16 @@ Parsing module <top_level_lab7>.
 
 Elaborating module <top_level_lab7>.
 
+<<<<<<< HEAD
+=======
+Elaborating module <debounce>.
+
+Elaborating module <clk_500Hz>.
+
+Elaborating module <one_shot>.
+WARNING:HDLCompiler:1127 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 32: Assignment to step_clk_out ignored, since the identifier is never used
+
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 Elaborating module <CPU_EU>.
 
 Elaborating module <IDP>.
@@ -162,6 +184,7 @@ Elaborating module <decoder3to8>.
 Elaborating module <reg16>.
 
 Elaborating module <alu16>.
+<<<<<<< HEAD
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" Line 30: Result of 32-bit expression is truncated to fit in 17-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" Line 46: Result of 32-bit expression is truncated to fit in 17-bit target.
 
@@ -174,12 +197,43 @@ Elaborating module <debounce>.
 Elaborating module <clk_500Hz>.
 
 Elaborating module <one_shot>.
+=======
+WARNING:HDLCompiler:413 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\alu16.v" Line 30: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\alu16.v" Line 46: Result of 32-bit expression is truncated to fit in 17-bit target.
+
+Elaborating module <reg16_L_Inc>.
+WARNING:HDLCompiler:413 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16_L_Inc.v" Line 24: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" Line 44: Assignment to IR_Out ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" Line 31: Net <W_Adr[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" Line 32: Net <ALU_OP[3]> does not have a driver.
+WARNING:HDLCompiler:189 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 42: Size mismatch in connection of port <D_in>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 42: Assignment to Address ignored, since the identifier is never used
+WARNING:HDLCompiler:25 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 25: Module <ram_256x16> does not have a port named <clk>.
+WARNING:HDLCompiler:25 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 26: Module <ram_256x16> does not have a port named <we>.
+WARNING:HDLCompiler:25 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 27: Module <ram_256x16> does not have a port named <addr>.
+WARNING:HDLCompiler:25 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 28: Module <ram_256x16> does not have a port named <din>.
+WARNING:HDLCompiler:25 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 29: Module <ram_256x16> does not have a port named <dout>.
+WARNING:HDLCompiler:1016 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 24: Port clka is not connected to this instance
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 
 Elaborating module <ram7>.
 
 Elaborating module <ram_256x16>.
+<<<<<<< HEAD
 WARNING:HDLCompiler:1499 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" Line 39: Empty module <ram_256x16> remains a black box.
 WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 40: Size mismatch in connection of port <addr>. Formal port size is 8-bit while actual signal size is 16-bit.
+=======
+WARNING:HDLCompiler:1499 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" Line 39: Empty module <ram_256x16> remains a black box.
+ERROR:HDLCompiler:267 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 25: Cannot find port clk on this module
+ERROR:HDLCompiler:267 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 26: Cannot find port we on this module
+ERROR:HDLCompiler:267 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 27: Cannot find port addr on this module
+ERROR:HDLCompiler:267 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 28: Cannot find port din on this module
+ERROR:HDLCompiler:267 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 29: Cannot find port dout on this module
+Module ram7 remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\ram7.v" Line 16: Empty module <ram7> remains a black box.
+WARNING:HDLCompiler:189 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 46: Size mismatch in connection of port <addr>. Formal port size is 8-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 46: Assignment to mem_d_out ignored, since the identifier is never used
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 
 Elaborating module <Display_Controller>.
 
@@ -190,6 +244,7 @@ Elaborating module <pixel_controller>.
 Elaborating module <ad_mux>.
 
 Elaborating module <hexto7segment>.
+<<<<<<< HEAD
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1165,4 +1220,16 @@ Total memory usage is 410412 kilobytes
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  180 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
+=======
+WARNING:HDLCompiler:634 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 28: Net <eu_d_out[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 29: Net <mem_w_en_out> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 42: Net <D_in> does not have a driver.
+--> 
+
+Total memory usage is 273360 kilobytes
+
+Number of errors   :    5 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 

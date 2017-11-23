@@ -5,14 +5,18 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
+<<<<<<< HEAD
   <application stringID="Xst" timeStamp="Wed Nov 22 22:21:07 2017">
+=======
+  <application stringID="Xst" timeStamp="Wed Nov 15 18:01:59 2017">
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\Users\Jesus\AppData\Local\Microsoft\WindowsApps"/>
+          <item stringID="value" value="C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\common\bin\nt64;C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Users\Rosswell\AppData\Local\Microsoft\WindowsApps"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,32 +24,32 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
+          <item stringID="value" value="C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
+          <item stringID="value" value="C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="C:\Xilinx_ISE_Design_Suite\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="major release  (build 9200)"/>
       </item>
-      <item stringID="User_EnvHost" value="DESKTOP-23M39DF"/>
+      <item stringID="User_EnvHost" value="ROSSWELL-ACER"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-4308U CPU @ 2.80GHz"/>
-          <item stringID="speed" value="2800 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz"/>
+          <item stringID="speed" value="2400 MHz"/>
         </row>
       </table>
     </section>
@@ -208,9 +212,15 @@
       <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
+<<<<<<< HEAD
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="180"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="5"/>
+=======
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="5"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="22"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
     </section>
   </application>
 

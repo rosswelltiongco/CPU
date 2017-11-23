@@ -1,5 +1,6 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+<<<<<<< HEAD
 --> Parameter TMPDIR set to C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/xst/projnav.tmp
 
 
@@ -11,6 +12,19 @@ Total CPU time to Xst completion: 0.08 secs
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
+=======
+--> Parameter TMPDIR set to C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
  
 --> Reading design: CPU_EU.prj
 
@@ -39,6 +53,7 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+<<<<<<< HEAD
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16.v" into library work
 Parsing module <reg16>.
 Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\decoder3to8.v" into library work
@@ -61,6 +76,30 @@ Total CPU time to Xst completion: 5.80 secs
 --> 
 
 Total memory usage is 288444 kilobytes
+=======
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16.v" into library work
+Parsing module <reg16>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\decoder3to8.v" into library work
+Parsing module <decoder3to8>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\Register_File.v" into library work
+Parsing module <Register_File>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\alu16.v" into library work
+Parsing module <alu16>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\reg16_L_Inc.v" into library work
+Parsing module <reg16_L_Inc>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\IDP.v" into library work
+Parsing module <IDP>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\CPU\CPU_Execution_Unit\CPU_EU.v" into library work
+Parsing module <CPU_EU>.
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.69 secs
+ 
+--> 
+
+Total memory usage is 264044 kilobytes
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

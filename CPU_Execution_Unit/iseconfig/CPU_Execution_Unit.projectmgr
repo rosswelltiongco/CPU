@@ -21,13 +21,21 @@
          <ClosedNode>/top_level_lab7 C:|Users|Jesus|Documents|Xilinx_Files|CPU|CPU_Execution_Unit|top_level_lab7.v/step - debounce</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem>top_level_lab7 (C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.v)</SelectedItem>
+=======
+         <SelectedItem>top_level_lab7 (C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/top_level_lab7.v)</SelectedItem>
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+<<<<<<< HEAD
       <CurrentItem>top_level_lab7 (C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.v)</CurrentItem>
+=======
+      <CurrentItem>top_level_lab7 (C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/top_level_lab7.v)</CurrentItem>
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -79,7 +87,11 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+<<<<<<< HEAD
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011f0000000100000000</ViewHeaderState>
+=======
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>View RTL Schematic</CurrentItem>
    </ItemView>
@@ -88,13 +100,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>User Constraints</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000010000000100000000000000000000000064ffffffff000000810000000000000001000001300000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>User Constraints</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>

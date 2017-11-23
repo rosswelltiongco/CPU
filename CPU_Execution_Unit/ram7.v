@@ -13,7 +13,7 @@
  * Work  Time: 15 mins Jesus 11/9
  * Debug Time: 
  *******************************************************************************/
-module ram7( clk, we, addr, din, dout);
+module ram7(clk, we, addr, din, dout);
     
     input clk, we;
     input [7:0] addr;

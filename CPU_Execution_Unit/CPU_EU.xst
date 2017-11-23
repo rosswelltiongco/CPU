@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 set -tmpdir "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/xst/projnav.tmp"
 set -xsthdpdir "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/xst"
+=======
+set -tmpdir "C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst"
+>>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 run -compileonly yes
 -p xc7a100t-3-csg324
 -top CPU_EU
