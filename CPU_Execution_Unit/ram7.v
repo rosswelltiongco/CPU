@@ -21,12 +21,12 @@ module ram7( clk, we, addr, din, dout);
     
     output [15:0] dout;
 
-ram_256x16 your_instance_name (
-  .clk(clk), // input clk
-  .we(we), // input [0 : 0] we
-  .addr(addr), // input [7 : 0] addr
-  .din(din), // input [15 : 0] din
-  .dout(dout) // output [15 : 0] dout
+ram_256x16 main_memory (
+  .clka(clk), // input clk
+  .wea(we), // input [0 : 0] we
+  .addra(addr), // input [7 : 0] addr
+  .dina(din), // input [15 : 0] din
+  .douta(dout) // output [15 : 0] dout
 );
 
 endmodule
