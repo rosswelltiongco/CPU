@@ -13,10 +13,11 @@
  * Work  Time: 45 mins Jesus 11/9 30 mins 11/22 
  * Debug Time: 
  *******************************************************************************/
-module CPU_EU(clk, reset, reg_w_en, S_Sel, adr_sel, pc_ld, pc_inc, ir_ld, D_in, C, N, Z, Address, D_out);
+module CPU_EU(clk, w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, D_in, Address, D_out, C, N, Z);
+
 
    //declare inputs
-   input clk, reset, reg_w_en, S_Sel, adr_sel, pc_ld, pc_inc, ir_ld; 
+   input clk, reset, w_en, s_sel, adr_sel, pc_ld, pc_inc, ir_ld; 
    input [15:0] D_in;
    
    //Din[15:12], Din[11:9], Din[8:6], Din[5:3], Din[2:0]
@@ -24,7 +25,8 @@ module CPU_EU(clk, reset, reg_w_en, S_Sel, adr_sel, pc_ld, pc_inc, ir_ld, D_in, 
    //alu_op,         xxx,      dest,      R,        S
    
    //declare outputs
-   output [15:0] Address, D_out;
+   output [15:0] Address;
+   output wire [15:0] D_out;
    output C, N, Z;
    
    //declare wires

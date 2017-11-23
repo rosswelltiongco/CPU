@@ -24,7 +24,7 @@ module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_e
    output [7:0] an;
    //wire
    wire [15:0] address, eu_d_out, mem_d_out;
-    wire step_clk_out, w_en_out;
+   wire step_clk_out, w_en_out;
 
    //CPU_EU
    //IDP shares input with IR

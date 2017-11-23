@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: top_level_lab7.prj
 
@@ -167,8 +167,6 @@ WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Executi
 
 Elaborating module <reg16_L_Inc>.
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" Line 24: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v" Line 35: Net <w_en> does not have a driver.
-WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 32: Size mismatch in connection of port <C>. Formal port size is 1-bit while actual signal size is 16-bit.
 
 Elaborating module <debounce>.
 
@@ -204,10 +202,6 @@ Unit <top_level_lab7> synthesized.
 
 Synthesizing Unit <CPU_EU>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\CPU_EU.v".
-WARNING:Xst:647 - Input <reg_w_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <S_Sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <w_en> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <s_sel> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <CPU_EU> synthesized.
@@ -215,7 +209,7 @@ Unit <CPU_EU> synthesized.
 Synthesizing Unit <IDP>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\IDP.v".
     Summary:
-	no macro.
+	inferred   1 Multiplexer(s).
 Unit <IDP> synthesized.
 
 Synthesizing Unit <Register_File>.
@@ -303,7 +297,7 @@ Synthesizing Unit <clk_500Hz>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\clk_500Hz.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_72_o_add_1_OUT> created at line 41.
+    Found 32-bit adder for signal <i[31]_GND_42_o_add_1_OUT> created at line 41.
     Found 32-bit comparator greater for signal <n0002> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -344,8 +338,8 @@ Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\pixel_clk.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_77_o_add_2_OUT> created at line 50.
-    Found 32-bit comparator greater for signal <i[31]_GND_77_o_LessThan_2_o> created at line 44
+    Found 32-bit adder for signal <i[31]_GND_47_o_add_2_OUT> created at line 50.
+    Found 32-bit comparator greater for signal <i[31]_GND_47_o_LessThan_2_o> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -375,8 +369,9 @@ Unit <pixel_controller> synthesized.
 
 Synthesizing Unit <ad_mux>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ad_mux.v".
+    Found 4-bit 8-to-1 multiplexer for signal <Y> created at line 33.
     Summary:
-	inferred   5 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <ad_mux> synthesized.
 
 Synthesizing Unit <hexto7segment>.
@@ -403,12 +398,12 @@ Macro Statistics
  32-bit register                                       : 3
 # Comparators                                          : 3
  32-bit comparator greater                             : 3
-# Multiplexers                                         : 46
+# Multiplexers                                         : 43
  1-bit 2-to-1 multiplexer                              : 34
  16-bit 15-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 4
  32-bit 2-to-1 multiplexer                             : 3
- 4-bit 2-to-1 multiplexer                              : 5
+ 4-bit 8-to-1 multiplexer                              : 1
 # Tristates                                            : 256
  1-bit tristate buffer                                 : 256
 # FSMs                                                 : 1
@@ -463,12 +458,12 @@ Macro Statistics
  Flip-Flops                                            : 215
 # Comparators                                          : 3
  32-bit comparator greater                             : 3
-# Multiplexers                                         : 43
+# Multiplexers                                         : 40
  1-bit 2-to-1 multiplexer                              : 34
  16-bit 15-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 5
+ 4-bit 8-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 # Xors                                                 : 1
  16-bit xor2                                           : 1
@@ -495,150 +490,7 @@ Optimizing FSM <FSM_0> on signal <present_state[1:8]> with one-hot encoding.
 WARNING:Xst:2677 - Node <execution_unit/IR/Q_9> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:2677 - Node <execution_unit/IR/Q_10> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:2677 - Node <execution_unit/IR/Q_11> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_1> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_2> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_3> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_4> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_5> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_6> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_7> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_8> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_9> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_10> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_11> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_12> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_13> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_14> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/PC/Q_15> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:1989 - Unit <top_level_lab7>: instances <mem_w_enable/clk500>, <step/clk500> of unit <clk_500Hz> are equivalent, second instance is removed
-WARNING:Xst:1710 - FF/Latch <R5/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R5/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R4/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R7/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R6/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R1/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R0/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R3/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_0> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_1> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_2> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_3> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_4> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_5> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_6> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_7> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_8> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_9> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_10> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_11> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_12> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_13> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_14> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R2/Dout_15> (without init value) has a constant value of 0 in block <Register_File>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2040 - Unit Register_File: 32 multi-source signals are replaced by logic (pull-up yes): R<0>, R<10>, R<11>, R<12>, R<13>, R<14>, R<15>, R<1>, R<2>, R<3>, R<4>, R<5>, R<6>, R<7>, R<8>, R<9>, S<0>, S<10>, S<11>, S<12>, S<13>, S<14>, S<15>, S<1>, S<2>, S<3>, S<4>, S<5>, S<6>, S<7>, S<8>, S<9>.
 
 Optimizing unit <top_level_lab7> ...
@@ -650,15 +502,6 @@ Optimizing unit <one_shot> ...
 Optimizing unit <Register_File> ...
 
 Optimizing unit <alu16> ...
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_0> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_1> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_2> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_3> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_4> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_5> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_6> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_7> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_8> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:1710 - FF/Latch <mem_w_enable/clk500/i_17> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_w_enable/clk500/i_18> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_w_enable/clk500/i_19> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
@@ -689,6 +532,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <disp/pxl/i_20> has 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <disp/pxl/i_19> has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <disp/pxl/i_18> has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <disp/pxl/i_17> has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <disp/pxl/i_0> in Unit <top_level_lab7> is equivalent to the following FF/Latch, which will be removed : <mem_w_enable/clk500/i_0> 
+INFO:Xst:2261 - The FF/Latch <disp/pxl/i_1> in Unit <top_level_lab7> is equivalent to the following FF/Latch, which will be removed : <mem_w_enable/clk500/i_1> 
+INFO:Xst:2261 - The FF/Latch <disp/pxl/i_2> in Unit <top_level_lab7> is equivalent to the following FF/Latch, which will be removed : <mem_w_enable/clk500/i_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -700,8 +546,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 69
- Flip-Flops                                            : 69
+# Registers                                            : 218
+ Flip-Flops                                            : 218
 
 =========================================================================
 
@@ -724,28 +570,30 @@ Top Level Output File Name         : top_level_lab7.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 176
+# BELS                             : 768
 #      GND                         : 2
-#      INV                         : 9
-#      LUT1                        : 16
-#      LUT2                        : 40
-#      LUT3                        : 2
-#      LUT4                        : 7
-#      LUT5                        : 9
-#      LUT6                        : 3
-#      MUXCY                       : 46
+#      INV                         : 12
+#      LUT1                        : 29
+#      LUT2                        : 36
+#      LUT3                        : 4
+#      LUT4                        : 40
+#      LUT5                        : 117
+#      LUT6                        : 227
+#      MUXCY                       : 141
+#      MUXF7                       : 14
 #      VCC                         : 2
-#      XORCY                       : 40
-# FlipFlops/Latches                : 69
-#      FDC                         : 68
+#      XORCY                       : 144
+# FlipFlops/Latches                : 218
+#      FDC                         : 87
+#      FDCE                        : 130
 #      FDP                         : 1
 # RAMS                             : 1
 #      RAMB18E1                    : 1
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 25
-#      IBUF                        : 7
+# IO Buffers                       : 26
+#      IBUF                        : 8
 #      OBUF                        : 18
 
 Device utilization summary:
@@ -755,25 +603,25 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              69  out of  126800     0%  
- Number of Slice LUTs:                   86  out of  63400     0%  
-    Number used as Logic:                86  out of  63400     0%  
+ Number of Slice Registers:             218  out of  126800     0%  
+ Number of Slice LUTs:                  465  out of  63400     0%  
+    Number used as Logic:               465  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    105
-   Number with an unused Flip Flop:      36  out of    105    34%  
-   Number with an unused LUT:            19  out of    105    18%  
-   Number of fully used LUT-FF pairs:    50  out of    105    47%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    578
+   Number with an unused Flip Flop:     360  out of    578    62%  
+   Number with an unused LUT:           113  out of    578    19%  
+   Number of fully used LUT-FF pairs:   105  out of    578    18%  
+   Number of unique control sets:        14
 
 IO Utilization: 
  Number of IOs:                          28
- Number of bonded IOBs:                  26  out of    210    12%  
+ Number of bonded IOBs:                  27  out of    210    12%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of    135     0%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
 
 ---------------------------
 Partition Resource Summary:
@@ -796,9 +644,9 @@ Clock Information:
 -----------------------------------+-----------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                         | Load  |
 -----------------------------------+-----------------------------------------------+-------+
+clk                                | BUFGP                                         | 34    |
 disp/pxl/clk_out                   | NONE(disp/main_control/present_state_FSM_FFd7)| 8     |
-clk                                | BUFGP                                         | 37    |
-step_clk_out(step/regclk/Dout:O)   | NONE(*)(execution_unit/IR/Q_12)               | 5     |
+step_clk_out(step/regclk/Dout:O)   | BUFG(*)(execution_unit/IR/Q_0)                | 157   |
 mem_w_enable/clk500/clk_out        | BUFG                                          | 20    |
 -----------------------------------+-----------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -814,100 +662,120 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.650ns (Maximum Frequency: 273.965MHz)
-   Minimum input arrival time before clock: 0.859ns
-   Maximum output required time after clock: 1.464ns
-   Maximum combinational path delay: 0.757ns
+   Minimum period: 5.223ns (Maximum Frequency: 191.468MHz)
+   Minimum input arrival time before clock: 4.010ns
+   Maximum output required time after clock: 6.313ns
+   Maximum combinational path delay: 4.945ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'disp/pxl/clk_out'
-  Clock period: 0.658ns (frequency: 1519.526MHz)
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Delay:               0.658ns (Levels of Logic = 0)
-  Source:            disp/main_control/present_state_FSM_FFd8 (FF)
-  Destination:       disp/main_control/present_state_FSM_FFd7 (FF)
-  Source Clock:      disp/pxl/clk_out rising
-  Destination Clock: disp/pxl/clk_out rising
-
-  Data Path: disp/main_control/present_state_FSM_FFd8 to disp/main_control/present_state_FSM_FFd7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDP:C->Q              3   0.361   0.289  disp/main_control/present_state_FSM_FFd8 (disp/main_control/present_state_FSM_FFd8)
-     FDC:D                     0.008          disp/main_control/present_state_FSM_FFd7
-    ----------------------------------------
-    Total                      0.658ns (0.369ns logic, 0.289ns route)
-                                       (56.1% logic, 43.9% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.650ns (frequency: 273.965MHz)
-  Total number of paths / destination ports: 10631 / 36
+  Clock period: 5.223ns (frequency: 191.468MHz)
+  Total number of paths / destination ports: 10603 / 51
 -------------------------------------------------------------------------
-Delay:               3.650ns (Levels of Logic = 20)
-  Source:            mem_w_enable/clk500/i_0 (FF)
-  Destination:       mem_w_enable/clk500/i_16 (FF)
+Delay:               5.223ns (Levels of Logic = 20)
+  Source:            main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination:       main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: mem_w_enable/clk500/i_0 to mem_w_enable/clk500/i_16
+  Data Path: main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram to main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              1   0.361   0.279  mem_w_enable/clk500/i_0 (mem_w_enable/clk500/i_0)
-     INV:I->O              1   0.113   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_lut<0>_INV_0 (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<0> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<1> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<2> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<3> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<4> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<5> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<6> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<7> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<8> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<9> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<10> (mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_cy<10>)
-     XORCY:CI->O           3   0.370   0.693  mem_w_enable/clk500/Madd_i[31]_GND_72_o_add_1_OUT_xor<11> (mem_w_enable/clk500/i[31]_GND_72_o_add_1_OUT<11>)
-     LUT5:I0->O            1   0.097   0.000  mem_w_enable/clk500/Mcompar_n0002_lut<1> (mem_w_enable/clk500/Mcompar_n0002_lut<1>)
-     MUXCY:S->O            1   0.353   0.000  mem_w_enable/clk500/Mcompar_n0002_cy<1> (mem_w_enable/clk500/Mcompar_n0002_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Mcompar_n0002_cy<2> (mem_w_enable/clk500/Mcompar_n0002_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Mcompar_n0002_cy<3> (mem_w_enable/clk500/Mcompar_n0002_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  mem_w_enable/clk500/Mcompar_n0002_cy<4> (mem_w_enable/clk500/Mcompar_n0002_cy<4>)
-     MUXCY:CI->O          18   0.253   0.374  mem_w_enable/clk500/Mcompar_n0002_cy<5> (mem_w_enable/clk500/Mcompar_n0002_cy<5>)
-     LUT2:I1->O            1   0.097   0.000  mem_w_enable/clk500/Mmux_i[31]_GND_72_o_mux_3_OUT11 (mem_w_enable/clk500/i[31]_GND_72_o_mux_3_OUT<0>)
-     FDC:D                     0.008          mem_w_enable/clk500/i_0
+     RAMB18E1:CLKARDCLK->DOADO0    7   1.846   0.323  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (douta<0>)
+     end scope: 'main_memory/main_memory:douta<0>'
+     LUT5:I4->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1 (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14>)
+     XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<15> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<15>)
+     LUT4:I3->O            2   0.097   0.515  execution_unit/idp/ALU/Alu_Op<3>_85 (execution_unit/idp/ALU/Alu_Op<3>_85)
+     LUT6:I3->O           12   0.097   0.330  execution_unit/idp/ALU/Alu_Op<3>61 (N_OBUF)
+     begin scope: 'main_memory/main_memory:dina<15>'
+     RAMB18E1:DIBDI11          0.577          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
     ----------------------------------------
-    Total                      3.650ns (2.304ns logic, 1.346ns route)
-                                       (63.1% logic, 36.9% route)
+    Total                      5.223ns (3.759ns logic, 1.464ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'disp/pxl/clk_out'
+  Clock period: 0.690ns (frequency: 1450.116MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               0.690ns (Levels of Logic = 0)
+  Source:            disp/main_control/present_state_FSM_FFd4 (FF)
+  Destination:       disp/main_control/present_state_FSM_FFd3 (FF)
+  Source Clock:      disp/pxl/clk_out rising
+  Destination Clock: disp/pxl/clk_out rising
+
+  Data Path: disp/main_control/present_state_FSM_FFd4 to disp/main_control/present_state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.361   0.321  disp/main_control/present_state_FSM_FFd4 (disp/main_control/present_state_FSM_FFd4)
+     FDC:D                     0.008          disp/main_control/present_state_FSM_FFd3
+    ----------------------------------------
+    Total                      0.690ns (0.369ns logic, 0.321ns route)
+                                       (53.5% logic, 46.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'step_clk_out'
-  Clock period: 1.872ns (frequency: 534.274MHz)
-  Total number of paths / destination ports: 5 / 1
+  Clock period: 4.904ns (frequency: 203.899MHz)
+  Total number of paths / destination ports: 281922 / 272
 -------------------------------------------------------------------------
-Delay:               1.872ns (Levels of Logic = 3)
-  Source:            execution_unit/IR/Q_14 (FF)
-  Destination:       execution_unit/PC/Q_0 (FF)
+Delay:               4.904ns (Levels of Logic = 22)
+  Source:            execution_unit/idp/regfile/R1/Dout_0 (FF)
+  Destination:       execution_unit/PC/Q_15 (FF)
   Source Clock:      step_clk_out rising
   Destination Clock: step_clk_out rising
 
-  Data Path: execution_unit/IR/Q_14 to execution_unit/PC/Q_0
+  Data Path: execution_unit/idp/regfile/R1/Dout_0 to execution_unit/PC/Q_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.361   0.575  execution_unit/IR/Q_14 (execution_unit/IR/Q_14)
-     LUT4:I0->O            2   0.097   0.561  execution_unit/idp/ALU/Alu_Op<3>1 (Z_OBUF)
-     LUT4:I0->O            0   0.097   0.000  execution_unit/PC/Mcount_Q_lut<0> (execution_unit/PC/Mcount_Q_lut<0>)
-     XORCY:LI->O           1   0.173   0.000  execution_unit/PC/Mcount_Q_xor<0> (execution_unit/PC/Mcount_Q)
-     FDC:D                     0.008          execution_unit/PC/Q_0
+     FDCE:C->Q             3   0.361   0.703  execution_unit/idp/regfile/R1/Dout_0 (execution_unit/idp/regfile/R1/Dout_0)
+     LUT6:I0->O            6   0.097   0.534  execution_unit/idp/Mmux_smux11 (execution_unit/idp/Mmux_smux1)
+     LUT5:I2->O            1   0.097   0.000  execution_unit/idp/Mmux_smux134 (execution_unit/idp/Mmux_smux132)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13>)
+     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_xor<14> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_2_OUT<14>)
+     LUT6:I4->O            4   0.097   0.309  execution_unit/idp/ALU/Alu_Op<3>_64 (execution_unit/idp/ALU/Alu_Op<3>_64)
+     LUT5:I4->O            1   0.097   0.379  execution_unit/idp/ALU/Alu_Op<3>51_SW0 (N4)
+     LUT6:I4->O            1   0.097   0.000  execution_unit/PC/Mcount_Q_lut<14> (execution_unit/PC/Mcount_Q_lut<14>)
+     MUXCY:S->O            0   0.353   0.000  execution_unit/PC/Mcount_Q_cy<14> (execution_unit/PC/Mcount_Q_cy<14>)
+     XORCY:CI->O           1   0.370   0.000  execution_unit/PC/Mcount_Q_xor<15> (execution_unit/PC/Mcount_Q15)
+     FDC:D                     0.008          execution_unit/PC/Q_15
     ----------------------------------------
-    Total                      1.872ns (0.736ns logic, 1.136ns route)
-                                       (39.3% logic, 60.7% route)
+    Total                      4.904ns (2.599ns logic, 2.305ns route)
+                                       (53.0% logic, 47.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mem_w_enable/clk500/clk_out'
@@ -931,10 +799,49 @@ Delay:               0.653ns (Levels of Logic = 0)
                                        (56.6% logic, 43.4% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 807 / 65
+-------------------------------------------------------------------------
+Offset:              3.854ns (Levels of Logic = 21)
+  Source:            s_sel (PAD)
+  Destination:       main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination Clock: clk rising
+
+  Data Path: s_sel to main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   0.001   0.800  s_sel_IBUF (s_sel_IBUF)
+     LUT5:I0->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1 (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14>)
+     XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<15> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<15>)
+     LUT4:I3->O            2   0.097   0.515  execution_unit/idp/ALU/Alu_Op<3>_85 (execution_unit/idp/ALU/Alu_Op<3>_85)
+     LUT6:I3->O           12   0.097   0.330  execution_unit/idp/ALU/Alu_Op<3>61 (N_OBUF)
+     begin scope: 'main_memory/main_memory:dina<15>'
+     RAMB18E1:DIBDI11          0.577          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                      3.854ns (1.914ns logic, 1.940ns route)
+                                       (49.7% logic, 50.3% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'disp/pxl/clk_out'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              0.741ns (Levels of Logic = 1)
+Offset:              0.765ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       disp/main_control/present_state_FSM_FFd7 (FF)
   Destination Clock: disp/pxl/clk_out rising
@@ -943,57 +850,57 @@ Offset:              0.741ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            64   0.001   0.391  reset_IBUF (reset_IBUF)
+     IBUF:I->O           218   0.001   0.415  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.349          disp/main_control/present_state_FSM_FFd7
     ----------------------------------------
-    Total                      0.741ns (0.350ns logic, 0.391ns route)
-                                       (47.2% logic, 52.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 36 / 36
--------------------------------------------------------------------------
-Offset:              0.741ns (Levels of Logic = 1)
-  Source:            reset (PAD)
-  Destination:       disp/pxl/i_0 (FF)
-  Destination Clock: clk rising
-
-  Data Path: reset to disp/pxl/i_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            64   0.001   0.391  reset_IBUF (reset_IBUF)
-     FDC:CLR                   0.349          disp/pxl/i_0
-    ----------------------------------------
-    Total                      0.741ns (0.350ns logic, 0.391ns route)
-                                       (47.2% logic, 52.8% route)
+    Total                      0.765ns (0.350ns logic, 0.415ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'step_clk_out'
-  Total number of paths / destination ports: 9 / 6
+  Total number of paths / destination ports: 14105 / 429
 -------------------------------------------------------------------------
-Offset:              0.859ns (Levels of Logic = 3)
-  Source:            pc_inc (PAD)
-  Destination:       execution_unit/PC/Q_0 (FF)
+Offset:              4.010ns (Levels of Logic = 22)
+  Source:            s_sel (PAD)
+  Destination:       execution_unit/PC/Q_15 (FF)
   Destination Clock: step_clk_out rising
 
-  Data Path: pc_inc to execution_unit/PC/Q_0
+  Data Path: s_sel to execution_unit/PC/Q_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.384  pc_inc_IBUF (pc_inc_IBUF)
-     LUT2:I0->O            0   0.097   0.000  execution_unit/PC/ld_GND_40_o_equal_3_o1 (execution_unit/PC/ld_GND_40_o_equal_3_o_inv_inv)
-     XORCY:CI->O           1   0.370   0.000  execution_unit/PC/Mcount_Q_xor<0> (execution_unit/PC/Mcount_Q)
-     FDC:D                     0.008          execution_unit/PC/Q_0
+     IBUF:I->O            96   0.001   0.800  s_sel_IBUF (s_sel_IBUF)
+     LUT5:I0->O            1   0.097   0.000  execution_unit/idp/Mmux_smux134 (execution_unit/idp/Mmux_smux132)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13>)
+     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_xor<14> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_2_OUT<14>)
+     LUT6:I4->O            4   0.097   0.309  execution_unit/idp/ALU/Alu_Op<3>_64 (execution_unit/idp/ALU/Alu_Op<3>_64)
+     LUT5:I4->O            1   0.097   0.379  execution_unit/idp/ALU/Alu_Op<3>51_SW0 (N4)
+     LUT6:I4->O            1   0.097   0.000  execution_unit/PC/Mcount_Q_lut<14> (execution_unit/PC/Mcount_Q_lut<14>)
+     MUXCY:S->O            0   0.353   0.000  execution_unit/PC/Mcount_Q_cy<14> (execution_unit/PC/Mcount_Q_cy<14>)
+     XORCY:CI->O           1   0.370   0.000  execution_unit/PC/Mcount_Q_xor<15> (execution_unit/PC/Mcount_Q15)
+     FDC:D                     0.008          execution_unit/PC/Q_15
     ----------------------------------------
-    Total                      0.859ns (0.476ns logic, 0.384ns route)
-                                       (55.4% logic, 44.6% route)
+    Total                      4.010ns (2.142ns logic, 1.868ns route)
+                                       (53.4% logic, 46.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mem_w_enable/clk500/clk_out'
   Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
-Offset:              0.741ns (Levels of Logic = 1)
+Offset:              0.765ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       step/regclk/q9 (FF)
   Destination Clock: mem_w_enable/clk500/clk_out rising
@@ -1002,70 +909,124 @@ Offset:              0.741ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            64   0.001   0.391  reset_IBUF (reset_IBUF)
+     IBUF:I->O           218   0.001   0.415  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.349          step/regclk/q0
     ----------------------------------------
-    Total                      0.741ns (0.350ns logic, 0.391ns route)
-                                       (47.2% logic, 52.8% route)
+    Total                      0.765ns (0.350ns logic, 0.415ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/pxl/clk_out'
-  Total number of paths / destination ports: 16 / 12
+  Total number of paths / destination ports: 316 / 15
 -------------------------------------------------------------------------
-Offset:              1.272ns (Levels of Logic = 2)
-  Source:            disp/main_control/present_state_FSM_FFd4 (FF)
+Offset:              4.322ns (Levels of Logic = 6)
+  Source:            disp/main_control/present_state_FSM_FFd3 (FF)
   Destination:       a (PAD)
   Source Clock:      disp/pxl/clk_out rising
 
-  Data Path: disp/main_control/present_state_FSM_FFd4 to a
+  Data Path: disp/main_control/present_state_FSM_FFd3 to a
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.361   0.521  disp/main_control/present_state_FSM_FFd4 (disp/main_control/present_state_FSM_FFd4)
-     LUT6:I3->O            4   0.097   0.293  disp/mux8to1/Mmux_Y<0>1 (a_OBUF)
-     OBUF:I->O                 0.000          a_OBUF (a)
+     FDC:C->Q             10   0.361   0.735  disp/main_control/present_state_FSM_FFd3 (disp/main_control/present_state_FSM_FFd3)
+     LUT6:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<0>1 (disp/mux8to1/Mmux_Y<0>)
+     LUT6:I3->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>3 (disp/mux8to1/Mmux_Y<0>2)
+     LUT5:I0->O            1   0.097   0.683  disp/mux8to1/Mmux_Y<0>4 (disp/mux8to1/Mmux_Y<0>3)
+     LUT5:I0->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<0>5 (disp/hex<0>)
+     LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp21 (e_OBUF)
+     OBUF:I->O                 0.000          e_OBUF (e)
     ----------------------------------------
-    Total                      1.272ns (0.458ns logic, 0.814ns route)
-                                       (36.0% logic, 64.0% route)
+    Total                      4.322ns (0.846ns logic, 3.476ns route)
+                                       (19.6% logic, 80.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'step_clk_out'
-  Total number of paths / destination ports: 25 / 7
+  Total number of paths / destination ports: 142066 / 10
 -------------------------------------------------------------------------
-Offset:              1.464ns (Levels of Logic = 2)
-  Source:            execution_unit/IR/Q_14 (FF)
-  Destination:       a (PAD)
+Offset:              6.026ns (Levels of Logic = 13)
+  Source:            execution_unit/IR/Q_4 (FF)
+  Destination:       f (PAD)
   Source Clock:      step_clk_out rising
 
-  Data Path: execution_unit/IR/Q_14 to a
+  Data Path: execution_unit/IR/Q_4 to f
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.361   0.712  execution_unit/IR/Q_14 (execution_unit/IR/Q_14)
-     LUT6:I0->O            4   0.097   0.293  disp/mux8to1/Mmux_Y<0>1 (a_OBUF)
-     OBUF:I->O                 0.000          a_OBUF (a)
+     FDC:C->Q             58   0.361   0.804  execution_unit/IR/Q_4 (execution_unit/IR/Q_4)
+     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/regfile/R<0>LogicTrst3_G (N55)
+     MUXF7:I1->O           4   0.279   0.393  execution_unit/idp/regfile/R<0>LogicTrst3 (execution_unit/reg_out<0>)
+     LUT6:I4->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<2>)
+     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_4_OUT<3>)
+     LUT6:I4->O            3   0.097   0.389  execution_unit/idp/ALU/Alu_Op<3>_716 (execution_unit/idp/ALU/Alu_Op<3>_716)
+     LUT6:I4->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
+     LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
+     OBUF:I->O                 0.000          f_OBUF (f)
     ----------------------------------------
-    Total                      1.464ns (0.458ns logic, 1.005ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      6.026ns (2.088ns logic, 3.938ns route)
+                                       (34.6% logic, 65.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 6230 / 10
+-------------------------------------------------------------------------
+Offset:              6.313ns (Levels of Logic = 12)
+  Source:            main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination:       f (PAD)
+  Source Clock:      clk rising
+
+  Data Path: main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram to f
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    7   1.846   0.323  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (douta<0>)
+     end scope: 'main_memory/main_memory:douta<0>'
+     LUT5:I4->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1 (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
+     XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<3>)
+     LUT4:I3->O            4   0.097   0.525  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
+     LUT6:I3->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
+     LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
+     OBUF:I->O                 0.000          f_OBUF (f)
+    ----------------------------------------
+    Total                      6.313ns (3.197ns logic, 3.116ns route)
+                                       (50.6% logic, 49.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 6258 / 10
 -------------------------------------------------------------------------
-Delay:               0.757ns (Levels of Logic = 3)
-  Source:            pc_ld (PAD)
-  Destination:       N (PAD)
+Delay:               4.945ns (Levels of Logic = 12)
+  Source:            s_sel (PAD)
+  Destination:       f (PAD)
 
-  Data Path: pc_ld to N
+  Data Path: s_sel to f
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.379  pc_ld_IBUF (pc_ld_IBUF)
-     LUT2:I0->O            1   0.097   0.279  execution_unit/Mmux_Address11 (N_OBUF)
-     OBUF:I->O                 0.000          N_OBUF (N)
+     IBUF:I->O            96   0.001   0.800  s_sel_IBUF (s_sel_IBUF)
+     LUT5:I0->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1 (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
+     XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<3>)
+     LUT4:I3->O            4   0.097   0.525  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
+     LUT6:I3->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
+     LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
+     OBUF:I->O                 0.000          f_OBUF (f)
     ----------------------------------------
-    Total                      0.757ns (0.098ns logic, 0.659ns route)
-                                       (13.0% logic, 87.0% route)
+    Total                      4.945ns (1.352ns logic, 3.593ns route)
+                                       (27.3% logic, 72.7% route)
 
 =========================================================================
 
@@ -1077,9 +1038,9 @@ Clock to Setup on destination clock clk
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-clk                        |    3.650|         |         |         |
+clk                        |    5.223|         |         |         |
 mem_w_enable/clk500/clk_out|    1.975|         |         |         |
-step_clk_out               |    1.844|         |         |         |
+step_clk_out               |    4.913|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock disp/pxl/clk_out
@@ -1087,7 +1048,7 @@ Clock to Setup on destination clock disp/pxl/clk_out
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-disp/pxl/clk_out|    0.658|         |         |         |
+disp/pxl/clk_out|    0.690|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mem_w_enable/clk500/clk_out
@@ -1103,21 +1064,21 @@ Clock to Setup on destination clock step_clk_out
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.027|         |         |         |
-step_clk_out   |    1.872|         |         |         |
+clk            |    5.378|         |         |         |
+step_clk_out   |    4.904|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.91 secs
+Total CPU time to Xst completion: 12.48 secs
  
 --> 
 
-Total memory usage is 410488 kilobytes
+Total memory usage is 411752 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  198 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 
