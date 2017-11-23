@@ -3,24 +3,15 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<<<<<<< HEAD
-<application name="pn" timeStamp="Wed Nov 22 22:22:07 2017">
+<application name="pn" timeStamp="Wed Nov 22 22:37:23 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="A4BB2DB003724A17AD4198BB35EBE938" type="project"/>
 <property name="ProjectIteration" value="1" type="project"/>
 <property name="ProjectFile" value="C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/CPU_Execution_Unit.xise" type="project"/>
-=======
-<application name="pn" timeStamp="Wed Nov 15 18:01:57 2017">
-<section name="Project Information" visible="false">
-<property name="ProjectID" value="A4BB2DB003724A17AD4198BB35EBE938" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
-<property name="ProjectFile" value="C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/CPU_Execution_Unit.xise" type="project"/>
->>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
 <property name="ProjectCreationTimestamp" value="2017-11-05T23:39:07" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
-<property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
@@ -29,7 +20,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
 <property name="PROP_UseSmartGuide" value="false" type="design"/>
-<property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2017-11-05T23:39:07" type="design"/>
 <property name="PROP_intWbtProjectID" value="A4BB2DB003724A17AD4198BB35EBE938" type="design"/>
 <property name="PROP_intWbtProjectIteration" value="1" type="process"/>

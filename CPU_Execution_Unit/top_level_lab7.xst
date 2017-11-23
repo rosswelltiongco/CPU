@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn top_level_lab7.prj
+-ofn top_level_lab7
+-ofmt NGC
 -p xc7a100t-3-csg324
 -top top_level_lab7
 -opt_mode Speed
@@ -48,4 +51,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn top_level_lab7.prj

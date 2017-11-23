@@ -1,9 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 22 22:22:04 2017
+// Written by: Map P.20131013 on Wed Nov 22 22:37:20 2017
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "d" LOCATE = SITE "K13" LEVEL 1;
 COMP "e" LOCATE = SITE "P15" LEVEL 1;
 COMP "mem_w_en" LOCATE = SITE "P17" LEVEL 1;
 COMP "f" LOCATE = SITE "T11" LEVEL 1;
@@ -31,5 +30,6 @@ COMP "Z" LOCATE = SITE "H17" LEVEL 1;
 COMP "a" LOCATE = SITE "T10" LEVEL 1;
 COMP "b" LOCATE = SITE "R10" LEVEL 1;
 COMP "c" LOCATE = SITE "K16" LEVEL 1;
+COMP "d" LOCATE = SITE "K13" LEVEL 1;
 SCHEMATIC END;
 

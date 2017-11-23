@@ -1,14 +1,16 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Nov 22 22:22:51 2017
+Wed Nov 22 22:38:06 2017
 
 drc -z top_level_lab7.ncd top_level_lab7.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net step_clk_out is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <ir_ld_IBUF> is incomplete. The signal
+WARNING:PhysDesignRules:367 - The signal <adr_sel_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <s_sel_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+DRC detected 0 errors and 3 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

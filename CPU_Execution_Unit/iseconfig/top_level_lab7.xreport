@@ -1,19 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-<<<<<<< HEAD
-  <DateModified>2017-11-22T22:14:42</DateModified>
+  <DateModified>2017-11-22T22:34:38</DateModified>
   <ModuleName>top_level_lab7</ModuleName>
-  <SummaryTimeStamp>2017-11-22T22:12:16</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-11-22T22:23:17</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/iseconfig/top_level_lab7.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit\</ImplementationReportsDirectory>
-=======
-  <DateModified>2017-11-15T16:42:32</DateModified>
-  <ModuleName>top_level_lab7</ModuleName>
-  <SummaryTimeStamp>2017-11-13T13:03:41</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit/iseconfig/top_level_lab7.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Rosswell/Documents/CPU/CPU_Execution_Unit\</ImplementationReportsDirectory>
->>>>>>> 776a75946ec34f92c3a9b958667c860f23f47272
   <DateInitialized>2017-11-13T13:29:12</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
