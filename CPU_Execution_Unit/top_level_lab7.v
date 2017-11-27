@@ -24,11 +24,12 @@ module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_e
    output [7:0] an;
    //wire
    wire [15:0] address, eu_d_out, mem_d_out;
-   wire step_clk_out, w_en_out;
+   wire step_clk_out, mem_w_en_out;
 
    //CPU_EU
    //IDP shares input with IR
    //             CPU_EU(         clk,     w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel,      D_in, Address,    D_out,  C, N, Z);
+   // CPU_EU                      clk,     w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel,      D_in, Address,    D_out,  C, N, Z);
    CPU_EU execution_unit(step_clk_out, reg_w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, mem_d_out, address, eu_d_out,  C, N, Z);
 
    //debounce   (clk, reset,      Din,         Dout);
@@ -37,8 +38,8 @@ module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_e
    //debounce           (clk, reset,      Din,         Dout);
    debounce mem_w_enable(clk, reset, mem_w_en, mem_w_en_out);
    
-   //ram7          (clk,           we,    addr,      din,      dout);
-   ram7 main_memory(clk, mem_w_en_out, address, eu_d_out, mem_d_out);
+   //ram7          (clk,           we,         addr,      din,      dout);
+   ram7 main_memory(clk, mem_w_en_out, address[7:0], eu_d_out, mem_d_out);
 
 
    //Display_Controller   (clk, reset, 

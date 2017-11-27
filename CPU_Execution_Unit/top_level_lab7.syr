@@ -178,7 +178,6 @@ Elaborating module <ram7>.
 
 Elaborating module <ram_256x16>.
 WARNING:HDLCompiler:1499 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" Line 39: Empty module <ram_256x16> remains a black box.
-WARNING:HDLCompiler:189 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\top_level_lab7.v" Line 41: Size mismatch in connection of port <addr>. Formal port size is 8-bit while actual signal size is 16-bit.
 
 Elaborating module <Display_Controller>.
 
@@ -284,7 +283,6 @@ Synthesizing Unit <reg16_L_Inc>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
 Unit <reg16_L_Inc> synthesized.
 
 Synthesizing Unit <debounce>.
@@ -398,10 +396,10 @@ Macro Statistics
  32-bit register                                       : 3
 # Comparators                                          : 3
  32-bit comparator greater                             : 3
-# Multiplexers                                         : 43
+# Multiplexers                                         : 41
  1-bit 2-to-1 multiplexer                              : 34
  16-bit 15-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 3
  4-bit 8-to-1 multiplexer                              : 1
 # Tristates                                            : 256
@@ -418,6 +416,9 @@ Macro Statistics
 
 Reading core <ipcore_dir/ram_256x16.ngc>.
 Loading core <ram_256x16> for timing and area information for instance <main_memory>.
+WARNING:Xst:2677 - Node <Q_9> of sequential type is unconnected in block <IR>.
+WARNING:Xst:2677 - Node <Q_10> of sequential type is unconnected in block <IR>.
+WARNING:Xst:2677 - Node <Q_11> of sequential type is unconnected in block <IR>.
 
 Synthesizing (advanced) Unit <hexto7segment>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_disp> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -437,25 +438,21 @@ Synthesizing (advanced) Unit <pixel_clk>.
 The following registers are absorbed into counter <i>: 1 register on signal <i>.
 Unit <pixel_clk> synthesized (advanced).
 
-Synthesizing (advanced) Unit <reg16_L_Inc>.
-The following registers are absorbed into counter <Q>: 1 register on signal <Q>.
-Unit <reg16_L_Inc> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
  16x7-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 7
+# Adders/Subtractors                                   : 9
+ 16-bit adder                                          : 2
  17-bit adder                                          : 2
  17-bit subtractor                                     : 3
  32-bit adder                                          : 2
-# Counters                                             : 3
- 16-bit up counter                                     : 2
+# Counters                                             : 1
  32-bit up counter                                     : 1
-# Registers                                            : 215
- Flip-Flops                                            : 215
+# Registers                                            : 247
+ Flip-Flops                                            : 247
 # Comparators                                          : 3
  32-bit comparator greater                             : 3
 # Multiplexers                                         : 40
@@ -487,9 +484,6 @@ Optimizing FSM <FSM_0> on signal <present_state[1:8]> with one-hot encoding.
  110   | 01000000
  111   | 10000000
 -------------------
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_9> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_10> of sequential type is unconnected in block <top_level_lab7>.
-WARNING:Xst:2677 - Node <execution_unit/IR/Q_11> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:1989 - Unit <top_level_lab7>: instances <mem_w_enable/clk500>, <step/clk500> of unit <clk_500Hz> are equivalent, second instance is removed
 WARNING:Xst:2040 - Unit Register_File: 32 multi-source signals are replaced by logic (pull-up yes): R<0>, R<10>, R<11>, R<12>, R<13>, R<14>, R<15>, R<1>, R<2>, R<3>, R<4>, R<5>, R<6>, R<7>, R<8>, R<9>, S<0>, S<10>, S<11>, S<12>, S<13>, S<14>, S<15>, S<1>, S<2>, S<3>, S<4>, S<5>, S<6>, S<7>, S<8>, S<9>.
 
@@ -502,6 +496,11 @@ Optimizing unit <one_shot> ...
 Optimizing unit <Register_File> ...
 
 Optimizing unit <alu16> ...
+
+Optimizing unit <reg16_L_Inc> ...
+WARNING:Xst:2677 - Node <execution_unit/IR/Q_11> of sequential type is unconnected in block <top_level_lab7>.
+WARNING:Xst:2677 - Node <execution_unit/IR/Q_10> of sequential type is unconnected in block <top_level_lab7>.
+WARNING:Xst:2677 - Node <execution_unit/IR/Q_9> of sequential type is unconnected in block <top_level_lab7>.
 WARNING:Xst:1710 - FF/Latch <mem_w_enable/clk500/i_17> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_w_enable/clk500/i_18> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mem_w_enable/clk500/i_19> (without init value) has a constant value of 0 in block <top_level_lab7>. This FF/Latch will be trimmed during the optimization process.
@@ -538,7 +537,7 @@ INFO:Xst:2261 - The FF/Latch <disp/pxl/i_2> in Unit <top_level_lab7> is equivale
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top_level_lab7, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block top_level_lab7, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -570,19 +569,19 @@ Top Level Output File Name         : top_level_lab7.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 768
+# BELS                             : 726
 #      GND                         : 2
-#      INV                         : 12
-#      LUT1                        : 29
-#      LUT2                        : 36
-#      LUT3                        : 4
-#      LUT4                        : 40
-#      LUT5                        : 117
-#      LUT6                        : 227
+#      INV                         : 13
+#      LUT1                        : 31
+#      LUT2                        : 35
+#      LUT3                        : 25
+#      LUT4                        : 38
+#      LUT5                        : 105
+#      LUT6                        : 197
 #      MUXCY                       : 141
-#      MUXF7                       : 14
+#      MUXF7                       : 6
 #      VCC                         : 2
-#      XORCY                       : 144
+#      XORCY                       : 131
 # FlipFlops/Latches                : 218
 #      FDC                         : 87
 #      FDCE                        : 130
@@ -592,8 +591,8 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 26
-#      IBUF                        : 8
+# IO Buffers                       : 27
+#      IBUF                        : 9
 #      OBUF                        : 18
 
 Device utilization summary:
@@ -604,19 +603,19 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             218  out of  126800     0%  
- Number of Slice LUTs:                  465  out of  63400     0%  
-    Number used as Logic:               465  out of  63400     0%  
+ Number of Slice LUTs:                  444  out of  63400     0%  
+    Number used as Logic:               444  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    578
-   Number with an unused Flip Flop:     360  out of    578    62%  
-   Number with an unused LUT:           113  out of    578    19%  
-   Number of fully used LUT-FF pairs:   105  out of    578    18%  
+ Number of LUT Flip Flop pairs used:    551
+   Number with an unused Flip Flop:     333  out of    551    60%  
+   Number with an unused LUT:           107  out of    551    19%  
+   Number of fully used LUT-FF pairs:   111  out of    551    20%  
    Number of unique control sets:        14
 
 IO Utilization: 
  Number of IOs:                          28
- Number of bonded IOBs:                  27  out of    210    12%  
+ Number of bonded IOBs:                  28  out of    210    13%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of    135     0%  
@@ -646,8 +645,8 @@ Clock Signal                       | Clock buffer(FF name)                      
 -----------------------------------+-----------------------------------------------+-------+
 clk                                | BUFGP                                         | 34    |
 disp/pxl/clk_out                   | NONE(disp/main_control/present_state_FSM_FFd7)| 8     |
-step_clk_out(step/regclk/Dout:O)   | BUFG(*)(execution_unit/IR/Q_0)                | 157   |
 mem_w_enable/clk500/clk_out        | BUFG                                          | 20    |
+step_clk_out(step/regclk/Dout:O)   | BUFG(*)(execution_unit/idp/regfile/R7/Dout_0) | 157   |
 -----------------------------------+-----------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -663,9 +662,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 5.223ns (Maximum Frequency: 191.468MHz)
-   Minimum input arrival time before clock: 4.010ns
-   Maximum output required time after clock: 6.313ns
-   Maximum combinational path delay: 4.945ns
+   Minimum input arrival time before clock: 3.854ns
+   Maximum output required time after clock: 6.337ns
+   Maximum combinational path delay: 4.940ns
 
 Timing Details:
 ---------------
@@ -735,49 +734,6 @@ Delay:               0.690ns (Levels of Logic = 0)
                                        (53.5% logic, 46.5% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'step_clk_out'
-  Clock period: 4.904ns (frequency: 203.899MHz)
-  Total number of paths / destination ports: 281922 / 272
--------------------------------------------------------------------------
-Delay:               4.904ns (Levels of Logic = 22)
-  Source:            execution_unit/idp/regfile/R1/Dout_0 (FF)
-  Destination:       execution_unit/PC/Q_15 (FF)
-  Source Clock:      step_clk_out rising
-  Destination Clock: step_clk_out rising
-
-  Data Path: execution_unit/idp/regfile/R1/Dout_0 to execution_unit/PC/Q_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             3   0.361   0.703  execution_unit/idp/regfile/R1/Dout_0 (execution_unit/idp/regfile/R1/Dout_0)
-     LUT6:I0->O            6   0.097   0.534  execution_unit/idp/Mmux_smux11 (execution_unit/idp/Mmux_smux1)
-     LUT5:I2->O            1   0.097   0.000  execution_unit/idp/Mmux_smux134 (execution_unit/idp/Mmux_smux132)
-     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13>)
-     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_xor<14> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_2_OUT<14>)
-     LUT6:I4->O            4   0.097   0.309  execution_unit/idp/ALU/Alu_Op<3>_64 (execution_unit/idp/ALU/Alu_Op<3>_64)
-     LUT5:I4->O            1   0.097   0.379  execution_unit/idp/ALU/Alu_Op<3>51_SW0 (N4)
-     LUT6:I4->O            1   0.097   0.000  execution_unit/PC/Mcount_Q_lut<14> (execution_unit/PC/Mcount_Q_lut<14>)
-     MUXCY:S->O            0   0.353   0.000  execution_unit/PC/Mcount_Q_cy<14> (execution_unit/PC/Mcount_Q_cy<14>)
-     XORCY:CI->O           1   0.370   0.000  execution_unit/PC/Mcount_Q_xor<15> (execution_unit/PC/Mcount_Q15)
-     FDC:D                     0.008          execution_unit/PC/Q_15
-    ----------------------------------------
-    Total                      4.904ns (2.599ns logic, 2.305ns route)
-                                       (53.0% logic, 47.0% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'mem_w_enable/clk500/clk_out'
   Clock period: 0.653ns (frequency: 1532.567MHz)
   Total number of paths / destination ports: 18 / 18
@@ -797,6 +753,49 @@ Delay:               0.653ns (Levels of Logic = 0)
     ----------------------------------------
     Total                      0.653ns (0.369ns logic, 0.283ns route)
                                        (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'step_clk_out'
+  Clock period: 4.796ns (frequency: 208.526MHz)
+  Total number of paths / destination ports: 154323 / 285
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 22)
+  Source:            execution_unit/IR/Q_4 (FF)
+  Destination:       execution_unit/PC/Q_15 (FF)
+  Source Clock:      step_clk_out rising
+  Destination Clock: step_clk_out rising
+
+  Data Path: execution_unit/IR/Q_4 to execution_unit/PC/Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             43   0.361   0.802  execution_unit/IR/Q_4 (execution_unit/IR/Q_4)
+     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/regfile/R<0>LogicTrst3_G (N13)
+     MUXF7:I1->O           4   0.279   0.707  execution_unit/idp/regfile/R<0>LogicTrst3 (execution_unit/reg_out<0>)
+     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/ALU/Madd_n0036_lut<0>1 (execution_unit/idp/ALU/Madd_n0036_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Madd_n0036_cy<0> (execution_unit/idp/ALU/Madd_n0036_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<1> (execution_unit/idp/ALU/Madd_n0036_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<2> (execution_unit/idp/ALU/Madd_n0036_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<3> (execution_unit/idp/ALU/Madd_n0036_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<4> (execution_unit/idp/ALU/Madd_n0036_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<5> (execution_unit/idp/ALU/Madd_n0036_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<6> (execution_unit/idp/ALU/Madd_n0036_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<7> (execution_unit/idp/ALU/Madd_n0036_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<8> (execution_unit/idp/ALU/Madd_n0036_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<9> (execution_unit/idp/ALU/Madd_n0036_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<10> (execution_unit/idp/ALU/Madd_n0036_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<11> (execution_unit/idp/ALU/Madd_n0036_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<12> (execution_unit/idp/ALU/Madd_n0036_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<13> (execution_unit/idp/ALU/Madd_n0036_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Madd_n0036_cy<14> (execution_unit/idp/ALU/Madd_n0036_cy<14>)
+     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Madd_n0036_xor<15> (execution_unit/idp/ALU/n0036<15>)
+     LUT5:I3->O            2   0.097   0.383  execution_unit/idp/ALU/Alu_Op<3>_710 (execution_unit/idp/ALU/Alu_Op<3>_710)
+     LUT6:I4->O           12   0.097   0.346  execution_unit/idp/ALU/Alu_Op<3>61 (N_OBUF)
+     LUT5:I4->O            1   0.097   0.000  execution_unit/PC/ld_D[15]_select_4_OUT<15>1 (execution_unit/PC/ld_D[15]_select_4_OUT<15>)
+     FDC:D                     0.008          execution_unit/PC/Q_15
+    ----------------------------------------
+    Total                      4.796ns (2.178ns logic, 2.618ns route)
+                                       (45.4% logic, 54.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -857,46 +856,6 @@ Offset:              0.765ns (Levels of Logic = 1)
                                        (45.8% logic, 54.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'step_clk_out'
-  Total number of paths / destination ports: 14105 / 429
--------------------------------------------------------------------------
-Offset:              4.010ns (Levels of Logic = 22)
-  Source:            s_sel (PAD)
-  Destination:       execution_unit/PC/Q_15 (FF)
-  Destination Clock: step_clk_out rising
-
-  Data Path: s_sel to execution_unit/PC/Q_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            96   0.001   0.800  s_sel_IBUF (s_sel_IBUF)
-     LUT5:I0->O            1   0.097   0.000  execution_unit/idp/Mmux_smux134 (execution_unit/idp/Mmux_smux132)
-     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_cy<13>)
-     XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_2_OUT_xor<14> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_2_OUT<14>)
-     LUT6:I4->O            4   0.097   0.309  execution_unit/idp/ALU/Alu_Op<3>_64 (execution_unit/idp/ALU/Alu_Op<3>_64)
-     LUT5:I4->O            1   0.097   0.379  execution_unit/idp/ALU/Alu_Op<3>51_SW0 (N4)
-     LUT6:I4->O            1   0.097   0.000  execution_unit/PC/Mcount_Q_lut<14> (execution_unit/PC/Mcount_Q_lut<14>)
-     MUXCY:S->O            0   0.353   0.000  execution_unit/PC/Mcount_Q_cy<14> (execution_unit/PC/Mcount_Q_cy<14>)
-     XORCY:CI->O           1   0.370   0.000  execution_unit/PC/Mcount_Q_xor<15> (execution_unit/PC/Mcount_Q15)
-     FDC:D                     0.008          execution_unit/PC/Q_15
-    ----------------------------------------
-    Total                      4.010ns (2.142ns logic, 1.868ns route)
-                                       (53.4% logic, 46.6% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'mem_w_enable/clk500/clk_out'
   Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
@@ -914,6 +873,45 @@ Offset:              0.765ns (Levels of Logic = 1)
     ----------------------------------------
     Total                      0.765ns (0.350ns logic, 0.415ns route)
                                        (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'step_clk_out'
+  Total number of paths / destination ports: 7152 / 442
+-------------------------------------------------------------------------
+Offset:              3.398ns (Levels of Logic = 21)
+  Source:            s_sel (PAD)
+  Destination:       execution_unit/PC/Q_15 (FF)
+  Destination Clock: step_clk_out rising
+
+  Data Path: s_sel to execution_unit/PC/Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            96   0.001   0.800  s_sel_IBUF (s_sel_IBUF)
+     LUT5:I0->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1 (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<14>)
+     XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<15> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<15>)
+     LUT4:I3->O            2   0.097   0.516  execution_unit/idp/ALU/Alu_Op<3>_85 (execution_unit/idp/ALU/Alu_Op<3>_85)
+     LUT6:I3->O           12   0.097   0.346  execution_unit/idp/ALU/Alu_Op<3>61 (N_OBUF)
+     LUT5:I4->O            1   0.097   0.000  execution_unit/PC/ld_D[15]_select_4_OUT<15>1 (execution_unit/PC/ld_D[15]_select_4_OUT<15>)
+     FDC:D                     0.008          execution_unit/PC/Q_15
+    ----------------------------------------
+    Total                      3.398ns (1.442ns logic, 1.956ns route)
+                                       (42.4% logic, 57.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/pxl/clk_out'
@@ -943,7 +941,7 @@ Offset:              4.322ns (Levels of Logic = 6)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'step_clk_out'
   Total number of paths / destination ports: 142066 / 10
 -------------------------------------------------------------------------
-Offset:              6.026ns (Levels of Logic = 13)
+Offset:              6.337ns (Levels of Logic = 13)
   Source:            execution_unit/IR/Q_4 (FF)
   Destination:       f (PAD)
   Source Clock:      step_clk_out rising
@@ -952,29 +950,29 @@ Offset:              6.026ns (Levels of Logic = 13)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             58   0.361   0.804  execution_unit/IR/Q_4 (execution_unit/IR/Q_4)
-     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/regfile/R<0>LogicTrst3_G (N55)
-     MUXF7:I1->O           4   0.279   0.393  execution_unit/idp/regfile/R<0>LogicTrst3 (execution_unit/reg_out<0>)
-     LUT6:I4->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0>)
+     FDC:C->Q             43   0.361   0.802  execution_unit/IR/Q_4 (execution_unit/IR/Q_4)
+     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/regfile/R<0>LogicTrst3_G (N13)
+     MUXF7:I1->O           4   0.279   0.707  execution_unit/idp/regfile/R<0>LogicTrst3 (execution_unit/reg_out<0>)
+     LUT6:I0->O            1   0.097   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_lut<0>)
      MUXCY:S->O            1   0.353   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<0> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<0>)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_cy<2>)
      XORCY:CI->O           1   0.370   0.379  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_4_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_4_OUT<3>)
-     LUT6:I4->O            3   0.097   0.389  execution_unit/idp/ALU/Alu_Op<3>_716 (execution_unit/idp/ALU/Alu_Op<3>_716)
-     LUT6:I4->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
-     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT6:I4->O            2   0.097   0.384  execution_unit/idp/ALU/Alu_Op<3>_716 (execution_unit/idp/ALU/Alu_Op<3>_716)
+     LUT6:I4->O           11   0.097   0.602  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N8)
      LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
      OBUF:I->O                 0.000          f_OBUF (f)
     ----------------------------------------
-    Total                      6.026ns (2.088ns logic, 3.938ns route)
-                                       (34.6% logic, 65.4% route)
+    Total                      6.337ns (2.088ns logic, 4.249ns route)
+                                       (32.9% logic, 67.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 6230 / 10
 -------------------------------------------------------------------------
-Offset:              6.313ns (Levels of Logic = 12)
+Offset:              6.309ns (Levels of Logic = 12)
   Source:            main_memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Destination:       f (PAD)
   Source Clock:      clk rising
@@ -990,21 +988,21 @@ Offset:              6.313ns (Levels of Logic = 12)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
      XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<3>)
-     LUT4:I3->O            4   0.097   0.525  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
-     LUT6:I3->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
-     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT4:I3->O            2   0.097   0.516  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
+     LUT6:I3->O           11   0.097   0.602  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N8)
      LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
      OBUF:I->O                 0.000          f_OBUF (f)
     ----------------------------------------
-    Total                      6.313ns (3.197ns logic, 3.116ns route)
-                                       (50.6% logic, 49.4% route)
+    Total                      6.309ns (3.197ns logic, 3.112ns route)
+                                       (50.7% logic, 49.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 6258 / 10
 -------------------------------------------------------------------------
-Delay:               4.945ns (Levels of Logic = 12)
+Delay:               4.940ns (Levels of Logic = 12)
   Source:            s_sel (PAD)
   Destination:       f (PAD)
 
@@ -1018,15 +1016,15 @@ Delay:               4.945ns (Levels of Logic = 12)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2> (execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_cy<2>)
      XORCY:CI->O           1   0.370   0.295  execution_unit/idp/ALU/Msub_GND_39_o_GND_39_o_sub_9_OUT_xor<3> (execution_unit/idp/ALU/GND_39_o_GND_39_o_sub_9_OUT<3>)
-     LUT4:I3->O            4   0.097   0.525  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
-     LUT6:I3->O           10   0.097   0.598  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
-     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N50)
+     LUT4:I3->O            2   0.097   0.516  execution_unit/idp/ALU/Alu_Op<3>_88 (execution_unit/idp/ALU/Alu_Op<3>_88)
+     LUT6:I3->O           11   0.097   0.602  execution_unit/idp/ALU/Alu_Op<3>91 (eu_d_out<3>)
+     LUT4:I0->O            1   0.097   0.511  disp/mux8to1/Mmux_Y<3>6_SW0 (N8)
      LUT6:I3->O            7   0.097   0.584  disp/mux8to1/Mmux_Y<3>6 (disp/hex<3>)
      LUT4:I0->O            1   0.097   0.279  disp/decoder/Mram_disp111 (f_OBUF)
      OBUF:I->O                 0.000          f_OBUF (f)
     ----------------------------------------
-    Total                      4.945ns (1.352ns logic, 3.593ns route)
-                                       (27.3% logic, 72.7% route)
+    Total                      4.940ns (1.352ns logic, 3.588ns route)
+                                       (27.4% logic, 72.6% route)
 
 =========================================================================
 
@@ -1040,7 +1038,7 @@ Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
 clk                        |    5.223|         |         |         |
 mem_w_enable/clk500/clk_out|    1.975|         |         |         |
-step_clk_out               |    4.913|         |         |         |
+step_clk_out               |    5.252|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock disp/pxl/clk_out
@@ -1064,21 +1062,21 @@ Clock to Setup on destination clock step_clk_out
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.378|         |         |         |
-step_clk_out   |    4.904|         |         |         |
+clk            |    4.767|         |         |         |
+step_clk_out   |    4.796|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.48 secs
+Total CPU time to Xst completion: 11.49 secs
  
 --> 
 
 Total memory usage is 411752 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   40 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

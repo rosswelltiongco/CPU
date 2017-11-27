@@ -26,7 +26,7 @@ module CPU_EU(clk, w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, D_in, Addr
    
    //declare outputs
    output [15:0] Address;
-   output wire [15:0] D_out;
+   output [15:0] D_out;
    output C, N, Z;
    
    //declare wires

@@ -36,3 +36,94 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
 bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/CPU_Execution_Unit/top_level_lab7.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level.ucf -p xc7a100t-csg324-3 top_level_lab7.ngc top_level_lab7.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab7_map.ncd top_level_lab7.ngd top_level_lab7.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab7_map.ncd top_level_lab7.ncd top_level_lab7.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab7.twx top_level_lab7.ncd -o top_level_lab7.twr top_level_lab7.pcf -ucf top_level.ucf 
+bitgen -intstyle ise -f top_level_lab7.ut top_level_lab7.ncd 

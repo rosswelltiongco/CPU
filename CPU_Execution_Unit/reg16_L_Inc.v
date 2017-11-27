@@ -22,7 +22,7 @@ module reg16_L_Inc(clk, reset, ld, inc, D, Q);
          case({ld,inc})
               2'b10: Q <= D;
               2'b01: Q <= Q + 1;
-            default: Q <= D;
+            default: Q <= Q;
          endcase
    end
    
