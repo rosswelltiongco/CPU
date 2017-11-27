@@ -11,8 +11,6 @@
  * in the ram are specified by the file "ram_256x16_lab7Fa17.coe" given by
  * the instructor that contained control signals for use in our Execution Unit
  *
- * Work  Time: 15 mins Jesus 11/9
- * Debug Time: 
  *******************************************************************************/
 module ram7(clk, we, addr, din, dout);
     

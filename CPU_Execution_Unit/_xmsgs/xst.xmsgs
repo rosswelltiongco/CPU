@@ -11,7 +11,7 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\alu16.v" Line 46: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" Line 24: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\reg16_L_Inc.v" Line 35: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\CPU_Execution_Unit\ipcore_dir\ram_256x16.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">ram_256x16</arg>&gt; remains a black box.

@@ -10,14 +10,13 @@
  * Description: Top level module instantiates and connection the Execution Unit
  * module, ram module and Display Controller.
  *
- * Work  Time: 45 mins Jesus 11/9 
- * Debug Time: 30 mins Jesus 11/21
  *******************************************************************************/
-module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_en, 
-                     adr_sel, reg_w_en, C, N, Z, a,  b,  c,  d,  e,  f,  g, an );
-
+module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, 
+                      mem_w_en, adr_sel, reg_w_en, C, N, Z, 
+                      a,  b,  c,  d,  e,  f,  g, an );
    //input 
-   input clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_en, adr_sel, reg_w_en;
+   input clk, reset, s_sel, pc_ld, pc_inc, ir_ld, 
+         step_clk, mem_w_en, adr_sel, reg_w_en;
    
    //output
    output C, N, Z, a,  b,  c,  d,  e,  f,  g;
@@ -26,11 +25,11 @@ module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_e
    wire [15:0] address, eu_d_out, mem_d_out;
    wire step_clk_out, mem_w_en_out;
 
-   //CPU_EU
-   //IDP shares input with IR
-   //             CPU_EU(         clk,     w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel,      D_in, Address,    D_out,  C, N, Z);
-   // CPU_EU                      clk,     w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel,      D_in, Address,    D_out,  C, N, Z);
-   CPU_EU execution_unit(step_clk_out, reg_w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, mem_d_out, address, eu_d_out,  C, N, Z);
+
+   //             CPU_EU(         clk,     w_en, s_sel, reset, pc_ld, pc_inc, 
+   CPU_EU execution_unit(step_clk_out, reg_w_en, s_sel, reset, pc_ld, pc_inc,
+   //                    ir_ld, adr_sel,      D_in, Address,    D_out,  C, N, Z);
+                         ir_ld, adr_sel, mem_d_out, address, eu_d_out,  C, N, Z);
 
    //debounce   (clk, reset,      Din,         Dout);
    debounce step(clk, reset, step_clk, step_clk_out);

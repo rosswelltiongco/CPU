@@ -28,9 +28,7 @@ module Display_Controller(clk, reset,
    wire pixel_clk_out;
    wire [2:0] seg_sel;
    wire [3:0] hex;
-   
-   //Declare modules
-   
+
    //pixel_clk  (clk_in, reset, clk_out      );
    pixel_clk pxl(   clk, reset, pixel_clk_out);
    
