@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: one_shot.v
- * Date:     November 6, 2017
+ * Date:     November 27, 2017
  * Version:  1.0
  *
  * Description: Debounces a signal and only outputs high when 9 of 

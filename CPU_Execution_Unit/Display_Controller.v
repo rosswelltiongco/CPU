@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: Display_Controller.v
- * Date:     November 6, 2017
+ * Date:     November 27, 2017
  * Version:  1.0
  *
  * Description: Outputs 8 4-bit values to 8 different seven segment displays

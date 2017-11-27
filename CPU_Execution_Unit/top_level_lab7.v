@@ -3,15 +3,15 @@
  *
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
- * Filename: 
- * Date:     
+ * Filename: top_level_lab7.v
+ * Date:     November 27, 2017
  * Version:  1.0
  *
- * Description: 
+ * Description: Top level module instantiates and connection the Execution Unit
+ * module, ram module and Display Controller.
  *
- *
- * Work  Time: 45 mins Jesus 11/9
- * Debug Time: 
+ * Work  Time: 45 mins Jesus 11/9 
+ * Debug Time: 30 mins Jesus 11/21
  *******************************************************************************/
 module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, mem_w_en, 
                      adr_sel, reg_w_en, C, N, Z, a,  b,  c,  d,  e,  f,  g, an );

@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: decoder3to8.v
- * Date:     November 6, 2017
+ * Date:     November 27, 2017
  * Version:  1.0
  *
  * Description: Behavioral implementation of a 3-8 decoder that asserts a single

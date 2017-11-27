@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: ad_mux.v
- * Date:     November 6, 2017
+ * Date:     November 27, 2017
  * Version:  1.0
  *
  * Description: A four bit 8 to 1 multiplexer that selects address/data

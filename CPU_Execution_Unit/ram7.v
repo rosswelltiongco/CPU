@@ -3,12 +3,13 @@
  *
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
- * Filename: 
- * Date:     
+ * Filename: ram7.v
+ * Date:     November 27, 2017
  * Version:  1.0
  *
- * Description: 
- *
+ * Description: Ram module instantiates a memory module using coregen. The value
+ * in the ram are specified by the file "ram_256x16_lab7Fa17.coe" given by
+ * the instructor that contained control signals for use in our Execution Unit
  *
  * Work  Time: 15 mins Jesus 11/9
  * Debug Time: 

@@ -3,12 +3,14 @@
  *
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
- * Filename: 
- * Date:     
+ * Filename: CPU_EU.v
+ * Date:     November 27, 2017
  * Version:  1.0
  *
- * Description: 
- *
+ * Description: Execution unit instantiates and connects our Integer Data Path
+ * module as well as 2 additional registers, the Program Counter and 
+ * Instruction Register. The Instruction register's output is connected as a 
+ * control word for the Integer Datapath's Register File.
  *
  * Work  Time: 45 mins Jesus 11/9 30 mins 11/22 
  * Debug Time: 
