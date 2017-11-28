@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-22T22:59:06</DateModified>
+  <DateModified>2017-11-27T13:07:11</DateModified>
   <ModuleName>cu</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/iseconfig/cu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-22T22:59:06</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

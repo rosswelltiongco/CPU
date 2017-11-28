@@ -152,3 +152,7 @@ There were 0 CONFIG constraint(s) processed from top_level_lab7.pcf.
 
 
 Running DRC.
+DRC detected 0 errors and 0 warnings.
+Creating bit map...
+Saving bit stream in "top_level_lab7.bit".
+Bitstream generation is complete.

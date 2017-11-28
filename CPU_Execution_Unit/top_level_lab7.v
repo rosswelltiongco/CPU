@@ -14,17 +14,17 @@
 module top_level_lab7(clk, reset, s_sel, pc_ld, pc_inc, ir_ld, step_clk, 
                       mem_w_en, adr_sel, reg_w_en, C, N, Z, 
                       a,  b,  c,  d,  e,  f,  g, an );
-   //input 
+   //inputs 
    input clk, reset, s_sel, pc_ld, pc_inc, ir_ld, 
          step_clk, mem_w_en, adr_sel, reg_w_en;
    
-   //output
+   //outputs
    output C, N, Z, a,  b,  c,  d,  e,  f,  g;
    output [7:0] an;
+   
    //wire
    wire [15:0] address, eu_d_out, mem_d_out;
    wire step_clk_out, mem_w_en_out;
-
 
    //             CPU_EU(         clk,     w_en, s_sel, reset, pc_ld, pc_inc, 
    CPU_EU execution_unit(step_clk_out, reg_w_en, s_sel, reset, pc_ld, pc_inc,
