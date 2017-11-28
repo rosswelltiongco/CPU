@@ -159,6 +159,14 @@ module cu(clk, reset, IR, N, Z, C,
            endcase
          end//DECODE
          
+         
+         
+         
+         
+         
+         
+         
+         
          ADD:  begin
          // R[ir(8:6)] <- R[ir(5:3)] + R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00000}
          W_Adr   = 3'b
@@ -174,7 +182,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00000};
          nextstate = FETCH;         
       
          end//ADD
@@ -194,7 +202,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00001};
          nextstate = FETCH;        
       
          end//SUB
@@ -214,7 +222,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00010};
          nextstate = FETCH;        
       
          end//CMP
@@ -234,7 +242,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00011};
          nextstate = FETCH;       
       
          end//MOV
@@ -254,7 +262,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00100};
          nextstate = FETCH;        
       
          end//SHL
@@ -274,7 +282,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00101};
          nextstate = FETCH;        
       
          end//SHR
@@ -294,7 +302,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00110};
          nextstate = FETCH;         
       
          end//INC
@@ -314,7 +322,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b00111};
          nextstate = FETCH;        
       
          end//DEC
@@ -334,7 +342,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01000};
          nextstate = FETCH;        
       
          end//LD
@@ -354,7 +362,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01001};
          nextstate = FETCH;        
       
          end//STO
@@ -374,7 +382,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01010};
          nextstate = FETCH;        
       
          end//LDI
@@ -394,7 +402,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01100};
          nextstate = FETCH;        
       
          end//JE
@@ -414,7 +422,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01101};
          nextstate = FETCH;        
       
          end//JNE
@@ -434,7 +442,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01110};
          nextstate = FETCH;        
       
          end//JC
@@ -454,7 +462,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01111};
          nextstate = FETCH;        
       
          end//JMP
@@ -474,7 +482,7 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = {ps_N, ps_Z, ps_C, 5'b01011};
          nextstate = HALT;         
       
          end//HALT
@@ -494,15 +502,9 @@ module cu(clk, reset, IR, N, Z, C,
          rw_en   = 1'b
          alu_op  = 4'b
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, pc_C};
-         status  = 8'h
+         status  = 8'hF0;
          nextstate = ILLEGAL_OP;        
       
          end//ILLEGAL_OP
    endcase
-   
-   
-   
-   
-   
-   
 endmodule
