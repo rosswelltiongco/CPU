@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 165: Syntax error near &quot;<arg fmt="%s" index="1">R_Adr</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 166: Syntax error near &quot;<arg fmt="%s" index="1">S_Adr</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="472" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 166: Illegal character in binary number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 167: Syntax error near &quot;<arg fmt="%s" index="1">r_sel</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 168: Syntax error near &quot;<arg fmt="%s" index="1">s_sel</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 169: Syntax error near &quot;<arg fmt="%s" index="1">pc_ld</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 170: Syntax error near &quot;<arg fmt="%s" index="1">pc_inc</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 171: Syntax error near &quot;<arg fmt="%s" index="1">pc_sel</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 172: Syntax error near &quot;<arg fmt="%s" index="1">ir_ld</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 173: Syntax error near &quot;<arg fmt="%s" index="1">mw_en</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 174: Syntax error near &quot;<arg fmt="%s" index="1">rw_en</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="472" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 174: Illegal character in binary number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 175: Syntax error near &quot;<arg fmt="%s" index="1">lu_op</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 176: Syntax error near &quot;<arg fmt="%s" index="1">{</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 178: Syntax error near &quot;<arg fmt="%s" index="1">nextstate</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 185: Syntax error near &quot;<arg fmt="%s" index="1">R_Adr</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 186: Syntax error near &quot;<arg fmt="%s" index="1">S_Adr</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="472" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 186: Illegal character in binary number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 187: Syntax error near &quot;<arg fmt="%s" index="1">r_sel</arg>&quot;.
+</msg>
+
+</messages>
+

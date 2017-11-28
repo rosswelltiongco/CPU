@@ -1,0 +1,83 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: RISC_PROCESSOR.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16.v" into library work
+Parsing module <reg16>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\decoder3to8.v" into library work
+Parsing module <decoder3to8>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\Register_File.v" into library work
+Parsing module <Register_File>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\alu16.v" into library work
+Parsing module <alu16>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16_L_Inc.v" into library work
+Parsing module <reg16_L_Inc>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\IDP.v" into library work
+Parsing module <IDP>.
+Analyzing Verilog file "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" into library work
+Parsing module <cu>.
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 165: Syntax error near "R_Adr".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 166: Syntax error near "S_Adr".
+ERROR:HDLCompiler:472 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 166: Illegal character in binary number
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 167: Syntax error near "r_sel".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 168: Syntax error near "s_sel".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 169: Syntax error near "pc_ld".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 170: Syntax error near "pc_inc".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 171: Syntax error near "pc_sel".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 172: Syntax error near "ir_ld".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 173: Syntax error near "mw_en".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 174: Syntax error near "rw_en".
+ERROR:HDLCompiler:472 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 174: Illegal character in binary number
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 175: Syntax error near "lu_op".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 176: Syntax error near "{".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 178: Syntax error near "nextstate".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 185: Syntax error near "R_Adr".
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 186: Syntax error near "S_Adr".
+ERROR:HDLCompiler:472 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 186: Illegal character in binary number
+ERROR:HDLCompiler:806 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 187: Syntax error near "r_sel".
+Sorry, too many errors..
+--> 
+
+Total memory usage is 288456 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

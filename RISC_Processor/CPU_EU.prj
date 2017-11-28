@@ -1,0 +1,7 @@
+verilog work "reg16.v"
+verilog work "decoder3to8.v"
+verilog work "Register_File.v"
+verilog work "alu16.v"
+verilog work "reg16_L_Inc.v"
+verilog work "IDP.v"
+verilog work "CPU_EU.v"

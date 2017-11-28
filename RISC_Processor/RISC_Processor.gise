@@ -21,7 +21,18 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="RISC_Processor.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CPU_EU.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CPU_EU.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="CPU_EU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RISC_PROCESSOR.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RISC_PROCESSOR.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RISC_PROCESSOR.xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="clk_500Hz.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="one_shot.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
