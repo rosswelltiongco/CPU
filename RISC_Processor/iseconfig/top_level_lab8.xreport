@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-28T10:22:04</DateModified>
+  <DateModified>2017-11-28T22:38:23</DateModified>
   <ModuleName>top_level_lab8</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-11-28T21:22:48</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/iseconfig/top_level_lab8.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-28T10:22:03</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

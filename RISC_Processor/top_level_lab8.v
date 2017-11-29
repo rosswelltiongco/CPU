@@ -13,11 +13,12 @@
  * Work  Time: Jesus 11/27 1.5 hrs
  * Debug Time: 
  *******************************************************************************/
-module top_level_lab8();
+module top_level_lab8(clk, reset, dump_mem, step_clk, step_mem,
+                      an, a, b, c, d, e, f, g, status);
 
    //inputs
    input clk, reset;
-   input dump_mem, step_clk, step_mem, dump_mem;
+   input dump_mem, step_clk, step_mem;
    
    //outputs
    output [7:0] an;
@@ -25,8 +26,9 @@ module top_level_lab8();
    output [7:0] status;//status LEDs
    
    //wires
-   wire mem_dump_out, step_clk_out, step_mem_out, adr_mux, mw_en;
+   wire step_clk_out, step_mem_out, mw_en;
    wire [15:0] Address, CPU_D_out, RAM_D_out;
+   wire [15:0] adr_mux,  mem_dump_out;
 
 //module debounce(clk, reset, Din, Dout);
    debounce stepclk(clk, reset, step_clk, step_clk_out);
