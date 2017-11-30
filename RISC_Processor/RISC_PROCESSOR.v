@@ -32,6 +32,6 @@ module RISC_PROCESSOR(clk, reset, D_in, mw_en, status, Address, D_out);
 //module cu       (clk, reset,     IR,             N,             Z,             C, W_Adr, R_Adr, S_Adr, adr_sel, s_sel, pc_ld, pc_Inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
    cu control_unit(clk, reset, IR_out, ALU_status[2], ALU_status[1], ALU_status[0], w_adr, r_adr, s_adr, adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
    
-//module CPU_EU   (clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out,             C,             N,             Z);
-   CPU_EU  ex_unit(clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, ALU_status[0], ALU_status[1], ALU_status[2]);
+//module CPU_EU   (clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out,             C,             N,             Z, W_Adr, R_Adr, S_Adr, ALU_OP, ir_our);
+   CPU_EU  ex_unit(clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, ALU_status[0], ALU_status[1], ALU_status[2], w_adr, r_adr, s_adr, alu_op, IR_out);
 endmodule

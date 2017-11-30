@@ -43,16 +43,16 @@ module top_level_lab8(clk, reset, dump_mem, step_clk, step_mem,
 
    assign adr_mux = dump_mem ? mem_dump_out : Address;//address from RISC
 //module  ram(clk,    we,          addr,       din,      dout);
-   ram memory(clk, mw_en,Address [7:0], CPU_D_out, RAM_D_out);
+   ram memory(clk, mw_en,adr_mux[7:0], CPU_D_out, RAM_D_out);
 
 
 //module Display_Controller(clk, reset, 
 //                          seg7, seg6, seg5, seg4, seg3, seg2, seg1, seg0, 
 //                            A7,   A6,   A5,   A4,   A3,   A2,   A1,   A0, 
 //                             a,    b,    c,    d,    e,    f,    g);
-   Display_Controller(clk, reset, 
+   Display_Controller disp(clk, reset, 
                         adr_mux[15:12], adr_mux[11:8], adr_mux[7:4], adr_mux[3:0],
-                        Address[15:12], Address[11:8], Address[7:4], Address[3:0],
+                        RAM_D_out[15:12], RAM_D_out[11:8], RAM_D_out[7:4], RAM_D_out[3:0],
                         an[7], an[6], an[5], an[4], an[3], an[2], an[1], an[0],
                         a,b,c,d,e,f,g);
                       

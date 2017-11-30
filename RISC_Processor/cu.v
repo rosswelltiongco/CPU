@@ -171,7 +171,7 @@ module cu(clk, reset, IR, N, Z, C,
          pc_sel  = 1'b0;
          ir_ld   = 1'b0;
          mw_en   = 1'b0;
-         rw_en   = 1'b0;
+         rw_en   = 1'b1;
          alu_op  = 4'b0100;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00000};
@@ -332,7 +332,7 @@ module cu(clk, reset, IR, N, Z, C,
          ir_ld   = 1'b0;
          mw_en   = 1'b0;
          rw_en   = 1'b1;
-         alu_op  = 4'b000;
+         alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01000};
          nextstate = FETCH;        
@@ -509,5 +509,22 @@ module cu(clk, reset, IR, N, Z, C,
          nextstate = ILLEGAL_OP;        
       
          end//ILLEGAL_OP
+         default: begin
+         W_Adr   = 3'b000;
+         R_Adr   = 3'b000;
+         S_Adr   = 3'b000;
+         adr_sel = 1'b0;
+         s_sel   = 1'b0;
+         pc_ld   = 1'b0;
+         pc_inc  = 1'b0;
+         pc_sel  = 1'b0;
+         ir_ld   = 1'b0;
+         mw_en   = 1'b0;
+         rw_en   = 1'b0;
+         alu_op  = 4'b0;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
+         status  = 8'hF0;
+         nextstate = ILLEGAL_OP;
+         end//defualt;
    endcase
 endmodule

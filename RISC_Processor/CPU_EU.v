@@ -14,27 +14,32 @@
  *
  *******************************************************************************/
 module CPU_EU(clk, w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel,
-              D_in, Address, D_out, C, N, Z);
+              D_in, Address, D_out, C, N, Z,
+              W_Adr, R_Adr, S_Adr, ALU_OP, ir_out);
 
 
    //declare inputs
    input clk, reset, w_en, s_sel, adr_sel, pc_ld, pc_inc, ir_ld, pc_sel; 
    input [15:0] D_in;
+   //new inputs
+   input [2:0] W_Adr, R_Adr, S_Adr;
+   input [3:0] ALU_OP;
    
    //declare outputs
    output [15:0] Address;
    output [15:0] D_out;
    output C, N, Z;
+   output [15:0] ir_out;
    
    //declare wires
-   wire [15:0] ir_out, pc_out, reg_out;
-   wire pc_mux;
+   wire [15:0] pc_out, reg_out, sign_ext, branch_address;
+   wire [15:0] pc_mux;
    
 
-   //IDP    (clk, W_En,       W_Adr,       S_Adr,       R_Adr,   DS, S_Sel,
-   IDP  idp (clk, w_en, ir_out[8:6], ir_out[2:0], ir_out[5:3], D_in, s_sel,
-   //               ALU_OP, reset, C, N, Z, Reg_Out, Alu_out);
-             ir_out[15:12], reset, C, N, Z, reg_out,   D_out);
+   //IDP    (clk, W_En, W_Adr, S_Adr, R_Adr,   DS, S_Sel,
+   IDP  idp (clk, w_en, W_Adr, S_Adr, R_Adr, D_in, s_sel,
+   //        ALU_OP, reset, C, N, Z, Reg_Out, Alu_out);
+             ALU_OP, reset, C, N, Z, reg_out,   D_out);
    
    
    //reg16_L_Inc (clk, reset,    ld,    inc,        D,      q);
@@ -44,7 +49,7 @@ module CPU_EU(clk, w_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel,
    reg16_L_Inc IR(clk, reset, ir_ld, 1'b0, D_in, ir_out);
    
    //sign extention
-   assign sign_ext = {{8{ir_out[7]}},ir_out};
+   assign sign_ext = {{8{ir_out[7]}},ir_out[7:0]};
    //16 bit adder
    assign branch_address = pc_out + sign_ext;
    
