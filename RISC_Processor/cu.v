@@ -204,15 +204,8 @@ module cu(clk, reset, IR, N, Z, C,
          W_Adr   = 3'b000;
          //R_Adr   = IR[2:0];
          //S_Adr   = IR[5:3];
-         if(IR[2:0] > IR[5:3]) begin
-            R_Adr   = IR[2:0];
-            S_Adr   = IR[5:3];
-         end
-         else begin
-            S_Adr   = IR[2:0];
-            R_Adr   = IR[5:3];
-         end
-         
+         S_Adr   = IR[2:0];
+         R_Adr   = IR[5:3];
          adr_sel = 1'b0;
          s_sel   = 1'b0; 
          pc_ld   = 1'b0;
