@@ -1,4 +1,5 @@
 # Output products list for <ram_256x16>
+_xmsgs\pn_parser.xmsgs
 ram_256x16.asy
 ram_256x16.gise
 ram_256x16.mif

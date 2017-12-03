@@ -202,10 +202,19 @@ module cu(clk, reset, IR, N, Z, C,
          CMP:  begin
          // R[ir(5:3)] - R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00010}
          W_Adr   = 3'b000;
-         R_Adr   = IR[5:3];
-         S_Adr   = IR[2:0];
+         //R_Adr   = IR[2:0];
+         //S_Adr   = IR[5:3];
+         if(IR[2:0] > IR[5:3]) begin
+            R_Adr   = IR[2:0];
+            S_Adr   = IR[5:3];
+         end
+         else begin
+            S_Adr   = IR[2:0];
+            R_Adr   = IR[5:3];
+         end
+         
          adr_sel = 1'b0;
-         s_sel   = 1'b0;
+         s_sel   = 1'b0; 
          pc_ld   = 1'b0;
          pc_inc  = 1'b0;
          pc_sel  = 1'b0;
@@ -386,12 +395,7 @@ module cu(clk, reset, IR, N, Z, C,
          S_Adr   = 3'b000;
          adr_sel = 1'b0;
          s_sel   = 1'b0;
-       
-         if(ps_Z)
-           pc_ld = 1'b1;
-         else
-           pc_ld = 1'b0;
-         
+         pc_ld   = ps_Z;
          pc_inc  = 1'b0;
          pc_sel  = 1'b0;
          ir_ld   = 1'b0;
@@ -411,10 +415,7 @@ module cu(clk, reset, IR, N, Z, C,
          S_Adr   = 3'b000;
          adr_sel = 1'b0;
          s_sel   = 1'b0;
-         if(!ps_Z)
-           pc_ld = 1'b1;
-         else
-           pc_ld = 1'b0;
+         pc_ld   = !ps_Z;
          pc_inc  = 1'b0;
          pc_sel  = 1'b0;
          ir_ld   = 1'b0;
@@ -434,10 +435,7 @@ module cu(clk, reset, IR, N, Z, C,
          S_Adr   = 3'b000;
          adr_sel = 1'b0;
          s_sel   = 1'b0;
-         if(ps_C)
-           pc_ld = 1'b1;
-         else
-           pc_ld = 1'b0;
+         pc_ld   = ps_C;
          pc_inc  = 1'b0;
          pc_sel  = 1'b0;
          ir_ld   = 1'b0;
@@ -454,12 +452,12 @@ module cu(clk, reset, IR, N, Z, C,
          // PC <- R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01111}
          W_Adr   = 3'b000;
          R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
+         S_Adr   = IR[2:0];
          adr_sel = 1'b0;
          s_sel   = 1'b0;
          pc_ld   = 1'b1;
          pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
+         pc_sel  = 1'b1;
          ir_ld   = 1'b0;
          mw_en   = 1'b0;
          rw_en   = 1'b0;
