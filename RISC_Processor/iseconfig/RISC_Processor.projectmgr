@@ -11,6 +11,9 @@
          <ClosedNode>/Display_Controller C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|Display_Controller.v</ClosedNode>
          <ClosedNode>/debounce C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|debounce.v</ClosedNode>
          <ClosedNode>/top_level_lab8 C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|top_level_lab8.v/Display_Controller - Display_Controller</ClosedNode>
+         <ClosedNode>/top_level_lab8 C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|top_level_lab8.v/cpu - RISC_PROCESSOR/ex_unit - CPU_EU/idp - IDP/regfile - Register_File</ClosedNode>
+         <ClosedNode>/top_level_lab8 C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|top_level_lab8.v/stepclk - debounce</ClosedNode>
+         <ClosedNode>/top_level_lab8 C:|Users|Jesus|Documents|Xilinx_Files|CPU|RISC_Processor|top_level_lab8.v/stepmem - debounce</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>top_level_lab8 (C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.v)</SelectedItem>
@@ -68,13 +71,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Design Summary/Reports</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000141000000010000000100000000000000000000000064ffffffff000000810000000000000001000001410000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Design Summary/Reports</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -98,12 +101,12 @@
          <ClosedNode>CORE Generator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000017e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000017e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000141000000010000000100000000000000000000000064ffffffff000000810000000000000001000001410000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

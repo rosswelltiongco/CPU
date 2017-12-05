@@ -95,7 +95,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512018041" xil_pn:in_ck="9057255540568180162" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5746486562887665203" xil_pn:start_ts="1512018040">
+    <transform xil_pn:end_ts="1512424177" xil_pn:in_ck="9057255540568180162" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5746486562887665203" xil_pn:start_ts="1512424177">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/ram_256x16.ngc"/>
@@ -117,19 +117,21 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512090763" xil_pn:in_ck="8231102903813009571" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7704848601794235350" xil_pn:start_ts="1512090753">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1512424192" xil_pn:in_ck="8231102903813009571" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7704848601794235350" xil_pn:start_ts="1512424177">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="top_level_lab8.lso"/>
       <outfile xil_pn:name="top_level_lab8.ngc"/>
       <outfile xil_pn:name="top_level_lab8.ngr"/>
       <outfile xil_pn:name="top_level_lab8.prj"/>
+      <outfile xil_pn:name="top_level_lab8.stx"/>
       <outfile xil_pn:name="top_level_lab8.syr"/>
       <outfile xil_pn:name="top_level_lab8.xst"/>
+      <outfile xil_pn:name="top_level_lab8_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
@@ -137,20 +139,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512090502" xil_pn:in_ck="-5328848297003021255" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2657556957586722046" xil_pn:start_ts="1512090494">
+    <transform xil_pn:end_ts="1512424201" xil_pn:in_ck="-5328848297003021255" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2657556957586722046" xil_pn:start_ts="1512424192">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="top_level_lab8.bld"/>
       <outfile xil_pn:name="top_level_lab8.ngd"/>
       <outfile xil_pn:name="top_level_lab8_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512090552" xil_pn:in_ck="107550696297738410" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1512090502">
+    <transform xil_pn:end_ts="1512424238" xil_pn:in_ck="107550696297738410" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1512424201">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -163,10 +163,9 @@
       <outfile xil_pn:name="top_level_lab8_summary.xml"/>
       <outfile xil_pn:name="top_level_lab8_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1512090590" xil_pn:in_ck="-5268881033986131869" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1512090552">
+    <transform xil_pn:end_ts="1512424273" xil_pn:in_ck="-5268881033986131869" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1512424238">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="top_level_lab8.ncd"/>
       <outfile xil_pn:name="top_level_lab8.pad"/>
@@ -178,12 +177,10 @@
       <outfile xil_pn:name="top_level_lab8_pad.txt"/>
       <outfile xil_pn:name="top_level_lab8_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512090624" xil_pn:in_ck="2649979289562145107" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1512090590">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1512424307" xil_pn:in_ck="2649979289562145107" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1512424273">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="top_level_lab8.bgn"/>
       <outfile xil_pn:name="top_level_lab8.bit"/>
@@ -193,10 +190,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1512090590" xil_pn:in_ck="5831190885248964518" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1512090576">
+    <transform xil_pn:end_ts="1512424273" xil_pn:in_ck="5831190885248964518" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1512424260">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="top_level_lab8.twr"/>
       <outfile xil_pn:name="top_level_lab8.twx"/>

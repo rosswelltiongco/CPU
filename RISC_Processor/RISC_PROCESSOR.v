@@ -26,12 +26,13 @@ module RISC_PROCESSOR(clk, reset, D_in, mw_en, status, Address, D_out);
    //wires
    wire [15:0] IR_out;
    wire [3:0]  alu_op;
-   wire [2:0]  w_adr, r_adr, s_adr, ALU_status;
-   wire        adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, rw_en;
-
-//module cu       (clk, reset,     IR,             N,             Z,             C, W_Adr, R_Adr, S_Adr, adr_sel, s_sel, pc_ld, pc_Inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
-   cu control_unit(clk, reset, IR_out, ALU_status[2], ALU_status[1], ALU_status[0], w_adr, r_adr, s_adr, adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
+   wire [2:0]  w_adr, r_adr, s_adr;
+   wire        adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, rw_en, N, Z, C;
+//module cu(clk, reset, IR, N, Z, C, W_Adr, R_Adr, S_Adr, adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
+//module cu       (clk, reset,     IR, N, Z, C, W_Adr, R_Adr, S_Adr, adr_sel, s_sel, pc_ld, pc_Inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
+   cu control_unit(clk, reset, IR_out, N, Z, C, w_adr, r_adr, s_adr, adr_sel, s_sel, pc_ld, pc_inc, pc_sel, ir_ld, mw_en, rw_en, alu_op, status);
    
-//module CPU_EU   (clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out,             C,             N,             Z, W_Adr, R_Adr, S_Adr, ALU_OP, ir_our);
-   CPU_EU  ex_unit(clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, ALU_status[0], ALU_status[1], ALU_status[2], w_adr, r_adr, s_adr, alu_op, IR_out);
+//module CPU_EU   (clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, C, N, Z, W_Adr, R_Adr, S_Adr, ALU_OP, ir_our);
+//odule CPU_EU    (clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, C, N, Z, W_Adr, R_Adr, S_Adr, ALU_OP, ir_out);
+   CPU_EU  ex_unit(clk, rw_en, s_sel, reset, pc_ld, pc_inc, ir_ld, adr_sel, pc_sel, D_in, Address, D_out, C, N, Z, w_adr, r_adr, s_adr, alu_op, IR_out);
 endmodule
