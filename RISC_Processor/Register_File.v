@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: Register_File.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: Decoders used to enable 8 instances of a 16-bit register
@@ -14,13 +14,14 @@
  *
  *******************************************************************************/
 module Register_File(clk, reset, W_Adr, we, R_Adr, S_Adr, W, R, S);
+   
    //Declare inputs
-	input           clk, reset,    we;
+	input         clk, reset,    we;
 	input  [2:0]  W_Adr, R_Adr, S_Adr;
-	input  [15:0]     W              ;
+	input  [15:0] W;
    
    //Declare outputs
-	output [15:0]     R,     S       ;
+	output [15:0] R, S;
 	
    //Wdec decoder wires
    wire  w7, w6, w5, w4, w3, w2, w1, w0;

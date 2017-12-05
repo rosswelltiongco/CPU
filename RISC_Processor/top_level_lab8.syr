@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: top_level_lab8.prj
 
@@ -164,70 +164,57 @@ Elaborating module <one_shot>.
 Elaborating module <RISC_PROCESSOR>.
 
 Elaborating module <cu>.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 118: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 138: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 141: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 164: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 165: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 102: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 115: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 118: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 142: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 146: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 147: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 154: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 158: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 159: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 166: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 176: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 177: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 184: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 185: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 186: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 196: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 197: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 207: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 208: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 218: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 219: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 226: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 228: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 239: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 240: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 247: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 249: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 259: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 260: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 267: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 269: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 279: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 287: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 289: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 299: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 300: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 307: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 309: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 319: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 320: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 327: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 328: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 339: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 170: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 171: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 178: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 182: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 183: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 190: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 194: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 195: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 203: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 207: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 208: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 215: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 219: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 220: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 227: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 231: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 232: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 239: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 243: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 244: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 251: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 255: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 256: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 263: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 267: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 268: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 277: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 281: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 289: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 292: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 293: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 301: Signal <ps_C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 304: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 305: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 312: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 316: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 317: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 328: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 329: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 340: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 348: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 349: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 350: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 361: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 362: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 369: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 382: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 383: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 395: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 402: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 403: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 415: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 423: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 424: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 436: Signal <ps_C> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 444: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 445: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 454: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 465: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 466: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 485: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 486: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 505: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <CPU_EU>.
 
@@ -241,10 +228,10 @@ Elaborating module <reg16>.
 
 Elaborating module <alu16>.
 WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\alu16.v" Line 30: Result of 32-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\alu16.v" Line 46: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\alu16.v" Line 45: Result of 32-bit expression is truncated to fit in 17-bit target.
 
 Elaborating module <reg16_L_Inc>.
-WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16_L_Inc.v" Line 35: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16_L_Inc.v" Line 36: Result of 17-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <ram>.
 
@@ -385,7 +372,7 @@ Unit <cu> synthesized.
 
 Synthesizing Unit <CPU_EU>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\CPU_EU.v".
-    Found 16-bit adder for signal <branch_address> created at line 54.
+    Found 16-bit adder for signal <branch_address> created at line 49.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Multiplexer(s).
@@ -412,38 +399,38 @@ Unit <decoder3to8> synthesized.
 Synthesizing Unit <reg16>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16.v".
     Found 16-bit register for signal <Dout>.
-    Found 1-bit tristate buffer for signal <DA<15>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<14>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<13>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<12>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<11>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<10>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<9>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<8>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<7>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<6>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<5>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<4>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<3>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<2>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<1>> created at line 39
-    Found 1-bit tristate buffer for signal <DA<0>> created at line 39
-    Found 1-bit tristate buffer for signal <DB<15>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<14>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<13>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<12>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<11>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<10>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<9>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<8>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<7>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<6>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<5>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<4>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<3>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<2>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<1>> created at line 40
-    Found 1-bit tristate buffer for signal <DB<0>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<15>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<14>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<13>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<12>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<11>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<10>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<9>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<8>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<7>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<6>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<5>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<4>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<3>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<2>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<1>> created at line 40
+    Found 1-bit tristate buffer for signal <DA<0>> created at line 40
+    Found 1-bit tristate buffer for signal <DB<15>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<14>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<13>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<12>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<11>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<10>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<9>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<8>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<7>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<6>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<5>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<4>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<3>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<2>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<1>> created at line 41
+    Found 1-bit tristate buffer for signal <DB<0>> created at line 41
     Summary:
 	inferred  16 D-type flip-flop(s).
 	inferred  32 Tristate(s).
@@ -455,7 +442,7 @@ Synthesizing Unit <alu16>.
     Found 17-bit subtractor for signal <GND_81_o_GND_81_o_sub_4_OUT> created at line 32.
     Found 17-bit adder for signal <n0033> created at line 29.
     Found 17-bit adder for signal <n0036> created at line 31.
-    Found 17-bit subtractor for signal <GND_81_o_GND_81_o_sub_9_OUT> created at line 46.
+    Found 17-bit subtractor for signal <GND_81_o_GND_81_o_sub_9_OUT> created at line 45.
     Found 16-bit 15-to-1 multiplexer for signal <Y> created at line 26.
     Summary:
 	inferred   5 Adder/Subtractor(s).
@@ -465,7 +452,7 @@ Unit <alu16> synthesized.
 Synthesizing Unit <reg16_L_Inc>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\reg16_L_Inc.v".
     Found 16-bit register for signal <Q>.
-    Found 16-bit adder for signal <Q[15]_GND_82_o_add_0_OUT> created at line 35.
+    Found 16-bit adder for signal <Q[15]_GND_82_o_add_0_OUT> created at line 36.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
@@ -487,8 +474,8 @@ Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\pixel_clk.v".
     Found 32-bit register for signal <i>.
     Found 1-bit register for signal <clk_out>.
-    Found 32-bit adder for signal <i[31]_GND_86_o_add_2_OUT> created at line 50.
-    Found 32-bit comparator greater for signal <i[31]_GND_86_o_LessThan_2_o> created at line 44
+    Found 32-bit adder for signal <i[31]_GND_86_o_add_2_OUT> created at line 48.
+    Found 32-bit comparator greater for signal <i[31]_GND_86_o_LessThan_2_o> created at line 42
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -739,12 +726,12 @@ Top Level Output File Name         : top_level_lab8.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 836
+# BELS                             : 837
 #      GND                         : 2
 #      INV                         : 11
 #      LUT1                        : 46
 #      LUT2                        : 51
-#      LUT3                        : 38
+#      LUT3                        : 39
 #      LUT4                        : 25
 #      LUT5                        : 132
 #      LUT6                        : 196
@@ -774,14 +761,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             273  out of  126800     0%  
- Number of Slice LUTs:                  499  out of  63400     0%  
-    Number used as Logic:               499  out of  63400     0%  
+ Number of Slice LUTs:                  500  out of  63400     0%  
+    Number used as Logic:               500  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    603
-   Number with an unused Flip Flop:     330  out of    603    54%  
-   Number with an unused LUT:           104  out of    603    17%  
-   Number of fully used LUT-FF pairs:   169  out of    603    28%  
+ Number of LUT Flip Flop pairs used:    604
+   Number with an unused Flip Flop:     331  out of    604    54%  
+   Number with an unused LUT:           104  out of    604    17%  
+   Number of fully used LUT-FF pairs:   169  out of    604    27%  
    Number of unique control sets:        14
 
 IO Utilization: 
@@ -835,7 +822,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.141ns (Maximum Frequency: 194.507MHz)
+   Minimum period: 5.145ns (Maximum Frequency: 194.348MHz)
    Minimum input arrival time before clock: 1.619ns
    Maximum output required time after clock: 4.418ns
    Maximum combinational path delay: 3.031ns
@@ -867,10 +854,10 @@ Delay:               0.708ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.141ns (frequency: 194.507MHz)
+  Clock period: 5.145ns (frequency: 194.348MHz)
   Total number of paths / destination ports: 10435 / 49
 -------------------------------------------------------------------------
-Delay:               5.141ns (Levels of Logic = 20)
+Delay:               5.145ns (Levels of Logic = 20)
   Source:            memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Destination:       memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Source Clock:      clk rising
@@ -899,13 +886,13 @@ Delay:               5.141ns (Levels of Logic = 20)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<13> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<14> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<14>)
      XORCY:CI->O           2   0.370   0.561  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_4_OUT<15>)
-     LUT6:I2->O            1   0.097   0.000  cpu/ex_unit/idp/ALU/Alu_Op<3>61_G (N72)
-     MUXF7:I1->O           9   0.279   0.316  cpu/ex_unit/idp/ALU/Alu_Op<3>61 (CPU_D_out<15>)
+     LUT6:I2->O            1   0.097   0.000  cpu/ex_unit/idp/ALU/Alu_Op<3>61_G (N70)
+     MUXF7:I1->O          10   0.279   0.321  cpu/ex_unit/idp/ALU/Alu_Op<3>61 (CPU_D_out<15>)
      begin scope: 'memory/main_memory:dina<15>'
      RAMB18E1:DIBDI11          0.577          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
     ----------------------------------------
-    Total                      5.141ns (3.941ns logic, 1.200ns route)
-                                       (76.7% logic, 23.3% route)
+    Total                      5.145ns (3.941ns logic, 1.204ns route)
+                                       (76.6% logic, 23.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'stepmem/clk500/clk_out'
@@ -930,10 +917,10 @@ Delay:               0.653ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'step_clk_out'
-  Clock period: 4.195ns (frequency: 238.402MHz)
+  Clock period: 4.189ns (frequency: 238.720MHz)
   Total number of paths / destination ports: 81060 / 160
 -------------------------------------------------------------------------
-Delay:               4.195ns (Levels of Logic = 21)
+Delay:               4.189ns (Levels of Logic = 21)
   Source:            cpu/ex_unit/idp/regfile/R1/Dout_0 (FF)
   Destination:       cpu/ex_unit/PC/Q_15 (FF)
   Source Clock:      step_clk_out rising
@@ -961,13 +948,13 @@ Delay:               4.195ns (Levels of Logic = 21)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<12> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<12>)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<13> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<14> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<14>)
-     XORCY:CI->O           2   0.370   0.383  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_2_OUT<15>)
-     LUT6:I4->O            3   0.097   0.389  cpu/ex_unit/idp/ALU/Alu_Op<3>_65 (cpu/ex_unit/idp/ALU/Alu_Op<3>_65)
+     XORCY:CI->O           2   0.370   0.384  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_2_OUT<15>)
+     LUT6:I4->O            2   0.097   0.383  cpu/ex_unit/idp/ALU/Alu_Op<3>_65 (cpu/ex_unit/idp/ALU/Alu_Op<3>_65)
      LUT5:I3->O            1   0.097   0.295  cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>1 (cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>1)
      LUT5:I4->O            1   0.097   0.000  cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>2 (cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>)
      FDC:D                     0.008          cpu/ex_unit/PC/Q_15
     ----------------------------------------
-    Total                      4.195ns (1.899ns logic, 2.296ns route)
+    Total                      4.189ns (1.899ns logic, 2.290ns route)
                                        (45.3% logic, 54.7% route)
 
 =========================================================================
@@ -1025,7 +1012,7 @@ Delay:               4.881ns (Levels of Logic = 13)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q              32   0.472   0.800  cpu/control_unit/R_Adr_1 (cpu/control_unit/R_Adr_1)
-     LUT6:I0->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<0>LogicTrst3_G (N14)
+     LUT6:I0->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<0>LogicTrst3_G (N12)
      MUXF7:I1->O           5   0.279   0.398  cpu/ex_unit/idp/regfile/R<0>LogicTrst3 (cpu/ex_unit/reg_out<0>)
      LUT6:I4->O            1   0.097   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_lut<0> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_lut<0>)
      MUXCY:S->O            1   0.353   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<0> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<0>)
@@ -1177,7 +1164,7 @@ Offset:              4.418ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q              32   0.472   0.800  cpu/control_unit/R_Adr_1 (cpu/control_unit/R_Adr_1)
-     LUT6:I0->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<4>LogicTrst3_G (N22)
+     LUT6:I0->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<4>LogicTrst3_G (N20)
      MUXF7:I1->O           5   0.279   0.530  cpu/ex_unit/idp/regfile/R<4>LogicTrst3 (cpu/ex_unit/reg_out<4>)
      LUT5:I2->O            3   0.097   0.693  Mmux_adr_mux111 (adr_mux<4>)
      LUT5:I0->O            1   0.097   0.295  disp/mux8to1/Mmux_Y<0>2 (disp/mux8to1/Mmux_Y<0>1)
@@ -1225,7 +1212,7 @@ Offset:              4.068ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             2   0.361   0.561  cpu/ex_unit/idp/regfile/R6/Dout_4 (cpu/ex_unit/idp/regfile/R6/Dout_4)
-     LUT6:I2->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<4>LogicTrst3_G (N22)
+     LUT6:I2->O            1   0.097   0.000  cpu/ex_unit/idp/regfile/R<4>LogicTrst3_G (N20)
      MUXF7:I1->O           5   0.279   0.530  cpu/ex_unit/idp/regfile/R<4>LogicTrst3 (cpu/ex_unit/reg_out<4>)
      LUT5:I2->O            3   0.097   0.693  Mmux_adr_mux111 (adr_mux<4>)
      LUT5:I0->O            1   0.097   0.295  disp/mux8to1/Mmux_Y<0>2 (disp/mux8to1/Mmux_Y<0>1)
@@ -1291,9 +1278,9 @@ Clock to Setup on destination clock clk
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-clk                           |    5.141|         |         |         |
-cpu/control_unit/Mram__n019915|         |    5.018|         |         |
-step_clk_out                  |    4.703|         |         |         |
+clk                           |    5.145|         |         |         |
+cpu/control_unit/Mram__n019915|         |    5.022|         |         |
+step_clk_out                  |    4.707|         |         |         |
 step_mem_out                  |    1.494|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
@@ -1320,9 +1307,9 @@ Clock to Setup on destination clock step_clk_out
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-clk                           |    4.678|         |         |         |
-cpu/control_unit/Mram__n019915|         |    4.471|         |         |
-step_clk_out                  |    4.195|         |         |         |
+clk                           |    4.673|         |         |         |
+cpu/control_unit/Mram__n019915|         |    4.466|         |         |
+step_clk_out                  |    4.189|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock step_mem_out
@@ -1344,14 +1331,14 @@ stepmem/clk500/clk_out|    0.653|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.50 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.98 secs
  
 --> 
 
-Total memory usage is 415676 kilobytes
+Total memory usage is 414376 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  139 (   0 filtered)
+Number of warnings :  126 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

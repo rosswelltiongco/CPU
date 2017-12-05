@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: decoder3to8.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: Behavioral implementation of a 3-8 decoder that asserts a single
@@ -13,16 +13,17 @@
  *
  *******************************************************************************/
 module decoder3to8( In, en, y7, y6, y5, y4, y3, y2, y1, y0 );
+   
    //Declare inputs
    input [2:0] In;
-   input en;
+   input       en;
    
    //Declare outputs and registers
    output reg y7, y6, y5, y4, y3, y2, y1, y0;
 
    //Changes output based on any change in input
    always @ (*) begin
-   //check enable
+      //check enable
       if(en == 1'b1)
          case(In)
             3'b000  : {y7, y6, y5, y4, y3, y2, y1, y0 } = 8'b00000001;
@@ -36,7 +37,7 @@ module decoder3to8( In, en, y7, y6, y5, y4, y3, y2, y1, y0 );
             //default output is all zeros
             default : {y7, y6, y5, y4, y3, y2, y1, y0 } = 8'b00000000;
          endcase
-    //outputs all zeros is enable is low     
+      //outputs all zeros is enable is low     
       else
                       {y7, y6, y5, y4, y3, y2, y1, y0 } = 8'b00000000;
    end

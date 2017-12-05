@@ -4,8 +4,8 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: hexto7segment.v
- * Date:     November 27, 2017
- * Version:  1.0
+ * Date:     December 6, 2017
+ * Version:  1.1
  *
  * Description: Module has 4 bit input and uses case statement to convert 4 bit
  * value into a hexadecimal value and output a 7 bit value with corresponding
@@ -14,16 +14,12 @@
  *
  *******************************************************************************/
 module hexto7segment(Q, disp);
-	//declare input
-	//input is a 4 bit value
+
+	//inputs
 	input [3:0] Q;
 	
-	//declare output
-	//output is a 7 bit value 
-	output [6:0] disp;
-	
-	//register declared for behavioral module
-	reg [6:0] disp;
+	//outputs and registers
+	output reg [6:0] disp;
 	
 	//always statement will change output based on any change in input
 	always @ (Q) begin
@@ -51,5 +47,4 @@ module hexto7segment(Q, disp);
 			default : disp = 7'b1001001;
 		endcase
 	end
-	
-endmodule
+endmodule   

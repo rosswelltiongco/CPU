@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: reg16_L_Inc.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: A 16 bit register with load and incrementation capabilities.
@@ -15,11 +15,12 @@
  *
  *******************************************************************************/
 module reg16_L_Inc(clk, reset, ld, inc, D, Q);
+
    //inputs
    input               clk, reset, ld, inc;
    input      [15:0]   D;
    
-   //outputs
+   //outputs and registers
    output reg [15:0]   Q;
 
    always @ (posedge clk or posedge reset) begin

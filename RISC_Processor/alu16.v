@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: alu16.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: This 16-bit ALU will be used in the 301 "Integer Datapath" project
@@ -18,9 +18,9 @@
  *******************************************************************************/
 module alu16 (R, S, Alu_Op, Y, N, Z, C);
    input  [15:0] R, S;
-   input  [3:0] Alu_Op;
+   input  [3:0]  Alu_Op;
    output [15:0] Y;       reg [15:0] Y;
-   output N, Z, C;        reg N, Z, C;
+   output        N, Z, C; reg N, Z, C;
    
    always @( R or S or Alu_Op) begin
       case (Alu_Op)
@@ -37,7 +37,6 @@ module alu16 (R, S, Alu_Op, Y, N, Z, C);
          4'b0111: begin                  // left shift S (logic)
                      C = S[15];
                      Y = S << 1;
-
                   end
          4'b1000: {C,Y} = {1'b0,R & S}; // logic and
          4'b1001: {C,Y} = {1'b0,R | S}; // logic or
@@ -46,13 +45,11 @@ module alu16 (R, S, Alu_Op, Y, N, Z, C);
          4'b1100: {C,Y} = 0-S;          // negate S (2's comp)
          default: {C,Y} = {1'b0,S};     // pass S for default
       endcase
-
    // handle last two status flags
    N = Y[15];
    if (Y == 16'b0)
       Z = 1'b1;
    else
-      Z = 1'b0;
-      
+      Z = 1'b0;     
    end // end always
 endmodule 

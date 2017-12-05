@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: pixel_controller.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: Generates the signals for the common anode inputs to the
@@ -20,15 +20,13 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
 	//reset from btn_up debounced
 	input clk_480Hz, reset;
 	
-	//declare outputs for anode selection
-	output a7, a6, a5, a4, a3, a2, a1, a0;	
-   reg a7, a6, a5, a4, a3, a2, a1, a0;	
+	//declare outputs and registers for anode selection
+	output reg a7, a6, a5, a4, a3, a2, a1, a0;	
    
-	//delcare output for segment selection
-	output [2:0] seg_sel;
-   reg [2:0] seg_sel;
+	//declare output for segment selection
+	output reg [2:0] seg_sel;
    
-////////////////////////////////////////	
+   ////////////////////////////////////////	
 	//**********************
 	// state register and
 	// next_state vairables
@@ -89,7 +87,7 @@ module pixel_controller(clk_480Hz, reset, a7, a6, a5, a4, a3, a2, a1, a0, seg_se
          3'b101  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11011111_101;
          3'b110  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b10111111_110;
          3'b111  : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b01111111_111;
-			default   : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111111_xxx;
+			default : {a7, a6, a5, a4, a3, a2, a1, a0, seg_sel} = 11'b11111111_xxx;
 		endcase
       
 endmodule 

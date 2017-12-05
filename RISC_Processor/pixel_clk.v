@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: pixel_clk.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description:  A 480 Hz clock divider used to time multiplex the common
@@ -12,15 +12,13 @@
  *
  *******************************************************************************/
 module pixel_clk(clk_in, reset, clk_out);
+   
    //inputs
 	input clk_in, reset;
    
-   //outputs
-	output clk_out;
-   
-   //registers
-	reg clk_out;
-   
+   //outputs and registers
+	output reg clk_out;
+
    //variables
 	integer i = 32'b0;
 	

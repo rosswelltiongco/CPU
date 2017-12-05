@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: reg16.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: A 16 bit register with a 16 bit load that outputs  DA or DB 
@@ -13,6 +13,7 @@
  *
  *******************************************************************************/
 module reg16(clk, reset, ld, Din, DA, DB, oeA, oeB);
+    
     //Declare Inputs
     input         clk, reset, ld, oeA, oeB;
     input [15:0]  Din;

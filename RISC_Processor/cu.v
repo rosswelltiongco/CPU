@@ -4,14 +4,13 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: cu.v
- * Date:     
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: A "Moore" finite state machine that implements the major cycles
- * fetching and executing instructions for the 301 16-bit RISC processor
+ * fetching, decoding and executing instructions for the 301 16-bit 
+ * RISC processor
  *
- * Work  Time: 1.5hr Jesus 11/27
- * Debug Time: 
  *******************************************************************************/
 module cu(clk, reset, IR, N, Z, C,
           W_Adr, R_Adr, S_Adr,
@@ -82,39 +81,24 @@ module cu(clk, reset, IR, N, Z, C,
    always @( state )
       case( state )
          RESET: begin 
-         // Default Control Word Values -- LED pattern = 1111_1111
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
+         // Default Control Word Values
+         //LED pattern = 1111_1111
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = 3'b0;
          status  = 8'hFF;
          nextstate = FETCH;
-         
          end//RESET
          
          FETCH: begin 
-         // IR <-- M[PC], PC <- PC+1 -- LED pattern = 1000_0000
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b1;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b1;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
+         // IR <-- M[PC], PC <- PC+1
+         //LED pattern = 1000_0000
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b1;   pc_sel  = 1'b0;   ir_ld   = 1'b1;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C}; // flags remain the same
          status  = 8'h80;
          nextstate = DECODE;
@@ -122,19 +106,12 @@ module cu(clk, reset, IR, N, Z, C,
          end//FETCH
          
          DECODE: begin 
-         // Default Control Word, NS <- case(IR[15:9] ) -- LED pattern = 1100_0000
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
+         // Default Control Word, NS <- case(IR[15:9] )
+         //LED pattern = 1100_0000
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = 8'hC0;
          //next state
@@ -160,102 +137,60 @@ module cu(clk, reset, IR, N, Z, C,
          end//DECODE
          
          ADD:  begin
-         // R[ir(8:6)] <- R[ir(5:3)] + R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00000}
-         W_Adr   = IR[8:6];
-         R_Adr   = IR[5:3];
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0100;
+         // R[ir(8:6)] <- R[ir(5:3)] + R[ir(2:0)]
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b00000}
+         W_Adr   = IR[8:6]; R_Adr   = IR[5:3]; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;    pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;    ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;    alu_op  = 4'b0100;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00000};
          nextstate = FETCH;         
-      
          end//ADD
          
          SUB:  begin
-         //R[ir(8:6)] <- R[ir(5:3)] - R[ir(2:0)] -- LED pattern = {ps_N, ps_z, ps_C, 5'b00001}
-         W_Adr   = IR[8:6];
-         R_Adr   = IR[5:3];
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0101;
+         //R[ir(8:6)] <- R[ir(5:3)] - R[ir(2:0)]
+         //LED pattern = {ps_N, ps_z, ps_C, 5'b00001}
+         W_Adr   = IR[8:6]; R_Adr   = IR[5:3]; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;    pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;    ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;    alu_op  = 4'b0101;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00001};
          nextstate = FETCH;        
-      
          end//SUB
          
          CMP:  begin
-         // R[ir(5:3)] - R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00010}
-         W_Adr   = 3'b000;
-         //R_Adr   = IR[2:0];
-         //S_Adr   = IR[5:3];
-         R_Adr   = IR[5:3];
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0; 
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0101;
+         //R[ir(5:3)] - R[ir(2:0)]
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b00010}
+         W_Adr   = 3'b000; R_Adr   = IR[5:3]; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;   s_sel   = 1'b0;    pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;    ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;    alu_op  = 4'b0101;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00010};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;              
          end//CMP
          
          MOV:  begin
-         //R[ir(8:6)] <- R[ir(2:0)] -- LED pattern = {ns_N, ns_Z, ns_C, 5'b00011}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //R[ir(8:6)] <- R[ir(2:0)]
+         //LED pattern = {ns_N, ns_Z, ns_C, 5'b00011}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b00011};
          nextstate = FETCH;       
-      
          end//MOV
          
          SHL:  begin
-         // R[ir(8:6)] <- R[ir(2:0)] << 1 -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00100}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0111;
+         //R[ir(8:6)] <- R[ir(2:0)] << 1
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b00100}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0111;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00100};
          nextstate = FETCH;        
@@ -263,266 +198,149 @@ module cu(clk, reset, IR, N, Z, C,
          end//SHL
          
          SHR:  begin
-         // R[ir(8:6)] <- R[ir(2:0] >> 1 -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00101}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0110;
+         //R[ir(8:6)] <- R[ir(2:0] >> 1
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b00101}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0110;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00101};
          nextstate = FETCH;        
-      
          end//SHR
          
          INC:  begin
-         // R[ir(8:6)] <- R[ir(2:0)] + 1 -- LED pattern = {ps_N, ps_Z, ps_C, 5'b00110}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0010;
+         //R[ir(8:6)] <- R[ir(2:0)] + 1 
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b00110}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0010;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00110};
          nextstate = FETCH;         
-      
          end//INC
          
          DEC:  begin
-         // R[ir(8:6)] <- R[ir(2:0)] - 1 -- LED = {ps_N, ps_Z, ps_C, 5'b00111}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0011;
+         //R[ir(8:6)] <- R[ir(2:0)] - 1
+         //LED = {ps_N, ps_Z, ps_C, 5'b00111}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;    s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0011;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b00111};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;             
          end//DEC
          
          LD:   begin
-         // R[ir(8:6)] <- M[ R[ir(2:0)] ] -- LED pattern = {ps_N, ps_Z, ps_C, 5'01000}
-         W_Adr   = IR[8:6];
-         R_Adr   = IR[2:0];
-         S_Adr   = 3'b000;
-         adr_sel = 1'b1;
-         s_sel   = 1'b1;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0000;
+         //R[ir(8:6)] <- M[ R[ir(2:0)] ] 
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'01000}
+         W_Adr   = IR[8:6]; R_Adr   = IR[2:0]; S_Adr   = 3'b000;
+         adr_sel = 1'b1;    s_sel   = 1'b1;    pc_ld   = 1'b0;
+         pc_inc  = 1'b0;    pc_sel  = 1'b0;    ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;    alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b01000};
          nextstate = FETCH;        
-      
          end//LD
          
          STO:  begin
-         // M[ R[ir(8:6)] ] <- R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01001}
-         //W_Adr   = 3'b000;
-         W_Adr   = IR[8:6];
-         R_Adr   = IR[8:6];
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b1;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b1;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //M[ R[ir(8:6)] ] <- R[ir(2:0)]
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01001}
+         W_Adr   = 3'b000; R_Adr   = IR[8:6]; S_Adr   = IR[2:0];
+         adr_sel = 1'b1;   s_sel   = 1'b0;    pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;    ir_ld   = 1'b0;
+         mw_en   = 1'b1;   rw_en   = 1'b0;    alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01001};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;              
          end//STO
          
          LDI:  begin
-         // R[ir(8:6)] <- M[PC], PC <- PC + 1 -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01010}
-         W_Adr   = IR[8:6];
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b1;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b1;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b1;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //R[ir(8:6)] <- M[PC], PC <- PC + 1
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01010}
+         W_Adr   = IR[8:6]; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;    s_sel   = 1'b1;   pc_ld   = 1'b0;
+         pc_inc  = 1'b1;    pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;    rw_en   = 1'b1;   alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01010};
          nextstate = FETCH;        
       
          end//LDI
          
          JE:   begin
-         // if (ps_Z=1) PC <- PC+se_IR[7:0] else PC <- PC -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01100}
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = ps_Z;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
+         //if (ps_Z=1) PC <- PC+se_IR[7:0] else PC <- PC 
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01100}
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = ps_Z;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {N, Z, C};
          status  = {ps_N, ps_Z, ps_C, 5'b01100};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;              
          end//JE
          
          JNE:  begin
-         // if (ps_Z=0) PC <- PC+se_IR[7:0] else PC <- PC -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01101}
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = ~ps_Z;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //if (ps_Z=0) PC <- PC+se_IR[7:0] else PC <- PC 
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01101}
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = ~ps_Z;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01101};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;              
          end//JNE
          
          JC:   begin
-         // if (ps_C=1) PC <- PC+se_IR[7:0] else PC <- PC -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01110}
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = ps_C;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //if (ps_C=1) PC <- PC+se_IR[7:0] else PC <- PC 
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01110}
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = ps_C;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01110};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;             
          end//JC
          
          JMP:  begin
-         // PC <- R[ir(2:0)] -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01111}
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = IR[2:0];
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b1;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b1;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
-         //{ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         //PC <- R[ir(2:0)]
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01111}
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = IR[2:0];
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b1;
+         pc_inc  = 1'b0;   pc_sel  = 1'b1;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01111};
-         nextstate = FETCH;        
-      
+         nextstate = FETCH;              
          end//JMP
          
          HALT: begin
-         // Default Control Word Values -- LED pattern = {ps_N, ps_Z, ps_C, 5'b01011}
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0000;
+         //Default Control Word Values  
+         //LED pattern = {ps_N, ps_Z, ps_C, 5'b01011}
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01011};
-         nextstate = HALT;         
-      
+         nextstate = HALT;               
          end//HALT
    
          ILLEGAL_OP: begin
-         //Default Control Word Values -- LED pattern = 1111_0000
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0;
+         //Default Control Word Values
+         //LED pattern = 1111_0000
+         W_Adr   = 3'b000; R_Adr   = 3'b000; S_Adr   = 3'b000;
+         adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = 1'b0;
+         pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
+         mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0;
          {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = 8'hF0;
-         nextstate = ILLEGAL_OP;        
-      
+         nextstate = ILLEGAL_OP;             
          end//ILLEGAL_OP
-         /*default: begin
-         W_Adr   = 3'b000;
-         R_Adr   = 3'b000;
-         S_Adr   = 3'b000;
-         adr_sel = 1'b0;
-         s_sel   = 1'b0;
-         pc_ld   = 1'b0;
-         pc_inc  = 1'b0;
-         pc_sel  = 1'b0;
-         ir_ld   = 1'b0;
-         mw_en   = 1'b0;
-         rw_en   = 1'b0;
-         alu_op  = 4'b0;
-         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
-         status  = 8'hF0;
-         nextstate = ILLEGAL_OP;
-         end//defualt;*/
+     
    endcase
 endmodule

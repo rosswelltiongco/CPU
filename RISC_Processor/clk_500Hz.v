@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: clk_500Hz.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  2.0
  *
  * Description: Module takes clock input from the Nexys 4 board clock and   

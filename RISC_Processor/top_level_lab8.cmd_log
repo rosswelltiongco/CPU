@@ -171,3 +171,21 @@ map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off top_level_lab8_map.ncd top_level_lab8.ncd top_level_lab8.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab8.twx top_level_lab8.ncd -o top_level_lab8.twr top_level_lab8.pcf -ucf top_level_ucf.ucf 
 bitgen -intstyle ise -f top_level_lab8.ut top_level_lab8.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab8.ngc top_level_lab8.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab8_map.ncd top_level_lab8.ngd top_level_lab8.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab8_map.ncd top_level_lab8.ncd top_level_lab8.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab8.twx top_level_lab8.ncd -o top_level_lab8.twr top_level_lab8.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab8.ut top_level_lab8.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab8.ngc top_level_lab8.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab8_map.ncd top_level_lab8.ngd top_level_lab8.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab8_map.ncd top_level_lab8.ncd top_level_lab8.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab8.twx top_level_lab8.ncd -o top_level_lab8.twr top_level_lab8.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab8.ut top_level_lab8.ncd 
+xst -intstyle ise -ifn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.xst" -ofn "C:/Users/Jesus/Documents/Xilinx_Files/CPU/RISC_Processor/top_level_lab8.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top_level_ucf.ucf -p xc7a100t-csg324-3 top_level_lab8.ngc top_level_lab8.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o top_level_lab8_map.ncd top_level_lab8.ngd top_level_lab8.pcf 
+par -w -intstyle ise -ol high -mt off top_level_lab8_map.ncd top_level_lab8.ncd top_level_lab8.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_level_lab8.twx top_level_lab8.ncd -o top_level_lab8.twr top_level_lab8.pcf -ucf top_level_ucf.ucf 
+bitgen -intstyle ise -f top_level_lab8.ut top_level_lab8.ncd 

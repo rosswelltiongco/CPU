@@ -4,7 +4,7 @@
  * Author:   Rosswell Tiongco & Jesus Luciano
  * Email:    rosswelltiongco@gmail.com & jlucian995@gmail.com
  * Filename: IDP.v
- * Date:     November 27, 2017
+ * Date:     December 6, 2017
  * Version:  1.0
  *
  * Description: Integer Datapath Module instantiates a 8x16 bit register file,
@@ -32,9 +32,9 @@ module IDP(clk, W_En, W_Adr, S_Adr, R_Adr, DS, S_Sel, ALU_OP, reset,
     //declare wires
     wire [15:0] smux, S;
 
-  //Register_File        (clk, reset, W_Adr,   we, 
+    //Register_File      (clk, reset, W_Adr,   we, 
     Register_File regfile(clk, reset, W_Adr, W_En, 
-  //                      R_Adr, S_Adr,        W,       R, S);
+    //                    R_Adr, S_Adr,        W,       R, S);
                           R_Adr, S_Adr,  Alu_out, Reg_Out, S);
    
 
