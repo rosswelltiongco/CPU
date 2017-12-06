@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: top_level_lab8.prj
 
@@ -192,7 +192,7 @@ WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Process
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 231: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 232: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 239: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 243: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 243: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 244: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 251: Signal <IR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 255: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
@@ -201,7 +201,7 @@ WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Process
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 267: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 268: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 277: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal <N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 281: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 289: Signal <ps_Z> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 292: Signal <ps_N> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
@@ -731,10 +731,10 @@ Primitive and Black Box Usage:
 #      INV                         : 11
 #      LUT1                        : 46
 #      LUT2                        : 51
-#      LUT3                        : 39
-#      LUT4                        : 25
-#      LUT5                        : 132
-#      LUT6                        : 196
+#      LUT3                        : 40
+#      LUT4                        : 26
+#      LUT5                        : 129
+#      LUT6                        : 197
 #      MUXCY                       : 155
 #      MUXF7                       : 32
 #      VCC                         : 2
@@ -822,7 +822,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.145ns (Maximum Frequency: 194.348MHz)
+   Minimum period: 5.141ns (Maximum Frequency: 194.507MHz)
    Minimum input arrival time before clock: 1.619ns
    Maximum output required time after clock: 4.418ns
    Maximum combinational path delay: 3.031ns
@@ -854,10 +854,10 @@ Delay:               0.708ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.145ns (frequency: 194.348MHz)
+  Clock period: 5.141ns (frequency: 194.507MHz)
   Total number of paths / destination ports: 10435 / 49
 -------------------------------------------------------------------------
-Delay:               5.145ns (Levels of Logic = 20)
+Delay:               5.141ns (Levels of Logic = 20)
   Source:            memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Destination:       memory/main_memory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
   Source Clock:      clk rising
@@ -887,12 +887,12 @@ Delay:               5.145ns (Levels of Logic = 20)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<14> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_cy<14>)
      XORCY:CI->O           2   0.370   0.561  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_4_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_4_OUT<15>)
      LUT6:I2->O            1   0.097   0.000  cpu/ex_unit/idp/ALU/Alu_Op<3>61_G (N70)
-     MUXF7:I1->O          10   0.279   0.321  cpu/ex_unit/idp/ALU/Alu_Op<3>61 (CPU_D_out<15>)
+     MUXF7:I1->O           9   0.279   0.316  cpu/ex_unit/idp/ALU/Alu_Op<3>61 (CPU_D_out<15>)
      begin scope: 'memory/main_memory:dina<15>'
      RAMB18E1:DIBDI11          0.577          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
     ----------------------------------------
-    Total                      5.145ns (3.941ns logic, 1.204ns route)
-                                       (76.6% logic, 23.4% route)
+    Total                      5.141ns (3.941ns logic, 1.200ns route)
+                                       (76.7% logic, 23.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'stepmem/clk500/clk_out'
@@ -917,10 +917,10 @@ Delay:               0.653ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'step_clk_out'
-  Clock period: 4.189ns (frequency: 238.720MHz)
+  Clock period: 4.195ns (frequency: 238.402MHz)
   Total number of paths / destination ports: 81060 / 160
 -------------------------------------------------------------------------
-Delay:               4.189ns (Levels of Logic = 21)
+Delay:               4.195ns (Levels of Logic = 21)
   Source:            cpu/ex_unit/idp/regfile/R1/Dout_0 (FF)
   Destination:       cpu/ex_unit/PC/Q_15 (FF)
   Source Clock:      step_clk_out rising
@@ -948,13 +948,13 @@ Delay:               4.189ns (Levels of Logic = 21)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<12> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<12>)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<13> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<13>)
      MUXCY:CI->O           1   0.023   0.000  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<14> (cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_cy<14>)
-     XORCY:CI->O           2   0.370   0.384  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_2_OUT<15>)
-     LUT6:I4->O            2   0.097   0.383  cpu/ex_unit/idp/ALU/Alu_Op<3>_65 (cpu/ex_unit/idp/ALU/Alu_Op<3>_65)
+     XORCY:CI->O           2   0.370   0.383  cpu/ex_unit/idp/ALU/Msub_GND_81_o_GND_81_o_sub_2_OUT_xor<15> (cpu/ex_unit/idp/ALU/GND_81_o_GND_81_o_sub_2_OUT<15>)
+     LUT6:I4->O            3   0.097   0.389  cpu/ex_unit/idp/ALU/Alu_Op<3>_65 (cpu/ex_unit/idp/ALU/Alu_Op<3>_65)
      LUT5:I3->O            1   0.097   0.295  cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>1 (cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>1)
      LUT5:I4->O            1   0.097   0.000  cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>2 (cpu/ex_unit/PC/ld_D[15]_select_4_OUT<15>)
      FDC:D                     0.008          cpu/ex_unit/PC/Q_15
     ----------------------------------------
-    Total                      4.189ns (1.899ns logic, 2.290ns route)
+    Total                      4.195ns (1.899ns logic, 2.296ns route)
                                        (45.3% logic, 54.7% route)
 
 =========================================================================
@@ -1278,9 +1278,9 @@ Clock to Setup on destination clock clk
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-clk                           |    5.145|         |         |         |
-cpu/control_unit/Mram__n019915|         |    5.022|         |         |
-step_clk_out                  |    4.707|         |         |         |
+clk                           |    5.141|         |         |         |
+cpu/control_unit/Mram__n019915|         |    5.018|         |         |
+step_clk_out                  |    4.703|         |         |         |
 step_mem_out                  |    1.494|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
@@ -1307,9 +1307,9 @@ Clock to Setup on destination clock step_clk_out
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-clk                           |    4.673|         |         |         |
-cpu/control_unit/Mram__n019915|         |    4.466|         |         |
-step_clk_out                  |    4.189|         |         |         |
+clk                           |    4.678|         |         |         |
+cpu/control_unit/Mram__n019915|         |    4.471|         |         |
+step_clk_out                  |    4.195|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock step_mem_out
@@ -1331,12 +1331,12 @@ stepmem/clk500/clk_out|    0.653|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 16.98 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.56 secs
  
 --> 
 
-Total memory usage is 414376 kilobytes
+Total memory usage is 414436 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  126 (   0 filtered)

@@ -240,7 +240,7 @@ module cu(clk, reset, IR, N, Z, C,
          adr_sel = 1'b1;    s_sel   = 1'b1;    pc_ld   = 1'b0;
          pc_inc  = 1'b0;    pc_sel  = 1'b0;    ir_ld   = 1'b0;
          mw_en   = 1'b0;    rw_en   = 1'b1;    alu_op  = 4'b0000;
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01000};
          nextstate = FETCH;        
          end//LD
@@ -277,7 +277,7 @@ module cu(clk, reset, IR, N, Z, C,
          adr_sel = 1'b0;   s_sel   = 1'b0;   pc_ld   = ps_Z;
          pc_inc  = 1'b0;   pc_sel  = 1'b0;   ir_ld   = 1'b0;
          mw_en   = 1'b0;   rw_en   = 1'b0;   alu_op  = 4'b0000;
-         {ns_N, ns_Z, ns_C} = {N, Z, C};
+         {ns_N, ns_Z, ns_C} = {ps_N, ps_Z, ps_C};
          status  = {ps_N, ps_Z, ps_C, 5'b01100};
          nextstate = FETCH;              
          end//JE

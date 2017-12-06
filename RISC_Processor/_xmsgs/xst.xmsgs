@@ -89,7 +89,7 @@
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 239: Signal &lt;<arg fmt="%s" index="1">IR</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 243: Signal &lt;<arg fmt="%s" index="1">N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 243: Signal &lt;<arg fmt="%s" index="1">ps_N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 244: Signal &lt;<arg fmt="%s" index="1">ps_N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
@@ -116,7 +116,7 @@
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 277: Signal &lt;<arg fmt="%s" index="1">ps_Z</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal &lt;<arg fmt="%s" index="1">N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 280: Signal &lt;<arg fmt="%s" index="1">ps_N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Jesus\Documents\Xilinx_Files\CPU\RISC_Processor\cu.v" Line 281: Signal &lt;<arg fmt="%s" index="1">ps_N</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
